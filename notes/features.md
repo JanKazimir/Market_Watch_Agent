@@ -1,6 +1,6 @@
 # What features we need:
 
-### Capabilities of the software:
+### Capabilities of the script:
 
 
 
@@ -8,3 +8,6 @@
 - source of information
 - timestamp
 - source of information
+- rate
+- conditions
+- limits: min and max
