@@ -1,6 +1,6 @@
 # The plan:
 
 
-- Scrape two websites:
-- collect and merge into a single JSON
+- Scrape two websites: bankshopper and KBC website.
+- collect and merge into a single JSON or csv
 
