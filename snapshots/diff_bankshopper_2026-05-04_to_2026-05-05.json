@@ -1,0 +1,37 @@
+{
+  "source": "bankshopper.be",
+  "data_type": "products",
+  "date_old": "2026-05-04",
+  "date_new": "2026-05-05",
+  "generated_at": "2026-05-05T14:28:45",
+  "checksum_old": "24bb23d1dadd7a0d610b1acabdde10affa2abcc4b1ef2cf47517aaa2c2532538",
+  "checksum_new": "24bb23d1dadd7a0d610b1acabdde10affacabcc4b1ef2cf47517aaa2c2532538",
+  "checksums_match": false,
+  "total_changes": 2,
+  "summary": {
+    "rate_changes": 0,
+    "condition_changes": 1,
+    "rating_changes": 0,
+    "other_changes": 1,
+    "products_added": 0,
+    "products_removed": 0
+  },
+  "changes": [
+    {
+      "change_type": "other_change",
+      "bank": "Beobank",
+      "product_name": "Beobank Klassieke Spaarrekening",
+      "field": "product_sheet_url",
+      "before": "https://www.beobank.be/nl/particulier/media/12120/download?inline",
+      "after": "https://www.beobank.be/nl/particulier/media/13120/download?inline"
+    },
+    {
+      "change_type": "condition_change",
+      "bank": "BNP Paribas Fortis",
+      "product_name": "BNP Paribas Fortis Spaarrekening Plus",
+      "field": "max_deposit",
+      "before": "€ 150,00",
+      "after": "€ 100,00"
+    }
+  ]
+}
