@@ -28,7 +28,7 @@
       "taxonomy_category": "Eligibility / conditions",
       "taxonomy_group": "Product & Structure",
       "impact": "medium",
-      "description": "BNP Paribas Fortis reduced max deposit from €150 to €100 for Spaarrekening Plus."
+      "description": "BNP Paribas Fortis decreased max deposit from €150 to €100 for Spaarrekening Plus."
     }
   },
   "2": {
@@ -37,14 +37,14 @@
     "product_name": "1. KBC-Start2Save",
     "field": "base_rate",
     "before": 0.73,
-    "after": 0.75,
+    "after": 1.73,
     "source": "kbc.be",
     "data_type": "products",
     "classification": {
       "taxonomy_category": "Rate change",
       "taxonomy_group": "Product & Structure",
-      "impact": "medium",
-      "description": "KBC increased base rate from 0.73 to 0.75 for KBC-Start2Save."
+      "impact": "HIGH",
+      "description": "KBC increased base rate from 0.73% to 1.73% for 1. KBC-Start2Save."
     }
   },
   "3": {
@@ -60,7 +60,7 @@
       "taxonomy_category": "Category change",
       "taxonomy_group": "Product & Structure",
       "impact": "low",
-      "description": "KBC changed account type name for KBC-Start2Save."
+      "description": "KBC changed account type description for 1. KBC-Start2Save."
     }
   },
   "4": {
@@ -77,7 +77,7 @@
       "taxonomy_category": "New article",
       "taxonomy_group": "News & External Signals",
       "impact": "low",
-      "description": "ING updated article title regarding ETF investment plans."
+      "description": "Updated title for ING article on investment plans."
     }
   },
   "5": {
@@ -94,7 +94,7 @@
       "taxonomy_category": "New article",
       "taxonomy_group": "News & External Signals",
       "impact": "low",
-      "description": "BNP Paribas Fortis article title updated regarding new savings account."
+      "description": "BNP Paribas Fortis article title changed regarding new savings account conditions."
     }
   },
   "6": {
@@ -109,8 +109,8 @@
     "classification": {
       "taxonomy_category": "New article",
       "taxonomy_group": "News & External Signals",
-      "impact": "medium",
-      "description": "Belfius CEO reflects on 12 years in leadership in a new article."
+      "impact": "low",
+      "description": "New article featuring Marc Raisière's reflections on his tenure at Belfius."
     }
   }
 }

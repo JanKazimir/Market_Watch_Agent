@@ -88,7 +88,7 @@
       "product_name": "1. KBC-Start2Save",
       "field": "base_rate",
       "before": 0.73,
-      "after": 0.75,
+      "after": 1.73,
       "source": "kbc.be",
       "data_type": "products"
     },
