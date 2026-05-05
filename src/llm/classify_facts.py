@@ -29,9 +29,9 @@ llm_small_model = "gpt-4o-mini"
 today = datetime.date.today().isoformat()
 
 client = OpenAI(api_key=api_key)
-
-testing_input_path = BASE_DIR / "data" / "snapshots" / "diff_all_2026-05-05.json"
-testing_output_path = BASE_DIR / "data" / "outputs" / f"{today}_classified.json"
+#/Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/snapshots/diff_test.json
+testing_input_path = BASE_DIR / "data" / "snapshots" / "diff_test.json"
+testing_output_path = BASE_DIR / "data" / "outputs" / f"{today}_classified_test.json"
 
 
 
