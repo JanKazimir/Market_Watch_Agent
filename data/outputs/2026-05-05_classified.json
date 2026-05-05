@@ -12,7 +12,7 @@
       "taxonomy_category": "Other",
       "taxonomy_group": "Other",
       "impact": "low",
-      "description": "Beobank updated product sheet URL for Beobank Klassieke Spaarrekening."
+      "description": "Beobank updated product sheet URL for Klassieke Spaarrekening."
     }
   },
   "1": {
@@ -20,15 +20,15 @@
     "bank": "BNP Paribas Fortis",
     "product_name": "BNP Paribas Fortis Spaarrekening Plus",
     "field": "max_deposit",
-    "before": "\u20ac 150,00",
-    "after": "\u20ac 100,00",
+    "before": "€ 150,00",
+    "after": "€ 100,00",
     "source": "bankshopper.be",
     "data_type": "products",
     "classification": {
-      "taxonomy_category": "Product & Structure",
+      "taxonomy_category": "Eligibility / conditions",
       "taxonomy_group": "Product & Structure",
-      "impact": "Medium",
-      "description": "BNP Paribas Fortis decreased max deposit from \u20ac150.00 to \u20ac100.00 for Spaarrekening Plus."
+      "impact": "medium",
+      "description": "BNP Paribas Fortis reduced max deposit from €150 to €100 for Spaarrekening Plus."
     }
   },
   "2": {
@@ -41,10 +41,10 @@
     "source": "kbc.be",
     "data_type": "products",
     "classification": {
-      "taxonomy_category": "Product & Structure",
+      "taxonomy_category": "Rate change",
       "taxonomy_group": "Product & Structure",
-      "impact": "Medium",
-      "description": "KBC increased base rate from 0.73% to 0.75% for KBC-Start2Save."
+      "impact": "medium",
+      "description": "KBC increased base rate from 0.73 to 0.75 for KBC-Start2Save."
     }
   },
   "3": {
@@ -52,15 +52,15 @@
     "bank": "KBC",
     "product_name": "1. KBC-Start2Save",
     "field": "account_type",
-    "before": "Compte d'\u00e9pargne r\u00e9glement\u00e9",
-    "after": "Compte d'\u00e9pargnedfgsdgszdds r\u00e9glement\u00e9",
+    "before": "Compte d'épargne réglementé",
+    "after": "Compte d'épargnedfgsdgszdds réglementé",
     "source": "kbc.be",
     "data_type": "products",
     "classification": {
-      "taxonomy_category": "Product & Structure",
+      "taxonomy_category": "Category change",
       "taxonomy_group": "Product & Structure",
       "impact": "low",
-      "description": "KBC changed account type description for KBC-Start2Save."
+      "description": "KBC changed account type name for KBC-Start2Save."
     }
   },
   "4": {
@@ -74,16 +74,16 @@
     "source": "lecho.be",
     "data_type": "news",
     "classification": {
-      "taxonomy_category": "News & External Signals",
+      "taxonomy_category": "New article",
       "taxonomy_group": "News & External Signals",
       "impact": "low",
-      "description": "ING updated article title regarding investment plans."
+      "description": "ING updated article title regarding ETF investment plans."
     }
   },
   "5": {
     "change_type": "article_updated",
     "field": "title",
-    "before": "BNP Paribas Fortis lance un nouveau compte d'\u00e9pargne \u00e0 2,9%, mais sous conditions",
+    "before": "BNP Paribas Fortis lance un nouveau compte d'épargne à 2,9%, mais sous conditions",
     "after": " conditions",
     "title": " conditions",
     "link": "https://www.lecho.be/r/t/1/id/10659037",
@@ -91,26 +91,26 @@
     "source": "lecho.be",
     "data_type": "news",
     "classification": {
-      "taxonomy_category": "News & External Signals",
+      "taxonomy_category": "New article",
       "taxonomy_group": "News & External Signals",
       "impact": "low",
-      "description": "BNP Paribas Fortis altered article title on new savings account conditions."
+      "description": "BNP Paribas Fortis article title updated regarding new savings account."
     }
   },
   "6": {
     "change_type": "new_article",
-    "title": "Marc Raisi\u00e8re (Belfius): \"En Belgique, on a encore du mal \u00e0 \u00eatre fiers de notre succ\u00e8s\"",
-    "description": "02/05 Depuis le restaurant italien qu\u2019il vient de racheter avec Mehdi Bayat, Marc Raisi\u00e8re regarde dans le r\u00e9troviseur apr\u00e8s ses 12 ann\u00e9es \u00e0 la t\u00eate de Belfius. Une \u00abaventure financi\u00e8re, soci\u00e9tale, et humai...",
+    "title": "Marc Raisière (Belfius): \"En Belgique, on a encore du mal à être fiers de notre succès\"",
+    "description": "02/05 Depuis le restaurant italien qu’il vient de racheter avec Mehdi Bayat, Marc Raisière regarde dans le rétroviseur après ses 12 années à la tête de Belfius. Une «aventure financière, sociétale, et humai...",
     "link": "https://www.lecho.be/r/t/1/id/10658464",
     "pub_date": "Sat, 02 May 2026 02:56:14 GMT",
     "guid": "https://www.lecho.be/r/t/1/id/10658464",
     "source": "lecho.be",
     "data_type": "news",
     "classification": {
-      "taxonomy_category": "News & External Signals",
+      "taxonomy_category": "New article",
       "taxonomy_group": "News & External Signals",
-      "impact": "low",
-      "description": "New article regarding Marc Raisi\u00e8re's reflections on Belfius's success."
+      "impact": "medium",
+      "description": "Belfius CEO reflects on 12 years in leadership in a new article."
     }
   }
 }
