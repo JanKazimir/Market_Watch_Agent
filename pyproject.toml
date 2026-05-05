@@ -8,6 +8,7 @@ dependencies = [
     "apscheduler>=3.11.2",
     "beautifulsoup4>=4.14.3",
     "httpx>=0.28.1",
+    "ipykernel>=7.2.0",
     "jsondiff>=2.2.1",
     "logging>=0.4.9.6",
     "lxml>=6.1.0",
