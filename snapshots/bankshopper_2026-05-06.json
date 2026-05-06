@@ -1,10 +1,10 @@
 {
   "source": "bankshopper.be",
   "url": "https://www.bankshopper.be/vergelijk-spaarrekeningen/",
-  "timestamp": "2026-05-04T18:51:02.082543",
-  "date": "2026-05-04",
+  "timestamp": "2026-05-06T10:17:30.720777",
+  "date": "2026-05-06",
   "num_products": 50,
-  "checksum": "24bb23d1dadd7a0d610b1acabdde10affa2abcc4b1ef2cf47517aaa2c2532538",
+  "checksum": "24bb23d1dadd7a0d610b1acabdde10affacabcc4b1ef2cf47517aaa2c2532538",
   "products": [
     {
       "bank": "Beobank",
@@ -24,7 +24,7 @@
       "moody_rating": "Aa3",
       "sp_rating": "A",
       "fitch_rating": "A+",
-      "product_sheet_url": "https://www.beobank.be/nl/particulier/media/12120/download?inline"
+      "product_sheet_url": "https://www.beobank.be/nl/particulier/media/13120/download?inline"
     },
     {
       "bank": "BNP Paribas Fortis",
@@ -38,7 +38,7 @@
       "guarantee_fund": "België",
       "deposit_guarantee": "€ 100.000,00",
       "min_deposit": null,
-      "max_deposit": "€ 150,00",
+      "max_deposit": "€ 100,00",
       "open_online": "Ja",
       "management_costs": "Neen",
       "moody_rating": "A2",
@@ -111,7 +111,7 @@
       "product_name": "Argenta e-spaar",
       "base_rate": 0.2,
       "fidelity_premium": 0.3,
-      "total_rate": 2.5,
+      "total_rate": 0.5,
       "account_type": "Gereglementeerde spaarrekening",
       "group": "Argenta Spaarbank nv",
       "country_of_group": "België",
