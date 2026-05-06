@@ -1,0 +1,20 @@
+{
+  "source": "bankshopper.be",
+  "data_type": "products",
+  "date_old": "2026-05-05",
+  "date_new": "2026-05-06",
+  "generated_at": "2026-05-06T10:17:40",
+  "checksum_old": "24bb23d1dadd7a0d610b1acabdde10affacabcc4b1ef2cf47517aaa2c2532538",
+  "checksum_new": "24bb23d1dadd7a0d610b1acabdde10affacabcc4b1ef2cf47517aaa2c2532538",
+  "checksums_match": true,
+  "total_changes": 0,
+  "summary": {
+    "rate_changes": 0,
+    "condition_changes": 0,
+    "rating_changes": 0,
+    "other_changes": 0,
+    "products_added": 0,
+    "products_removed": 0
+  },
+  "changes": []
+}
