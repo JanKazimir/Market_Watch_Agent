@@ -1,22 +1,22 @@
 {
   "combined": true,
-  "date_old": "2026-05-04",
-  "date_new": "2026-05-05",
-  "generated_at": "2026-05-05T16:53:46",
+  "date_old": "2026-05-05",
+  "date_new": "2026-05-06",
+  "generated_at": "2026-05-06T10:17:40",
   "num_sources": 3,
   "sources": [
     {
       "source": "bankshopper.be",
       "data_type": "products",
-      "date_old": "2026-05-04",
-      "date_new": "2026-05-05",
-      "checksums_match": false,
-      "total_changes": 3,
+      "date_old": "2026-05-05",
+      "date_new": "2026-05-06",
+      "checksums_match": true,
+      "total_changes": 0,
       "summary": {
-        "rate_changes": 1,
-        "condition_changes": 1,
+        "rate_changes": 0,
+        "condition_changes": 0,
         "rating_changes": 0,
-        "other_changes": 1,
+        "other_changes": 0,
         "products_added": 0,
         "products_removed": 0
       }
@@ -50,48 +50,18 @@
       }
     }
   ],
-  "total_changes": 8,
+  "total_changes": 5,
   "summary": {
-    "rate_changes": 2,
-    "condition_changes": 2,
+    "rate_changes": 1,
+    "condition_changes": 1,
     "rating_changes": 0,
-    "other_changes": 1,
+    "other_changes": 0,
     "products_added": 0,
     "products_removed": 0,
     "new_articles": 1,
     "articles_updated": 2
   },
   "changes": [
-    {
-      "change_type": "other_change",
-      "bank": "Beobank",
-      "product_name": "Beobank Klassieke Spaarrekening",
-      "field": "product_sheet_url",
-      "before": "https://www.beobank.be/nl/particulier/media/12120/download?inline",
-      "after": "https://www.beobank.be/nl/particulier/media/13120/download?inline",
-      "source": "bankshopper.be",
-      "data_type": "products"
-    },
-    {
-      "change_type": "condition_change",
-      "bank": "BNP Paribas Fortis",
-      "product_name": "BNP Paribas Fortis Spaarrekening Plus",
-      "field": "max_deposit",
-      "before": "€ 150,00",
-      "after": "€ 100,00",
-      "source": "bankshopper.be",
-      "data_type": "products"
-    },
-    {
-      "change_type": "rate_change",
-      "bank": "Argenta",
-      "product_name": "Argenta e-spaar",
-      "field": "total_rate",
-      "before": 2.5,
-      "after": 0.5,
-      "source": "bankshopper.be",
-      "data_type": "products"
-    },
     {
       "change_type": "rate_change",
       "bank": "KBC",
