@@ -1,0 +1,41 @@
+"crelan_savings": {
+        "url": "https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/le-compte-depargne",
+        "bank": "Crelan",
+        "product_type": "regulated",
+        "language": "fr",
+    },
+    "crelan_term": {
+        "url": "https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme",
+        "bank": "Crelan",
+        "product_type": "unregulated",
+        "language": "fr",
+    },
+    # --- MEDIRECT ---
+    "medirect_savings": {
+        "url": "https://www.medirect.be/nl-be/vergelijking-van-spaarrekeningen/",
+        "bank": "MeDirect",
+        "product_type": "regulated",
+        "language": "nl",
+        "note": "Comparison page with all rates in one table.",
+    },
+    "medirect_term": {
+        "url": "https://www.medirect.be/nl-be/sparen/termijnrekening/",
+        "bank": "MeDirect",
+        "product_type": "unregulated",
+        "language": "nl",
+        "note": "Term deposit rates for 1-5 year periods.",
+    },
+    # --- BNP PARIBAS FORTIS ---
+    "bnp_savings": {
+        "url": "https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account-comparison",
+        "bank": "BNP Paribas Fortis",
+        "product_type": "regulated",
+        "language": "en",
+        "note": "JS-heavy site. Includes the new Compte Boost if launched.",
+    },
+    "bnp_term": {
+        "url": "https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account/deposit-account",
+        "bank": "BNP Paribas Fortis",
+        "product_type": "unregulated",
+        "language": "en",
+    },
