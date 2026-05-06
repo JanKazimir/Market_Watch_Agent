@@ -3,13 +3,13 @@
   "data_type": "products",
   "date_old": "2026-05-04",
   "date_new": "2026-05-05",
-  "generated_at": "2026-05-05T14:28:45",
+  "generated_at": "2026-05-05T16:53:46",
   "checksum_old": "24bb23d1dadd7a0d610b1acabdde10affa2abcc4b1ef2cf47517aaa2c2532538",
   "checksum_new": "24bb23d1dadd7a0d610b1acabdde10affacabcc4b1ef2cf47517aaa2c2532538",
   "checksums_match": false,
-  "total_changes": 2,
+  "total_changes": 3,
   "summary": {
-    "rate_changes": 0,
+    "rate_changes": 1,
     "condition_changes": 1,
     "rating_changes": 0,
     "other_changes": 1,
@@ -32,6 +32,14 @@
       "field": "max_deposit",
       "before": "€ 150,00",
       "after": "€ 100,00"
+    },
+    {
+      "change_type": "rate_change",
+      "bank": "Argenta",
+      "product_name": "Argenta e-spaar",
+      "field": "total_rate",
+      "before": 2.5,
+      "after": 0.5
     }
   ]
 }
