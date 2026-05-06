@@ -1,41 +1,46 @@
-## Function to classify the dict by llm
+## Script to add an llm summary and classification to a json of detected differences provided upstream in the pipeline.
 
-# run with:
+
+# run script with:
 # python src/llm/classify_facts.py
 
-
-## Imports ------------------ 
+## Imports ------------------ Path lib for file paths, open ai to talk to the llm, datetime and json from strandard lib
 from pathlib import Path
 import importlib.util
-import datetime
-
 from openai import OpenAI
 
+import datetime 
 import json
 
-## Importing secrets:
+## Importing secret openAI API key :
 BASE_DIR = Path(__file__).resolve().parents[2]
 secrets_path = BASE_DIR / ".venv" / "secrets.py"
 spec = importlib.util.spec_from_file_location("my_secrets", secrets_path)
 secrets = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(secrets)
 
-## Testing secrets imports, importing api_key as a var
+## Testing if importing secrets is working:
 #print(secrets.TEST_STRING)
 
-# Config:
+##===============================
+# CONFIG:
+##===============================
+
+
 api_key = secrets.API_KEY
 llm_small_model = "gpt-4o-mini"
 today = datetime.date.today().isoformat()
-
+## Open ai client: 
 client = OpenAI(api_key=api_key)
+
+# File path for testing purposes: 
 #/Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/snapshots/diff_test.json
 testing_input_path = BASE_DIR / "data" / "snapshots" / "diff_test.json"
 testing_output_path = BASE_DIR / "data" / "outputs" / f"{today}_classified_test.json"
 
 
-
-SYSTEM_PROMT  = """You are working as part of a Market Watch Analysis software package, focused on the Belgian savings account market. Your job for for this task is to provide the executive summary of the differences detected in the offerings of our competitors.  You'll receive a dictionnary containing the differences detected, analyse those changes, and return a clear, short, descriptive summary of those changes. Audience is banking professionals, lingo is allowed, but several departments will be involved, so keep it executive level. The output format MUST be a dict formated EXACTLY like this: 
+# The prompt sent to the llm. In the future there will be more.
+CLASSIFY_SYSTEM_PROMT  = """You are working as part of a Market Watch Analysis software package, focused on the Belgian savings account market. Your job for for this task is to provide the executive summary of the differences detected in the offerings of our competitors.  You'll receive a dictionnary containing the differences detected, analyse those changes, and return a clear, short, descriptive summary of those changes. Audience is banking professionals, lingo is allowed, but several departments will be involved, so keep it executive level. The output format MUST be a dict formated EXACTLY like this: 
 {"0": {classification : {"taxonomy_category": "category",
                   "taxonomy_group": "group",
                   "impact": "value",
@@ -64,59 +69,68 @@ The description summary for each entry MUST NOT BE longer than 25 words, prefera
 
 
 
-## Options : 
+## Options/ideas for later : 
 # - include an extra summary of all changes at the top
 # - (for later?) keep the number in your answer, so we can keep track of things 
 
 
-## Functions: 
 
+
+##======================
+## Functions: 
+##======================
+
+## Json helper functions: (load and write)
 def open_and_load_json(input_path):
   with open(input_path, encoding="utf-8") as f:
     data = json.load(f)
     #print(data)
     return data
 
-
-
 def dump_and_save_json(data, output_path):
   with open (output_path, "w", encoding="utf-8") as f:
     output_file = json.dump(data, f, ensure_ascii=False, indent=2)
     
-# read and save as latin 
-# indent=2, ensure_ascii=False),
-  #      encoding="utf-8"
 
 
-def llm_fact_summary(data) :
-  "Function to summarise in plain language changes detected. Takes a dict of old values and new values, return a dict of key + short summary of changes" 
+## LLM functions: 
+
+def talk_to_llm(data, prompt) :
+  """Function to summarise in plain language changes detected. 
+  Takes a dict, return a dict of key + short summary of changes"""
   client = OpenAI(api_key=api_key)
   response = client.chat.completions.create(
       model=llm_small_model,
       messages=[
-          {"role": "system", "content": SYSTEM_PROMT},
+          {"role": "system", "content": prompt},
           {"role": "user", "content": str(data)}
       ]
   )
   print("Prompting llm...")
-  #print(response.choices[0].message.content)
   return json.loads(response.choices[0].message.content)
   
 
 
-def get_llm_summary_fact(input_path):
+def get_llm_summary_fact_and_write_to_json(input_path=testing_input_path, output_path=testing_output_path, prompt=CLASSIFY_SYSTEM_PROMT):
+  """Function using talks_to_llm and json helper to load a diff json, classify changes and dump it as a new json. 
+  Args: input path, output path, prompt.    
+  Current version uses enumarate to ensure classification and summary are attached to the proper source information. Needs improvement.
+  """
   data = open_and_load_json(input_path)
   numbered_changes = {i: change for i, change in enumerate(data["changes"])}
-  classifications = llm_fact_summary(numbered_changes)
+  classifications = talk_to_llm(numbered_changes, prompt)
   result = numbered_changes
   for i in numbered_changes:
-    result[i] = {**numbered_changes[i], **classifications[str(i)]}
-  
-  output_path = testing_output_path
+    result[i] = {**numbered_changes[i], **classifications[str(i)]}  
   dump_and_save_json(result, output_path)
+  print(f"differences classified. Ouput:{output_path}")
 
 
 
-get_llm_summary_fact(testing_input_path)
+## test run:
 
+#get_llm_summary_fact_and_write_to_json(testing_input_path, testing_output_path, CLASSIFY_SYSTEM_PROMT)
+
+# run script with:
+# python src/llm/classify_facts.py
 
