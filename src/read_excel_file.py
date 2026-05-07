@@ -30,7 +30,7 @@ import csv
 today = datetime.date.today().isoformat()
 
 EXCEL_PATH = Path(__file__).parent.parent / "data" / "list_of_banks_ref.xlsx"
-OUTPUT_PATH = Path(__file__).parent.parent / "data" / "links_csv" / "{today}_sources.csv"
+OUTPUT_PATH = Path(__file__).parent.parent / "data" / "pdf_links_csv" / f"{today}_pdf_list.csv"
 
 
 
@@ -49,13 +49,14 @@ OUTPUT_PATH = Path(__file__).parent.parent / "data" / "links_csv" / "{today}_sou
 #   - The "UNREGULATED BEGINS" column is just a visual separator (all NaN), skip it
 #   - Language (nl/fr) is NOT in the excel — must be inferred from the URL path
 
-## Target CSV columns:
+
+## Target columns for pdfs:
 #   source_key : e.g. argenta_saving, argenta_terms
 #   bank       : e.g. Argenta
-#   url        : the url to scrape
+#   url        : the pdf url to scrape
 #   product_type : regulated / unregulated 
 #   language   : nl / fr (inferred from url)
-#   news_url   : if the url is a news page
+#   pdf_source   : source_url of the pdf download link
 
 
 #
@@ -78,19 +79,66 @@ list_of_cols = ['bank_name', 'holding_group', 'belgian_website_url', 'webiste no
 #print(f"\n{len(df)} rows loaded")
 #print(df.head(3))
 
-def build_sources(df: pd.DataFrame) -> pd.DataFrame:
+# excel column -> (source_key suffix, product_type)
+PDF_COLUMNS = {
+    "regulated_savings_pdf":  ("saving",  "regulated"),
+    "term_accounts_pdf":      ("terms",   "unregulated"),
+    "tarif_pdf_url":          ("tarif",   "tarif"),
+}
+
+# matching source columns (same order as PDF_COLUMNS)
+PDF_SOURCE_COLUMNS = {
+    "regulated_savings_pdf":  "regulated_savings_pdf_source",
+    "term_accounts_pdf":      "term_accounts_pdf_source",
+    "tarif_pdf_url":          "tarif_pdf_source",
+}
+
+
+def split_urls(cell):
+    if pd.isna(cell):
+        return []
+    return [u.strip().strip('"') for u in re.split(r';\s*', str(cell)) if u.strip()]
+
+
+def detect_language(url):
+    match = re.search(r'/(fr|nl)(/|-|$)', url)
+    return match.group(1) if match else ""
+
+
+def make_source_key(bank_name, suffix):
+    slug = re.sub(r'[^a-z0-9]+', '_', bank_name.lower()).strip('_')
+    return f"{slug}_{suffix}"
+
+
+def build_pdf_list(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for _, row in df.iterrows():
-        rows.append({"bank": row["bank_name"]})
+        bank = row["bank_name"]
+
+        for pdf_col, (suffix, product_type) in PDF_COLUMNS.items():
+            urls = split_urls(row[pdf_col])
+            sources = split_urls(row[PDF_SOURCE_COLUMNS[pdf_col]])
+
+            for i, url in enumerate(urls):
+                source = sources[i] if i < len(sources) else ""
+                lang = detect_language(url) or detect_language(source)
+                rows.append({
+                    "source_key": make_source_key(bank, suffix),
+                    "bank": bank,
+                    "url": url,
+                    "product_type": product_type,
+                    "language": lang,
+                    "pdf_source": source,
+                })
+
     return pd.DataFrame(rows)
-
-
-
 
 
 
 if __name__ == "__main__":
     df = load_excel()
-    print(df.head(3))
-    #sources = build_sources(df)
-    #print(sources)
+    pdf_df = build_pdf_list(df)
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    pdf_df.to_csv(OUTPUT_PATH, index=False)
+    print(pdf_df.to_string())
+    print(f"\nWrote {len(pdf_df)} rows to {OUTPUT_PATH}")
