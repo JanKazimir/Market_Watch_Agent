@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "apify-client>=2.5.0",
     "apscheduler>=3.11.2",
     "beautifulsoup4>=4.14.3",
     "httpx>=0.28.1",
@@ -13,8 +14,10 @@ dependencies = [
     "lxml>=6.1.0",
     "numpy>=2.4.4",
     "openai>=2.33.0",
+    "openpyxl>=3.1.5",
     "pandas>=3.0.2",
     "playwright>=1.59.0",
     "pydantic>=2.13.3",
+    "python-dotenv>=1.2.2",
     "requests>=2.33.1",
 ]
