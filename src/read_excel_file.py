@@ -73,7 +73,7 @@ def load_excel() -> pd.DataFrame:
 
 list_of_cols = ['bank_name', 'holding_group', 'belgian_website_url', 'webiste note', 'news_page_url', 'news_page_url_scrape_frequency', 'news_page_url_notes', 'saving_accounts_url', 'saving_accounts_url_scrape_frequency', 'saving_accounts_url_notes', 'tarif_pdf_url', 'tarif_pdf_source_scrape_frequency', 'tarif_pdf_notes', 'tarif_pdf_source', 'regulated_savings_url', 'regulated_savings_url_scrape_frequency', 'regulated_savings_url_notes', 'regulated_savings_individual_products_url', 'regulated_savings_individual_products_url_scrape_frequency', 'regulated_savings_individual_products_url_notes', 'regulated_savings_pdf', 'regulated_savings_pdf_scrape_frequency', 'regulated_savings_pdf_notes', 'regulated_savings_pdf_source', 'term_accounts_url', 'term_accounts_url_scrape_frequency', 'term_accounts_ulr_notes', 'term_accounts_pdf', 'term_accounts_pdf_scrape_frequency', 'term_accounts_pdf_notes', 'term_accounts_pdf_source']
 
-df.head(3)
+# df.head(3)
 #print(df.columns.tolist())
 #print(f"\n{len(df)} rows loaded")
 #print(df.head(3))
@@ -91,5 +91,6 @@ def build_sources(df: pd.DataFrame) -> pd.DataFrame:
 
 if __name__ == "__main__":
     df = load_excel()
+    print(df.head(3))
     #sources = build_sources(df)
     #print(sources)
