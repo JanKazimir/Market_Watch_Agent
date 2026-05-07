@@ -1,0 +1,148 @@
+{
+  "0": {
+    "change_type": "other_change",
+    "bank": "Beobank",
+    "product_name": "Beobank Klassieke Spaarrekening",
+    "field": "product_sheet_url",
+    "before": "https://www.beobank.be/nl/particulier/media/12120/download?inline",
+    "after": "https://www.beobank.be/nl/particulier/media/13120/download?inline",
+    "source": "bankshopper.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Other",
+      "taxonomy_group": [
+        "Other"
+      ],
+      "impact": "low",
+      "description": "Beobank updated the product sheet URL for Klassieke Spaarrekening."
+    }
+  },
+  "1": {
+    "change_type": "condition_change",
+    "bank": "BNP Paribas Fortis",
+    "product_name": "BNP Paribas Fortis Spaarrekening Plus",
+    "field": "max_deposit",
+    "before": "€ 150,00",
+    "after": "€ 100,00",
+    "source": "bankshopper.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Eligibility / conditions",
+      "taxonomy_group": [
+        "Product & Structure"
+      ],
+      "impact": "medium",
+      "description": "BNP Paribas Fortis reduced max deposit from €150 to €100 for Spaarrekening Plus."
+    }
+  },
+  "2": {
+    "change_type": "rate_change",
+    "bank": "Argenta",
+    "product_name": "Argenta e-spaar",
+    "field": "total_rate",
+    "before": 2.5,
+    "after": 0.5,
+    "source": "bankshopper.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Rate change",
+      "taxonomy_group": [
+        "Product & Structure"
+      ],
+      "impact": "HIGH",
+      "description": "Argenta decreased total rate from 2.5% to 0.5% for e-spaar."
+    }
+  },
+  "3": {
+    "change_type": "rate_change",
+    "bank": "KBC",
+    "product_name": "1. KBC-Start2Save",
+    "field": "base_rate",
+    "before": 0.73,
+    "after": 0.75,
+    "source": "kbc.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Rate change",
+      "taxonomy_group": [
+        "Product & Structure"
+      ],
+      "impact": "low",
+      "description": "KBC increased base rate from 0.73% to 0.75% for 1. KBC-Start2Save."
+    }
+  },
+  "4": {
+    "change_type": "condition_change",
+    "bank": "KBC",
+    "product_name": "1. KBC-Start2Save",
+    "field": "account_type",
+    "before": "Compte d'épargne réglementé",
+    "after": "Compte d'épargnedfgsdgszdds réglementé",
+    "source": "kbc.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Category change",
+      "taxonomy_group": [
+        "Product & Structure"
+      ],
+      "impact": "medium",
+      "description": "KBC changed account type from 'Compte d'épargne réglementé' to 'Compte d'épargnedfgsdgszdds réglementé' for 1. KBC-Start2Save."
+    }
+  },
+  "5": {
+    "change_type": "article_updated",
+    "field": "title",
+    "before": "ING Belgique se lance dans les plans d'investissement en ETF avec des tarifs plancher",
+    "after": "ING Belgique se lance dans les plans d'investissement",
+    "title": "ING Belgique se lance dans les plans d'investissement",
+    "link": "https://www.lecho.be/r/t/1/id/10659203",
+    "guid": "https://www.lecho.be/r/t/1/id/10659203",
+    "source": "lecho.be",
+    "data_type": "news",
+    "classification": {
+      "taxonomy_category": "New marketing message",
+      "taxonomy_group": [
+        "Communication & Positioning"
+      ],
+      "impact": "low",
+      "description": "ING Belgique's article title updated to focus on investment plans."
+    }
+  },
+  "6": {
+    "change_type": "article_updated",
+    "field": "title",
+    "before": "BNP Paribas Fortis lance un nouveau compte d'épargne à 2,9%, mais sous conditions",
+    "after": " conditions",
+    "title": " conditions",
+    "link": "https://www.lecho.be/r/t/1/id/10659037",
+    "guid": "https://www.lecho.be/r/t/1/id/10659036",
+    "source": "lecho.be",
+    "data_type": "news",
+    "classification": {
+      "taxonomy_category": "New marketing message",
+      "taxonomy_group": [
+        "Communication & Positioning"
+      ],
+      "impact": "low",
+      "description": "BNP Paribas Fortis updated article title focusing on conditions for new savings account."
+    }
+  },
+  "7": {
+    "change_type": "new_article",
+    "title": "Marc Raisière (Belfius): \"Free money for everyone\"",
+    "description": "Belfius bank has decide to donate 1000 euros to all its customers, effective immediately, and also to anyone name Kliti",
+    "link": "https://www.lecho.be/r/t/1/id/10658464",
+    "pub_date": "Sat, 02 May 2026 02:56:14 GMT",
+    "guid": "https://www.lecho.be/r/t/1/id/10658464",
+    "source": "lecho.be",
+    "data_type": "news",
+    "classification": {
+      "taxonomy_category": "Competitor statement",
+      "taxonomy_group": [
+        "News & External Signals"
+      ],
+      "impact": "medium",
+      "description": "Belfius announced a €1000 donation to customers, effective immediately."
+    }
+  }
+}
