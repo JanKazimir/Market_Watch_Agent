@@ -3,10 +3,6 @@ import glob
 import os
 from pathlib import Path
 from datetime import datetime
-import smtplib
-import os
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
 def get_latest_classified_file(search_dir: str) -> str:
     """
@@ -80,41 +76,26 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
     with open(file_path, "w", encoding="utf-8") as f:
         f.write("\n".join(content))
     
-    return str(file_path)
+    return f"✅ Success! Summary saved to: {file_path}"
 
-def send_summary_email(txt_file_path: str, recipients: list[str]) -> str:
-    """
-    Reads a text file and sends its content via Gmail SMTP.
-    """
-    # 1. Get credentials from environment variables
-    sender = os.environ.get("htien.hoang56@gmail.com")
-    password = os.environ.get("swsqbjzywpgsnxyy")
 
-    if not sender or not password:
-        return "❌ Error: EMAIL_SENDER or EMAIL_PASSWORD not set in environment."
 
-    # 2. Read the content of the TXT file
-    try:
-        with open(txt_file_path, 'r', encoding='utf-8') as f:
-            body = f.read()
-    except Exception as e:
-        return f"❌ Error reading TXT file: {e}"
 
-    # 3. Setup the email metadata
-    date_str = datetime.now().strftime("%Y-%m-%d")
-    subject = f"📊 Market Watch Summary — {date_str}"
+from summary_utils import save_classification_summary, get_latest_classified_file
+
+# 1. Define where your JSON files are stored
+OUTPUT_DIRECTORY = "data/outputs"
+
+try:
+    # 2. Find the newest file automatically
+    latest_json = get_latest_classified_file(OUTPUT_DIRECTORY)
+    print(f"📂 Processing: {latest_json}")
     
-    msg = MIMEMultipart()
-    msg['From'] = f"ING Market Watch <{sender}>"
-    msg['To'] = ", ".join(recipients)
-    msg['Subject'] = subject
-    msg.attach(MIMEText(body, 'plain', 'utf-8'))
+    # 3. Generate and save the TXT summary
+    result = save_classification_summary(latest_json)
+    print(result)
 
-    # 4. Send the email
-    try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-            server.login(sender, password)
-            server.sendmail(sender, recipients, msg.as_string())
-        return f"✅ Email successfully sent to: {', '.join(recipients)}"
-    except Exception as e:
-        return f"❌ SMTP Error: {e}"
+except FileNotFoundError as e:
+    print(f"❌ Error: {e}")
+except Exception as e:
+    print(f"⚠️ An unexpected error occurred: {e}")
