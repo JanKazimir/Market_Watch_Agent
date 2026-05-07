@@ -1,0 +1,26 @@
+{
+  "source": "argenta_product_3",
+  "url": "https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html",
+  "timestamp": "2026-05-07T16:11:05",
+  "date": "2026-05-07",
+  "scraper": "playwright",
+  "bank": "Argenta",
+  "raw_text_checksum": "ee01bab8e2157b20df84fd838a2783a59f5a600c1336a40a46786b0769f22bd3",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "cd15ad8782cdb2653b47c15b09f7f4f0082ce04cce6452f0c941619f635a180b",
+  "products": [
+    {
+      "bank": "Argenta",
+      "product_name": "Compte Maxi",
+      "base_rate": 0.2,
+      "fidelity_premium": 0.3,
+      "total_rate": 0.5,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Prime de fidélité versée 4 fois par an si l'épargne reste sur le compte pendant 12 mois sans interruption.",
+      "duration": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source": "banque_triodos_regulated",
+  "url": "https://www.triodos.be/fr/epargner/protocole-transparence-epargne;",
+  "timestamp": "2026-05-07T16:19:03",
+  "date": "2026-05-07",
+  "scraper": "playwright",
+  "bank": "Banque Triodos",
+  "raw_text_checksum": "3fd4c4d360f23ab269fae6cb0454e677f2cd49d9b5664542995a88856da690da",
+  "product_type": "regulated",
+  "num_products": 0,
+  "checksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "products": []
+}

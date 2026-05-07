@@ -1,0 +1,83 @@
+{
+  "source": "revolut_bank_uab___belgian_branch_news",
+  "url": "https://www.revolut.com/en-BE/news/",
+  "timestamp": "2026-05-07T16:29:31",
+  "date": "2026-05-07",
+  "scraper": "playwright",
+  "bank": "Revolut Bank UAB - Belgian Branch",
+  "raw_text_checksum": "8b4a39cbd35a30b68cb0978228756068166278b3f539f7fecff4a3c80ddf8078",
+  "num_articles": 10,
+  "checksum": "0d0c528f36a168d44fc809ff37c5f1e323db36b41b0e97894ec0b803c708fadb",
+  "articles": [
+    {
+      "title": "Revolut locks in Paris headquarters for Western Europe",
+      "description": "Revolut has secured a new headquarters in Paris, marking a significant step in its expansion strategy for Western Europe.",
+      "pub_date": "2026-04-08",
+      "link": null,
+      "guid": "d6cf2e7acf2cc8be"
+    },
+    {
+      "title": "Revolut Secures Organisation Authorisation in Peru, Moving to Formally Incorporate as a Bank",
+      "description": "Revolut has received organisational authorisation in Peru, paving the way for its formal incorporation as a bank in the country.",
+      "pub_date": "2026-04-01",
+      "link": null,
+      "guid": "7c28fb8a8b028635"
+    },
+    {
+      "title": "Revolut reports record profit of $2.3bn for 2025 as revenue surges to $6bn",
+      "description": "In its latest financial report, Revolut announced a record profit of $2.3 billion for the year 2025, with revenues reaching $6 billion.",
+      "pub_date": "2026-03-24",
+      "link": null,
+      "guid": "98e3399d9765628c"
+    },
+    {
+      "title": "Revolut Launches UK Bank",
+      "description": "Revolut has officially launched its banking operations in the UK, expanding its services to a new market.",
+      "pub_date": "2026-03-11",
+      "link": null,
+      "guid": "10505a98bde921de"
+    },
+    {
+      "title": "Revolut Files U.S. Bank Charter Application, Names New U.S. CEO",
+      "description": "Revolut has filed an application for a U.S. bank charter and appointed a new CEO for its U.S. operations.",
+      "pub_date": "2026-03-05",
+      "link": null,
+      "guid": "305f7eaca6d98ace"
+    },
+    {
+      "title": "Revolut unveils the Official Audi Revolut F1 Team Card design and exclusive fan benefits ahead of Grand Prix debut in Melbourne",
+      "description": "Revolut has revealed the design of the Official Audi Revolut F1 Team Card, along with exclusive benefits for fans ahead of the Grand Prix in Melbourne.",
+      "pub_date": "2026-03-04",
+      "link": null,
+      "guid": "eb65def19402dd6b"
+    },
+    {
+      "title": "Revolut becomes a Global Partner and Official Back of Shirt Partner of Manchester City men's and women's first teams",
+      "description": "Revolut has entered into a partnership with Manchester City, becoming a Global Partner and the Official Back of Shirt Partner for both the men's and women's teams.",
+      "pub_date": "2026-02-13",
+      "link": null,
+      "guid": "dfef95fbcdecc3de"
+    },
+    {
+      "title": "Revolut Launches Full Banking Operations in Mexico, Accelerating Global Expansion",
+      "description": "Revolut has launched full banking operations in Mexico, marking a significant milestone in its global expansion efforts.",
+      "pub_date": "2026-01-27",
+      "link": null,
+      "guid": "e03866f340c66ba3"
+    },
+    {
+      "title": "Audi Revolut F1 Team opens new chapter with immersive Berlin spectacle",
+      "description": "The Audi Revolut F1 Team has launched a new chapter with an immersive event in Berlin, showcasing its latest initiatives.",
+      "pub_date": "2026-01-20",
+      "link": null,
+      "guid": "cf5b3eb8c7369989"
+    },
+    {
+      "title": "Revolut to Enable Frictionless Checkout Across All Agentic Commerce Platforms for the UK and EEA",
+      "description": "Revolut is set to enable frictionless checkout across all Agentic Commerce platforms in the UK and EEA, enhancing the shopping experience.",
+      "pub_date": "2026-01-19",
+      "link": null,
+      "guid": "00b55acb505ca89b"
+    }
+  ]
+}

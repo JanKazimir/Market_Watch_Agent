@@ -1,0 +1,27 @@
+{
+  "source": "bnp_term",
+  "url": "https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account/deposit-account",
+  "timestamp": "2026-05-07T09:02:11",
+  "date": "2026-05-07",
+  "scraper": "apify",
+  "bank": "BNP Paribas Fortis",
+  "product_type": "unregulated",
+  "num_products": 1,
+  "checksum": "d6f36da2485bffcce5c4ac61af7348bf8ab53980907da2a2e9f6b49f9aa3ad87",
+  "products": [
+    {
+      "bank": "BNP Paribas Fortis",
+      "product_name": "Deposit Account",
+      "base_rate": 0.3,
+      "fidelity_premium": 0.2,
+      "total_rate": 0.5,
+      "account_type": "Non-regulated savings account",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Growth bonus vests after 6 months; loyalty bonus paid after 12 months."
+    }
+  ],
+  "raw_text_file": "snapshots/apify_bnp_term_2026-05-06_raw.txt",
+  "raw_text_checksum": "b73f786ac13892525f178140100056395f2f29403e9186f8b151f7e25e33c3d2",
+  "reused_from": "apify_bnp_term_2026-05-06.json"
+}
