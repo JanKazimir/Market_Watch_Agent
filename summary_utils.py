@@ -1,17 +1,26 @@
 import json
+import glob
+import os
 from pathlib import Path
 from datetime import datetime
 
+def get_latest_classified_file(search_dir: str) -> str:
+    """
+    Finds the most recently created JSON file in the specified directory.
+    """
+    # Create pattern to look for all .json files in the directory
+    pattern = os.path.join(search_dir, "*.json")
+    list_of_files = glob.glob(pattern)
+    
+    if not list_of_files:
+        raise FileNotFoundError(f"No JSON files found in directory: {search_dir}")
+    
+    # Return the file with the latest creation/modification time
+    return max(list_of_files, key=os.path.getmtime)
+
 def save_classification_summary(json_file_path: str, output_folder: str = "daily_summaries") -> str:
     """
-    Reads a classification JSON file and saves a formatted text summary.
-    
-    Args:
-        json_file_path (str): Path to the source JSON file.
-        output_folder (str): Folder where the .txt file will be saved.
-        
-    Returns:
-        str: A message indicating success or failure.
+    Reads the classification JSON and saves a formatted text summary to a folder.
     """
     folder = Path(output_folder)
     folder.mkdir(parents=True, exist_ok=True)
@@ -29,7 +38,6 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
         impact = entry.get("classification", {}).get("impact", "low").lower()
         desc = entry.get("classification", {}).get("description", "No description.")
         
-        # Format "Before -> After" for product changes
         field = entry.get("field", "")
         before = entry.get("before", "")
         after = entry.get("after", "")
@@ -48,7 +56,6 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
         else:
             low_count += 1
 
-    # Assemble the text content
     content = [
         f"ING Market Watch Summary — {date_str}",
         f"{len(high)} urgent · {len(medium)} to monitor · {low_count} low",
@@ -69,4 +76,4 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
     with open(file_path, "w", encoding="utf-8") as f:
         f.write("\n".join(content))
     
-    return f"Success! Summary saved to: {file_path}"
+    return f"✅ Success! Summary saved to: {file_path}"
