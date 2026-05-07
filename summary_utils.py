@@ -82,13 +82,39 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
     
     return str(file_path)
 
-def send_summary_email(txt_file_path: str, recipients: list[str]) -> str:
+def send_summary_email(txt_file_path: str, recipients: list[str], sender: str, password: str) -> str:
     """
-    Reads a text file and sends its content via Gmail SMTP.
+    RECEIVES sender and password as direct strings.
     """
+    # Double check if they arrived empty
+    if not sender:
+        return "❌ Error: Sender email is empty."
+    if not password:
+        return "❌ Error: Password is empty."
+    """
+    Reads a text file and sends its content. 
+    Credentials are passed directly to avoid environment scope issues.
+    """
+    if not sender or not password:
+        return "❌ Error: Credentials were not passed to the function."
+
+    try:
+        with open(txt_file_path, 'r', encoding='utf-8') as f:
+            body = f.read()
+    except Exception as e:
+        return f"❌ Error reading TXT file: {e}"
+    
     # 1. Get credentials from environment variables
-    sender = os.environ.get("htien.hoang56@gmail.com")
-    password = os.environ.get("swsqbjzywpgsnxyy")
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    sender = os.environ.get("EMAIL_SENDER")
+    password = os.environ.get("EMAIL_PASSWORD")
+
+    # INTERNAL DEBUG - Let's see what the function sees
+    print(f"--- Function Internal Check ---")
+    print(f"Sender found: {sender}")
+    print(f"Password found: {'Yes' if password else 'No'}")
 
     if not sender or not password:
         return "❌ Error: EMAIL_SENDER or EMAIL_PASSWORD not set in environment."
