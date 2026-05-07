@@ -1,0 +1,83 @@
+{
+  "date": "2026-05-07",
+  "summary": {
+    "unchanged": 10,
+    "updated": 0,
+    "not_a_link": 1,
+    "webpage": 3,
+    "dead_link": 1,
+    "error": 2
+  },
+  "entries": [
+    {
+      "source_key": "bnp_paribas_fortis_saving",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "regulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "source_key": "bnp_paribas_fortis_terms",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "unregulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "source_key": "banque_triodos_terms",
+      "bank": "Banque Triodos",
+      "url": "there is only a dead link",
+      "product_type": "unregulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "not_a_link",
+      "detail": "Value is not a URL: there is only a dead link"
+    },
+    {
+      "source_key": "banque_triodos_tarif",
+      "bank": "Banque Triodos",
+      "url": "https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40",
+      "product_type": "tarif",
+      "language": "fr",
+      "pdf_source": "https://www.triodos.be/fr/epargner/compte-a-terme",
+      "status": "webpage",
+      "detail": "URL points to a webpage, not a PDF"
+    },
+    {
+      "source_key": "crelan_terms",
+      "bank": "Crelan",
+      "url": "https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme",
+      "product_type": "unregulated",
+      "language": "fr",
+      "pdf_source": "",
+      "status": "webpage",
+      "detail": "URL points to a webpage, not a PDF"
+    },
+    {
+      "source_key": "kbc_banque_saving",
+      "bank": "KBC Banque",
+      "url": "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3771_F.pdf",
+      "product_type": "regulated",
+      "language": "fr",
+      "pdf_source": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav",
+      "status": "dead_link",
+      "detail": "HTTP 404"
+    },
+    {
+      "source_key": "medirect_terms",
+      "bank": "MeDirect",
+      "url": "https://www.medirect.be/nl-be/sparen/termijnrekening/",
+      "product_type": "unregulated",
+      "language": "nl",
+      "pdf_source": "",
+      "status": "webpage",
+      "detail": "URL points to a webpage, not a PDF"
+    }
+  ]
+}
