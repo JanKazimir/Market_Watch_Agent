@@ -7,13 +7,20 @@ import datetime
 from pathlib import Path
 
 
-## Paths
-BASE_DIR = Path.parent
-LOG_DIR = Path("data/outputs")
+## CONFIG:
+BASE_DIR = Path(__file__).resolve().parent
+LOG_DIR = BASE_DIR / "data" / "logs"
+SRC_DIR = BASE_DIR / "src" 
 today = datetime.date.today().isoformat()
 log_path = LOG_DIR / f"{today}_pipeline.log"
 
-def run_step(script, log_file):
+
+## Scripts Paths:
+test_function_path = SRC_DIR / "test_function.py"
+
+
+## Function to run a script, and write its console to file.
+def run_step(script, log_file=log_path):
     name = Path(script).stem
     now = datetime.datetime.now().strftime("%H:%M:%S")
     log_file.write(f"\n{'='*50}\n")
@@ -43,9 +50,13 @@ def run_step(script, log_file):
 
 
 
+
+
 def main():
     print("testing main...")
-    run_step()
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    with open(log_path, "a") as log_file:
+        run_step(test_function_path, log_file)
 
 
 if __name__ == "__main__":
