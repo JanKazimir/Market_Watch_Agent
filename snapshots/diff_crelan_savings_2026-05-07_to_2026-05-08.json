@@ -1,11 +1,11 @@
 {
-  "source": "crelan_term",
+  "source": "crelan_savings",
   "data_type": "products",
-  "date_old": "2026-05-06",
-  "date_new": "2026-05-07",
+  "date_old": "2026-05-07",
+  "date_new": "2026-05-08",
   "generated_at": "2026-05-08T14:33:03",
-  "checksum_old": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
-  "checksum_new": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
+  "checksum_old": "d4bb6f9e0c17e66167b42d4f10c769cddaf2d39034f1cd199194061be7a0b4f3",
+  "checksum_new": "d4bb6f9e0c17e66167b42d4f10c769cddaf2d39034f1cd199194061be7a0b4f3",
   "checksums_match": true,
   "total_changes": 0,
   "summary": {
