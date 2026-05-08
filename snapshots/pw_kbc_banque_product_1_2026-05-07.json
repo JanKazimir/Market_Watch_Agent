@@ -1,0 +1,26 @@
+{
+  "source": "kbc_banque_product_1",
+  "url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav",
+  "timestamp": "2026-05-07T16:26:16",
+  "date": "2026-05-07",
+  "scraper": "playwright",
+  "bank": "KBC Banque",
+  "raw_text_checksum": "17c1cdebf6605e6567c8751fb603e492bbcca521bb19e4e9db93d90b8ce194f8",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "5db83c371444058ee3e37c13abd9ffa4f0d70780081d83005dd2d5c7d7e5729c",
+  "products": [
+    {
+      "bank": "KBC Bank SA Belgique",
+      "product_name": "Compte d’épargne KBC pour Tiers",
+      "base_rate": 0.4,
+      "fidelity_premium": 0.2,
+      "total_rate": 0.6,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Prime de fidélité acquise sur les montants qui restent sur le compte d’épargne pendant 12 mois complets consécutifs.",
+      "duration": null
+    }
+  ]
+}
