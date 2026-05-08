@@ -1,0 +1,521 @@
+{
+  "combined": true,
+  "date_old": "2026-05-06",
+  "date_new": "2026-05-08",
+  "generated_at": "2026-05-08T14:33:03",
+  "num_sources": 32,
+  "sources": [
+    {
+      "source": "bnp_savings",
+      "data_type": "products",
+      "date_old": "2026-05-06",
+      "date_new": "2026-05-07",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "bnp_term",
+      "data_type": "products",
+      "date_old": "2026-05-06",
+      "date_new": "2026-05-07",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "crelan_term",
+      "data_type": "products",
+      "date_old": "2026-05-06",
+      "date_new": "2026-05-07",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "medirect_savings",
+      "data_type": "products",
+      "date_old": "2026-05-06",
+      "date_new": "2026-05-07",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "medirect_term",
+      "data_type": "products",
+      "date_old": "2026-05-06",
+      "date_new": "2026-05-07",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "argenta_product_1",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "argenta_product",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "argenta_product_2",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "argenta_product_3",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "argenta_regulated",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "argenta_term",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "bankb_regulated",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "bankb_savings",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_cph_regulated",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_triodos_news",
+      "data_type": "news",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": false,
+      "total_changes": 0,
+      "summary": {
+        "new_articles": 0,
+        "articles_updated": 0
+      }
+    },
+    {
+      "source": "banque_triodos_product_1",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_triodos_product",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_triodos_product_2",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_triodos_regulated",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_triodos_savings",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_triodos_term_1",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "banque_triodos_term",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "belfius_savings",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "bnp_paribas_fortis_news",
+      "data_type": "news",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "new_articles": 0,
+        "articles_updated": 0
+      }
+    },
+    {
+      "source": "crelan_savings",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "kbc_banque_product_1",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "kbc_banque_product",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "kbc_banque_product_2",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "kbc_banque_term",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "medirect_savings",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "revolut_bank_uab___belgian_branch_news",
+      "data_type": "news",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "new_articles": 0,
+        "articles_updated": 0
+      }
+    },
+    {
+      "source": "revolut_bank_uab___belgian_branch_savings",
+      "data_type": "products",
+      "date_old": "2026-05-07",
+      "date_new": "2026-05-08",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    }
+  ],
+  "total_changes": 0,
+  "summary": {
+    "rate_changes": 0,
+    "condition_changes": 0,
+    "rating_changes": 0,
+    "other_changes": 0,
+    "products_added": 0,
+    "products_removed": 0,
+    "new_articles": 0,
+    "articles_updated": 0
+  },
+  "changes": []
+}

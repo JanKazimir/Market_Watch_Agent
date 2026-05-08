@@ -1,11 +1,11 @@
 {
-  "source": "crelan_term",
+  "source": "belfius_savings",
   "data_type": "products",
-  "date_old": "2026-05-06",
-  "date_new": "2026-05-07",
+  "date_old": "2026-05-07",
+  "date_new": "2026-05-08",
   "generated_at": "2026-05-08T14:33:03",
-  "checksum_old": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
-  "checksum_new": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
+  "checksum_old": "cc49722909fe5d10a7fbbdc34ead4ca3ba7153958914c9d09afd100a54dd9419",
+  "checksum_new": "cc49722909fe5d10a7fbbdc34ead4ca3ba7153958914c9d09afd100a54dd9419",
   "checksums_match": true,
   "total_changes": 0,
   "summary": {
