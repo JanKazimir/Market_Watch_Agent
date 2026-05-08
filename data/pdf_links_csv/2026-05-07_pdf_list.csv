@@ -1,0 +1,18 @@
+source_key,bank,url,product_type,language,pdf_source
+argenta_saving,Argenta,https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf,regulated,fr,https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+argenta_saving,Argenta,https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf,regulated,fr,https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+argenta_saving,Argenta,https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf,regulated,fr,https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+argenta_saving,Argenta,https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf,regulated,fr,https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+argenta_terms,Argenta,https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf,unregulated,fr,https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+argenta_tarif,Argenta,https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf,tarif,fr,https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+bnp_paribas_fortis_saving,BNP Paribas Fortis,https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf,regulated,,
+bnp_paribas_fortis_terms,BNP Paribas Fortis,https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf,unregulated,,
+bankb_saving,BankB,https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf,regulated,,
+bankb_terms,BankB,https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf,unregulated,,
+banque_triodos_terms,Banque Triodos,there is only a dead link,unregulated,,
+banque_triodos_tarif,Banque Triodos,https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40,tarif,fr,https://www.triodos.be/fr/epargner/compte-a-terme
+crelan_terms,Crelan,https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme,unregulated,fr,
+kbc_banque_saving,KBC Banque,https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf,regulated,fr,https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+kbc_banque_saving,KBC Banque,https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3771_F.pdf,regulated,fr,https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+kbc_banque_saving,KBC Banque,https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf,regulated,fr,https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+medirect_terms,MeDirect,https://www.medirect.be/nl-be/sparen/termijnrekening/,unregulated,nl,

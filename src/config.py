@@ -13,7 +13,7 @@ scraped_data = {
         "product_type": str,
         "base_rate": float,
         "loyalty_bonus": float,
-        "total_rate"
+        "total_rate": float,
         "is_regulated": bool,
         "categories": str,
         "conditions": str,
