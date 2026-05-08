@@ -1,0 +1,39 @@
+name: Daily Market Watch
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+        run: python main.py
+
+      - name: Commit snapshots
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add snapshots/
+          git commit -m "snapshot $(date +'%Y-%m-%d')" || echo "nothing to commit"
+          git push
