@@ -1,11 +1,11 @@
 {
-  "source": "crelan_term",
+  "source": "medirect_savings",
   "data_type": "products",
-  "date_old": "2026-05-06",
-  "date_new": "2026-05-07",
+  "date_old": "2026-05-07",
+  "date_new": "2026-05-08",
   "generated_at": "2026-05-08T14:33:03",
-  "checksum_old": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
-  "checksum_new": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
+  "checksum_old": "7c106d613d9ba08c5efa88a0cf89734d41f3df3c5ab46b0822a1a296d91af094",
+  "checksum_new": "7c106d613d9ba08c5efa88a0cf89734d41f3df3c5ab46b0822a1a296d91af094",
   "checksums_match": true,
   "total_changes": 0,
   "summary": {

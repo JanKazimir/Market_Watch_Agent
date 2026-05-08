@@ -1,0 +1,123 @@
+{
+  "source": "banque_triodos_term_1",
+  "url": "https://www.triodos.be/fr/epargner/compte-a-terme-junior",
+  "timestamp": "2026-05-08T12:37:52",
+  "date": "2026-05-08",
+  "scraper": "playwright",
+  "bank": "Banque Triodos",
+  "raw_text_checksum": "f0b393be67b5ed0350205ed341d0f9bbb76ce348a3415db99e6c9b2fa972f0f7",
+  "product_type": "unregulated",
+  "num_products": 9,
+  "checksum": "0c58f58262b3efd474ff70ebe1d883aac71e7bd6b5f07520ba5915d287282e77",
+  "products": [
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.0165,
+      "fidelity_premium": null,
+      "total_rate": 0.0165,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 3
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.0175,
+      "fidelity_premium": null,
+      "total_rate": 0.0175,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 6
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.0185,
+      "fidelity_premium": null,
+      "total_rate": 0.0185,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 9
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.019,
+      "fidelity_premium": null,
+      "total_rate": 0.019,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 12
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.019,
+      "fidelity_premium": null,
+      "total_rate": 0.019,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 24
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.019,
+      "fidelity_premium": null,
+      "total_rate": 0.019,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 36
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.02,
+      "fidelity_premium": null,
+      "total_rate": 0.02,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 48
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.022,
+      "fidelity_premium": null,
+      "total_rate": 0.022,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 60
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": 0.0265,
+      "fidelity_premium": null,
+      "total_rate": 0.0265,
+      "account_type": "Termijnrekening",
+      "min_deposit": 10000,
+      "max_deposit": null,
+      "conditions": "Taux fixe garanti, argent bloqué pour toute la durée du contrat.",
+      "duration": 120
+    }
+  ],
+  "reused_from": "pw_banque_triodos_term_1_2026-05-07.json"
+}

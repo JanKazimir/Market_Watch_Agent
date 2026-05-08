@@ -1,11 +1,11 @@
 {
-  "source": "crelan_term",
+  "source": "banque_cph_regulated",
   "data_type": "products",
-  "date_old": "2026-05-06",
-  "date_new": "2026-05-07",
+  "date_old": "2026-05-07",
+  "date_new": "2026-05-08",
   "generated_at": "2026-05-08T14:33:03",
-  "checksum_old": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
-  "checksum_new": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
+  "checksum_old": "fa1042fb81dc261bb23b4a9f37bf99e9258062897f1f187e20cd80f4600c6291",
+  "checksum_new": "fa1042fb81dc261bb23b4a9f37bf99e9258062897f1f187e20cd80f4600c6291",
   "checksums_match": true,
   "total_changes": 0,
   "summary": {

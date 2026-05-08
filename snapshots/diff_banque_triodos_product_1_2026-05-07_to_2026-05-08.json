@@ -1,11 +1,11 @@
 {
-  "source": "crelan_term",
+  "source": "banque_triodos_product_1",
   "data_type": "products",
-  "date_old": "2026-05-06",
-  "date_new": "2026-05-07",
+  "date_old": "2026-05-07",
+  "date_new": "2026-05-08",
   "generated_at": "2026-05-08T14:33:03",
-  "checksum_old": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
-  "checksum_new": "f6dc4c0f21d389ce87cc123e6a6a0fd0eda5ab1d1820339317b7dcb881e7c563",
+  "checksum_old": "06068d081042a9db8f1a49b697c848e25da501600eeb9cfe973619d701f8f6dc",
+  "checksum_new": "06068d081042a9db8f1a49b697c848e25da501600eeb9cfe973619d701f8f6dc",
   "checksums_match": true,
   "total_changes": 0,
   "summary": {

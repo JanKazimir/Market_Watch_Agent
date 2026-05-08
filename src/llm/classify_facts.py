@@ -134,3 +134,9 @@ def get_llm_summary_fact_and_write_to_json(input_path=testing_input_path, output
 # run script with:
 # python src/llm/classify_facts.py
 
+def main():
+  get_llm_summary_fact_and_write_to_json(testing_input_path, testing_output_path, CLASSIFY_SYSTEM_PROMT)
+  
+
+if __name__ == "__main__":
+    main()

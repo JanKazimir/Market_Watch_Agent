@@ -16,11 +16,14 @@ from pathlib import Path
 #
 
 today = datetime.date.today().isoformat()
-DATA_DIR = Path(__file__).parent.parent / "data"
+BASE_DIR = Path(__file__).parent.parent.parent
+DATA_DIR = BASE_DIR / "data"
 CSV_PATH = DATA_DIR / "pdf_links_csv" / f"{today}_pdf_list.csv"
 LATEST_DIR = DATA_DIR / "pdfs" / "latest"
 ARCHIVE_DIR = DATA_DIR / "pdfs" / "archive"
 OUTPUT_DIR = DATA_DIR / "outputs"
+
+
 
 
 def checksum(data: bytes) -> str:
@@ -124,6 +127,7 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
 
 
 def main():
+    
     print("Starting pdf...")
     rows = load_links(CSV_PATH)
     print("Downloading and checking pdf files...")
