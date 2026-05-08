@@ -4,3 +4,9 @@
 ==================================================
 [11:56:32] test_function | testing the looging function
 [11:56:32] test_function | OK
+
+==================================================
+[12:07:50] Starting: test_function
+==================================================
+[12:07:50] test_function | testing the looging function
+[12:07:50] test_function | OK

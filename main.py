@@ -19,6 +19,11 @@ log_path = LOG_DIR / f"{today}_pipeline.log"
 test_function_path = SRC_DIR / "test_function.py"
 
 
+
+#
+# Functions:
+#
+
 ## Function to run a script, and write its console to file.
 def run_step(script, log_file=log_path):
     name = Path(script).stem
@@ -56,7 +61,9 @@ def main():
     print("testing main...")
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     with open(log_path, "a") as log_file:
-        run_step(test_function_path, log_file)
+        print("Pipeline started...")
+        print("Starting to... ")
+        #run_step(test_function_path, log_file)
 
 
 if __name__ == "__main__":
