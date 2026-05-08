@@ -18,4 +18,5 @@ dependencies = [
     "playwright>=1.59.0",
     "pydantic>=2.13.3",
     "requests>=2.33.1",
+    "streamlit>=1.57.0",
 ]
