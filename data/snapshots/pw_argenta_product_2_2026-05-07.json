@@ -1,0 +1,26 @@
+{
+  "source": "argenta_product_2",
+  "url": "https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html",
+  "timestamp": "2026-05-07T16:10:23",
+  "date": "2026-05-07",
+  "scraper": "playwright",
+  "bank": "Argenta",
+  "raw_text_checksum": "643944150e91df64dfd4d6d92cc69d1950f78c039ba34404108d6f6b85c89436",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "88e71be014f140511e1b79ac1c9e8fc4acd12c7d439d944dfa4ad8e7141e718c",
+  "products": [
+    {
+      "bank": "Argenta Banque d’Épargne SA",
+      "product_name": "e-épargne",
+      "base_rate": 0.2,
+      "fidelity_premium": 0.3,
+      "total_rate": 0.5,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": 2000000,
+      "conditions": "Prime de fidélité versée 4 fois par an si l'épargne reste sur le compte pendant 12 mois sans interruption.",
+      "duration": null
+    }
+  ]
+}

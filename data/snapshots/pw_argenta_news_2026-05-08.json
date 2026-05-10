@@ -1,0 +1,12 @@
+{
+  "source": "argenta_news",
+  "url": "https://www.argenta.be/fr/a-propos-d-argenta/presse.html",
+  "timestamp": "2026-05-08T12:24:21",
+  "date": "2026-05-08",
+  "scraper": "playwright",
+  "bank": "Argenta",
+  "raw_text_checksum": "44355175338a51f72dd17d5ad064a902845bd3be00f955ca4ebca105379352ae",
+  "num_articles": 0,
+  "checksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "articles": []
+}

@@ -1,0 +1,20 @@
+{
+  "source": "kbc_banque_product_1",
+  "data_type": "products",
+  "date_old": "2026-05-07",
+  "date_new": "2026-05-08",
+  "generated_at": "2026-05-08T14:33:03",
+  "checksum_old": "5db83c371444058ee3e37c13abd9ffa4f0d70780081d83005dd2d5c7d7e5729c",
+  "checksum_new": "5db83c371444058ee3e37c13abd9ffa4f0d70780081d83005dd2d5c7d7e5729c",
+  "checksums_match": true,
+  "total_changes": 0,
+  "summary": {
+    "rate_changes": 0,
+    "condition_changes": 0,
+    "rating_changes": 0,
+    "other_changes": 0,
+    "products_added": 0,
+    "products_removed": 0
+  },
+  "changes": []
+}

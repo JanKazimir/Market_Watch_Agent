@@ -1,0 +1,93 @@
+{
+  "date": "2026-05-08",
+  "generated_at": "2026-05-08T14:34:38",
+  "num_sources": 24,
+  "sources": [
+    "argenta_product_1",
+    "argenta_product",
+    "argenta_product_2",
+    "argenta_product_3",
+    "argenta_regulated",
+    "argenta_term",
+    "bankb_regulated",
+    "bankb_savings",
+    "banque_cph_regulated",
+    "banque_triodos_product_1",
+    "banque_triodos_product",
+    "banque_triodos_product_2",
+    "banque_triodos_regulated",
+    "banque_triodos_savings",
+    "banque_triodos_term_1",
+    "banque_triodos_term",
+    "belfius_savings",
+    "crelan_savings",
+    "kbc_banque_product_1",
+    "kbc_banque_product",
+    "kbc_banque_product_2",
+    "kbc_banque_term",
+    "medirect_savings",
+    "revolut_bank_uab___belgian_branch_savings"
+  ],
+  "products_matched_across_sources": 7,
+  "total_discrepancies": 4,
+  "rate_discrepancies": 0,
+  "condition_discrepancies": 4,
+  "discrepancies": [
+    {
+      "type": "condition_discrepancy",
+      "bank": "Argenta",
+      "product_name": "Compte de fidélité",
+      "field": "max_deposit",
+      "sources": {
+        "argenta_product_1": 2000000,
+        "argenta_regulated": null
+      },
+      "product_name_per_source": {
+        "argenta_product_1": "Compte de fidélité",
+        "argenta_regulated": "Compte de fidélité"
+      }
+    },
+    {
+      "type": "condition_discrepancy",
+      "bank": "Argenta",
+      "product_name": "Compte Maxi",
+      "field": "max_deposit",
+      "sources": {
+        "argenta_product_3": null,
+        "argenta_regulated": 2000000
+      },
+      "product_name_per_source": {
+        "argenta_product_3": "Compte Maxi",
+        "argenta_regulated": "Compte Maxi"
+      }
+    },
+    {
+      "type": "condition_discrepancy",
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos",
+      "field": "min_deposit",
+      "sources": {
+        "banque_triodos_savings": null,
+        "banque_triodos_term": 10000
+      },
+      "product_name_per_source": {
+        "banque_triodos_savings": "Compte à terme Triodos",
+        "banque_triodos_term": "Compte à terme Triodos"
+      }
+    },
+    {
+      "type": "condition_discrepancy",
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "field": "min_deposit",
+      "sources": {
+        "banque_triodos_savings": null,
+        "banque_triodos_term_1": 10000
+      },
+      "product_name_per_source": {
+        "banque_triodos_savings": "Compte à terme Triodos Junior",
+        "banque_triodos_term_1": "Compte à terme Triodos Junior"
+      }
+    }
+  ]
+}

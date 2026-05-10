@@ -1,0 +1,20 @@
+{
+  "source": "bnp_savings",
+  "data_type": "products",
+  "date_old": "2026-05-06",
+  "date_new": "2026-05-07",
+  "generated_at": "2026-05-08T14:33:03",
+  "checksum_old": "9c4e05f23eefc12687cec1d6089fe424abab2592e3053e03c116f9ede1d63162",
+  "checksum_new": "9c4e05f23eefc12687cec1d6089fe424abab2592e3053e03c116f9ede1d63162",
+  "checksums_match": true,
+  "total_changes": 0,
+  "summary": {
+    "rate_changes": 0,
+    "condition_changes": 0,
+    "rating_changes": 0,
+    "other_changes": 0,
+    "products_added": 0,
+    "products_removed": 0
+  },
+  "changes": []
+}
