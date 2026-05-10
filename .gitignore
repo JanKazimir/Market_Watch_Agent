@@ -1,0 +1,23 @@
+# Secrets
+.env
+.venv/secrets.py
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+
+# Data (generated at runtime)
+data/snapshots/
+data/logs/
+data/outputs/
+data/pdfs/
+data/pdf_links_csv/
+
+# OS
+.DS_Store
+*.Zone.Identifier
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
