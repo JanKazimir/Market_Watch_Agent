@@ -1,6 +1,6 @@
 ## This is a script to read the excell file and take the values into a useable format for the rest of the pipeline.
 
-## Target is a csv of these : 
+## Target is a csv of these :
 #source_key : crelan_saving or crelan_terms
 #bank: Crelan
 #url: the url
@@ -29,7 +29,7 @@ import csv
 
 today = datetime.date.today().isoformat()
 
-EXCEL_PATH = Path(__file__).parent.parent / "data" / "list_of_banks_ref.xlsx"
+EXCEL_PATH = Path(__file__).parent.parent / "data" / "list_of_banks_ref_new.xlsx"
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "pdf_links_csv" / f"{today}_pdf_list.csv"
 
 
@@ -54,7 +54,7 @@ OUTPUT_PATH = Path(__file__).parent.parent / "data" / "pdf_links_csv" / f"{today
 #   source_key : e.g. argenta_saving, argenta_terms
 #   bank       : e.g. Argenta
 #   url        : the pdf url to scrape
-#   product_type : regulated / unregulated 
+#   product_type : regulated / unregulated
 #   language   : nl / fr (inferred from url)
 #   pdf_source   : source_url of the pdf download link
 

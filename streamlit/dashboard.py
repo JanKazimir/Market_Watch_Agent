@@ -5,8 +5,35 @@ import streamlit as st
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-SNAPSHOTS_DIR = Path(__file__).parent.parent / "snapshots"
+SNAPSHOTS_DIR = Path(__file__).parent.parent / "data" / "snapshots"
 st.set_page_config(page_title="Daily Market Watch", page_icon="📊", layout="wide")
+
+SAVINGS_KEYWORDS = [
+    "épargne",
+    "sparen",
+    "savings",
+    "taux",
+    "rente",
+    "rate",
+    "intérêt",
+    "compte",
+    "rekening",
+    "account",
+    "dépôt",
+    "deposit",
+    "terme",
+    "fidélité",
+    "fidelity",
+    "getrouwheid",
+    "boost",
+    "promo",
+    "campagne",
+    "rendement",
+    "basisrente",
+    "base rate",
+    "réglementé",
+    "gereglementeerd",
+]
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 
@@ -65,6 +92,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
+def is_relevant(article):
+    text = f"{article.get('title', '')} {article.get('description', '')}".lower()
+    return any(kw in text for kw in SAVINGS_KEYWORDS)
 
 def load_json(path):
     if Path(path).exists():
@@ -126,11 +156,29 @@ lecho         = load_json(SNAPSHOTS_DIR / f"lecho_entreprises_banques_{selected_
 
 changes  = diff_all.get("changes", [])
 sources  = [s["source"] for s in diff_all.get("sources", [])]
-articles = lecho.get("articles", [])
 discs    = discrepancies.get("discrepancies", [])
 
 high_count = sum(1 for c in changes if classify_impact(c) == "HIGH")
 med_count  = sum(1 for c in changes if classify_impact(c) == "MED")
+
+# Load all news sources (l'Echo + bank newsrooms)
+all_articles = []
+
+# L'Echo RSS
+lecho = load_json(SNAPSHOTS_DIR / f"lecho_entreprises_banques_{selected_date}.json")
+for a in lecho.get("articles", []):
+    a["news_source"] = "lecho.be"
+    all_articles.append(a)
+
+# Bank newsroom snapshots
+for nf in sorted(SNAPSHOTS_DIR.glob(f"pw_*_news_{selected_date}.json")):
+    data = load_json(nf)
+    for a in data.get("articles", []):
+        a["news_source"] = data.get("bank", data.get("source", ""))
+        all_articles.append(a)
+
+# Filter: keep all l'Echo, only savings-relevant from bank newsrooms
+articles = [a for a in all_articles if a["news_source"] == "lecho.be" or is_relevant(a)]
 
 # ── Header ────────────────────────────────────────────────────────────────────
 
@@ -218,9 +266,12 @@ else:
             pub_fmt = dt.strftime("%d %b %Y")
         except Exception:
             pub_fmt = pub[:16] if pub else ""
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="news-item">
             <div class="news-title"><a href="{link}" target="_blank">{title}</a></div>
-            <div class="news-meta">lecho.be — {pub_fmt}</div>
-        </div>""", unsafe_allow_html=True)
+            <div class="news-meta">{article.get('news_source', '')} — {pub_fmt}</div>
+        </div>""",
+            unsafe_allow_html=True,
+        )
 st.markdown('</div>', unsafe_allow_html=True)
