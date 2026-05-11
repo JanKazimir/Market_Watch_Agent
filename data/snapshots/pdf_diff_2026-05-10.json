@@ -1,0 +1,414 @@
+{
+  "date": "2026-05-10",
+  "products": "pdf_savings",
+  "summary": {
+    "unchanged": 14,
+    "updated": 1,
+    "not_a_link": 0,
+    "dead_link": 0,
+    "error": 2
+  },
+  "entries": [
+    {
+      "source_key": "argenta_tarif",
+      "bank": "Argenta",
+      "url": "https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf",
+      "product_type": "tarif",
+      "language": "fr",
+      "pdf_source": "https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre",
+      "status": "updated",
+      "detail": "Content changed"
+    },
+    {
+      "source_key": "bnp_paribas_fortis_saving",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "regulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=120)"
+    },
+    {
+      "source_key": "bnp_paribas_fortis_terms",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "unregulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=120)"
+    }
+  ],
+  "pdf_diffs": [
+    {
+      "old_file": "/Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdfs/archive/2026-05-11_Liste%20des%20tarifs.pdf",
+      "new_file": "/Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdfs/latest/Liste%20des%20tarifs.pdf",
+      "has_changes": true,
+      "text_diffs": [
+        {
+          "context_before": [
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026. We're making Kliti Hamataj CEO of the bank, effective immediately"
+          ],
+          "context_after": [
+            "TABLE DES MATIÈRES",
+            "PRODUITS ÉMIS PAR ARGENTA BANQUE D'EPARGNE SA",
+            "1. Comptes de paiement"
+          ]
+        },
+        {
+          "context_before": [
+            "Voir 1. Compte de paiement",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 5/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "2.6 PERTE OU VOL DE LA CARTE",
+            "2.7 RESPONSABILITÉ",
+            "Carte de débit (Bancontact/Maestro) et Carte de crédit (Martercard/Mastercard Gold) 50,00 EUR"
+          ]
+        },
+        {
+          "context_before": [
+            "Les retraits d'argent ont une influence sur les montants pour lesquels la garantie de la prime est la moins éloignée dans le temps.",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 6/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "3.A.1.3 IMPÔTS (2)",
+            "3.A.1.4 DATE VALEUR",
+            "3.A.1.5 ASSURANCES COMPLÉMENTAIRES"
+          ]
+        },
+        {
+          "context_before": [
+            "3.A.2.3 IMPÔTS (1)",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 7/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "3.A.2.4 DATE VALEUR",
+            "3.A.2.5 ASSURANCES COMPLÉMENTAIRES",
+            "Pas possible."
+          ]
+        },
+        {
+          "context_before": [
+            "3.A.4.1 FRAIS DE GESTION",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 8/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "3.A.4.2 TAUX D'INTÉRÊT CRÉDITEUR",
+            "Le taux de base est calculé sur le solde tenant compte du nombre de jours calendriers de placement du capital. Le tarif du taux de base n’est pas garanti, en cas de modification le nouveau taux",
+            "d’intérêt est immédiatement d'application. Les intérêts sont versés annuellement avec date valeur 01/01."
+          ]
+        },
+        {
+          "context_before": [
+            "3.B.1.1 FRAIS DE GESTION",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 9/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "3.B.1.2 TAUX D'INTÉRÊT CRÉDITEUR",
+            "Le taux de base est calculé sur le solde tenant compte du nombre de jours calendriers de placement du capital. Le tarif du taux de base n’est pas garanti, en cas de modification le nouveau taux",
+            "d’intérêt est immédiatement d'application Les intérêts seront versés annuellement avec date valeur 01/01."
+          ]
+        },
+        {
+          "context_before": [
+            "(1) Les revenus d’un compte d’épargne non réglementé ne sont pas exonérés du précompte mobilier.",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 10/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "4. PLACEMENTS À TERME",
+            "4.A DÉPOTS À TERME (avec P.M.)",
+            "Placements possibles à partir de 250 EUR"
+          ]
+        },
+        {
+          "context_before": [
+            "4.B DÉPOTS À TERME PRO",
+            "Placements possibles à partir de 5.000 EUR",
+            "4.B.1 FRAIS DE GESTION"
+          ],
+          "removed": [
+            "4.B.2 TAUX D'NTÉRÊT CRÉDITEUR"
+          ],
+          "added": [],
+          "context_after": [
+            "4.B.3 IMPÔTS",
+            "Précompte mobilier 30,00%",
+            "4.B.4 DATE VALEUR"
+          ]
+        },
+        {
+          "context_before": [
+            "Versement jour du versement",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 11/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "Remboursement date de l'échéance (1)",
+            "(1) Si la date d'échéance tombe un samedi, un dimanche ou un jour férié, le remboursement du capital aura lieu le premier jour de travail bancaire suivant.",
+            "4.B.5 ASSURANCES COMPLÉMENTAIRES"
+          ]
+        },
+        {
+          "context_before": [
+            "Modalités de calcul remboursement anticipé : voir le Règlement Général des Opérations.",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 12/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "5. Compte titres/Compte dépôt titres",
+            "Le client peut détenir des titres sur un compte titres et/ou un compte dépôt titres. Pour le compte titres, il s'agit des titres suivants (énumération non-limitative): bons de caisse Argenta, bons de",
+            "caisse/bons d'épargne non-Argenta, certificats (subordonnés), actions, obligations, parts/actions d'institutions de placement, OLO's. Pour le compte dépôt titres, il s'agit des titres suivants"
+          ]
+        },
+        {
+          "context_before": [
+            "6.3 DATE VALEUR",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 13/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "6.4 ASSURANCES COMPLÉMENTAIRES",
+            "Pas possible.",
+            "6.5 DÉPÔTS EN CONSIGNATION"
+          ]
+        },
+        {
+          "context_before": [
+            "8. ORDRES DE BOURSE (1) (3) (4) (5) (6)",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 14/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "(1) Tous les prix sont applicables par transaction.",
+            "(2) Pour les transactions sur certains marchés étrangers, un impôt étranger / une taxe étrangère supplémentaire sera facturé(e).",
+            "(3) En cas d’exécution de l’ordre par le biais de plusieurs ordres partiels répartis sur plusieurs jours: dans une mise en oeuvre partielle, le coût minimum sera toujours facturé et ce coût minimum"
+          ]
+        },
+        {
+          "context_before": [
+            "Pas possible",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 15/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "12. Virements internationaux",
+            "Un virement international est un virement effectué au départ ou vers un pays hors de la zone SEPA ou un virement exprimé dans une devise autre que l'euro. C'est toujours un virement, en euros",
+            "ou en devise étrangère, qui n'est pas un virement européen, reprenant le code BIC du payeur et le numéro IBAN - ou le numéro de compte, en fonction du pays - et le code BIC du bénéficiaire."
+          ]
+        },
+        {
+          "context_before": [
+            "débiteur fixe de 3,95 %, vous effectuez 60 remboursements mensuels de 295,34 euros, soit au total 17.720,40 euros. Pour un prêt à tempérament en vue de travaux de rénovation",
+            "de votre habitation.",
+            "(6) Exemple représentatif: pour un prêt à tempérament de 14.811 euros, d’une durée de 60 mois, sur la base d’un taux annuel effectif global fixe, avec un taux d’intérêt débiteur"
+          ],
+          "removed": [
+            "fixe de 3,49 %, vous effectuez 60 remboursements mensuels de 269,01 euros, soit au total 16.140,60 euros. Pour un prêt à tempérament en vue de travaux de rénovation"
+          ],
+          "added": [
+            "fixe de 3,59 %, vous effectuez 60 remboursements mensuels de 269,65 euros, soit au total 16.179,00 euros. Pour un prêt à tempérament en vue de travaux de rénovation"
+          ],
+          "context_after": [
+            "écologiques de votre habitation.",
+            "(7) Exemple représentatif: pour un prêt à tempérament de 8.767 euros, d’une durée de 36 mois, sur la base d’un taux annuel effectif global fixe, avec un taux d’intérêt débiteur",
+            "fixe de 7,69 %, vous effectuez 36 remboursements mensuels de 272,43 euros, soit au total 9.807,48 euros. Ce taux s’applique aux prêts à tempérament pour le financement"
+          ]
+        },
+        {
+          "context_before": [
+            "fixe de 3,49 %, vous effectuez 60 remboursements mensuels de 269,01 euros, soit au total 16.140,60 euros. Pour un prêt à tempérament en vue de travaux de rénovation",
+            "écologiques de votre habitation.",
+            "(7) Exemple représentatif: pour un prêt à tempérament de 8.767 euros, d’une durée de 36 mois, sur la base d’un taux annuel effectif global fixe, avec un taux d’intérêt débiteur"
+          ],
+          "removed": [
+            "fixe de 7,59 %, vous effectuez 36 remboursements mensuels de 272,06 euros, soit au total 9.794,16 euros. Ce taux s’applique aux prêts à tempérament pour le financement"
+          ],
+          "added": [
+            "fixe de 7,69 %, vous effectuez 36 remboursements mensuels de 272,43 euros, soit au total 9.807,48 euros. Ce taux s’applique aux prêts à tempérament pour le financement"
+          ],
+          "context_after": [
+            "d'autres dépenses.",
+            "Délai maximum en fonction du capital emprunté:",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 16/20"
+          ]
+        },
+        {
+          "context_before": [
+            "Délai maximum en fonction du capital emprunté:",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 16/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "14. Ouverture de crédit avec garantie hypothécaire (crédits hypothécaires)",
+            "Le prospectus et la carte tarifaire sont disponibles dans votre agence ou sur www.argenta.be",
+            "15. Location de coffres"
+          ]
+        },
+        {
+          "context_before": [
+            "17. Correspondance",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 17/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "PRODUITS ÉMIS PAR ARGENTA ASSURANCES SA",
+            "18. ASSURANCES VIE BRANCHE 21 ET/OU BRANCHE 23: ARGENTA LIFE PLAN",
+            "Taxes et impôts Consultez le Document d'informations clés, disponible chez votre agent ou sur www.argenta.be"
+          ]
+        },
+        {
+          "context_before": [
+            "(1) possibilité de date échéance uniquement prévu en cas d'absence d'un volet branche 23",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 18/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "19. ASSURANCES VIE BRANCHE 21 ET/OU BRANCHE 23 AVEC UNE DURÉE FIXE D'AU MOINS 10 ANS: ARGENTA-FLEXX",
+            "Taxes et impôts Consultez la fiche info financière Assurances-Vie, disponible chez votre agent ou sur www.argenta.be",
+            "20. ASSURANCE VIE BRANCHE 21 AVEC UNE DURÉE FIXE D'AU MOINS 10 ANS: CAPITAL PLUS"
+          ]
+        },
+        {
+          "context_before": [
+            "www.ombudsfin.be www.ombudsman-insurance.be",
+            "Argenta Banque d'Epargne SA - Argenta Assurances SA 19/20",
+            "Liste des Tarifs"
+          ],
+          "removed": [
+            "Document n°: DW 26080 Valable à partir du: 04/05/2026"
+          ],
+          "added": [
+            "Document n°: DW 26083 Valable à partir du: 11/05/2026"
+          ],
+          "context_after": [
+            "Vous pouvez également adresser une plainte au Service public fédéral",
+            "Économie, PME, Classes moyennes et Énergie, Direction générale de",
+            "l'Inspection économique, City Atrium, Rue du Progrès 50, 1210 Bruxelles."
+          ]
+        }
+      ],
+      "table_diffs": [
+        {
+          "table_index": 72,
+          "row": 7,
+          "col": 0,
+          "header": "Durée Durée JKP* minimum maximum",
+          "before": "Rénovations écologiques 12 mois 180 mois 3,49 % - 4,09 %*(6)",
+          "after": "Rénovations écologiques 12 mois 180 mois 3,59 % - 4,09 %*(6)"
+        },
+        {
+          "table_index": 72,
+          "row": 8,
+          "col": 0,
+          "header": "Durée Durée JKP* minimum maximum",
+          "before": "Autres buts 12 mois 180 mois 7,59 % - 8,99 %*(7)",
+          "after": "Autres buts 12 mois 180 mois 7,69 % - 8,99 %*(7)"
+        }
+      ],
+      "table_rows_added": [],
+      "table_rows_removed": [],
+      "tables_added": [],
+      "tables_removed": [],
+      "source_key": "argenta_tarif",
+      "bank": "Argenta"
+    }
+  ]
+}

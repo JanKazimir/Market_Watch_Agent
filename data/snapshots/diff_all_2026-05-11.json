@@ -2,8 +2,8 @@
   "combined": true,
   "date_old": "2026-05-10",
   "date_new": "2026-05-11",
-  "generated_at": "2026-05-11T10:22:33",
-  "num_sources": 3,
+  "generated_at": "2026-05-11T15:04:26",
+  "num_sources": 4,
   "sources": [
     {
       "source": "bankshopper.be",
@@ -31,6 +31,22 @@
       "summary": {
         "new_articles": 1,
         "articles_updated": 0
+      }
+    },
+    {
+      "source": "",
+      "data_type": "products",
+      "date_old": "2026-05-10",
+      "date_new": "2026-05-11",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
       }
     },
     {
