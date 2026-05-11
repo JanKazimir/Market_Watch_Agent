@@ -2510,3 +2510,1829 @@ Pipeline started: 2026-05-11T09:51:33.282767
 Pipeline finished: 2026-05-11T10:22:46.185487
 Duration: 1872.9 seconds
 ##################################################
+
+##################################################
+Pipeline started: 2026-05-11T15:23:41.004369
+##################################################
+
+==================================================
+[15:23:41] Starting: bankshopper_scraper
+==================================================
+[15:23:41] bankshopper_scraper | 
+[15:23:41] bankshopper_scraper | ============================================================
+[15:23:41] bankshopper_scraper |   Bankshopper Scraper — 2026-05-11
+[15:23:41] bankshopper_scraper | ============================================================
+[15:23:41] bankshopper_scraper | 
+[15:23:41] bankshopper_scraper | [SCRAPE] Fetching HTML from bankshopper.be ...
+[15:23:41] bankshopper_scraper | [SCRAPE] Saved raw HTML → /home/kliti/code/becode/becode_projects/Market_Watch_Agent/data/snapshots/bankshopper_2026-05-11.html (372,404 bytes)
+[15:23:41] bankshopper_scraper | [EXTRACT] Parsing product data ...
+[15:23:41] bankshopper_scraper | [EXTRACT] Saved structured data → /home/kliti/code/becode/becode_projects/Market_Watch_Agent/data/snapshots/bankshopper_2026-05-11.json (50 products)
+[15:23:41] bankshopper_scraper | 
+[15:23:41] bankshopper_scraper | --- Summary ---
+[15:23:41] bankshopper_scraper | Products found: 50
+[15:23:41] bankshopper_scraper | Checksum: 24bb23d1dadd7a0d...
+[15:23:41] bankshopper_scraper | 
+[15:23:41] bankshopper_scraper | Sample products:
+[15:23:41] bankshopper_scraper |   Beobank — Beobank Klassieke Spaarrekening
+[15:23:41] bankshopper_scraper |     Base: 0.45% | Fidelity: 0.55% | Total: 1.0%
+[15:23:41] bankshopper_scraper | 
+[15:23:41] bankshopper_scraper |   BNP Paribas Fortis — BNP Paribas Fortis Spaarrekening Plus
+[15:23:41] bankshopper_scraper |     Base: 0.5% | Fidelity: 1.25% | Total: 1.75%
+[15:23:41] bankshopper_scraper | 
+[15:23:41] bankshopper_scraper |   Triodos Bank — Triodos Bank Impact Savings Junior
+[15:23:41] bankshopper_scraper |     Base: 0.35% | Fidelity: 0.25% | Total: 0.6%
+[15:23:41] bankshopper_scraper | 
+[15:23:41] bankshopper_scraper | OK
+
+==================================================
+[15:23:41] Starting: bankshopper_scraper_term_acc
+==================================================
+[15:23:42] bankshopper_scraper_term_acc | 
+[15:23:42] bankshopper_scraper_term_acc | ============================================================
+[15:23:42] bankshopper_scraper_term_acc |   Bankshopper Scraper — 2026-05-11
+[15:23:42] bankshopper_scraper_term_acc | ============================================================
+[15:23:42] bankshopper_scraper_term_acc | 
+[15:23:42] bankshopper_scraper_term_acc | [SCRAPE] Fetching HTML from bankshopper.be ...
+[15:23:42] bankshopper_scraper_term_acc | [SCRAPE] Saved raw HTML → data/snapshots/bankshopper_term_acc_2026-05-11.html (692,431 bytes)
+[15:23:42] bankshopper_scraper_term_acc | [EXTRACT] Parsing product data ...
+[15:23:42] bankshopper_scraper_term_acc | [EXTRACT] Saved structured data → data/snapshots/bankshopper_term_acc_2026-05-11.json (145 products)
+[15:23:42] bankshopper_scraper_term_acc | 
+[15:23:42] bankshopper_scraper_term_acc | --- Summary ---
+[15:23:42] bankshopper_scraper_term_acc | Products found: 145
+[15:23:42] bankshopper_scraper_term_acc | Checksum: 1c469277a6d1f615...
+[15:23:42] bankshopper_scraper_term_acc | 
+[15:23:42] bankshopper_scraper_term_acc | Sample products:
+[15:23:42] bankshopper_scraper_term_acc |   None — AXA Certirente (2 jaar)
+[15:23:42] bankshopper_scraper_term_acc |     Bruto: 2.0% | Netto: 1.4%
+[15:23:42] bankshopper_scraper_term_acc | 
+[15:23:42] bankshopper_scraper_term_acc |   None — AXA Certirente (3 jaar)
+[15:23:42] bankshopper_scraper_term_acc |     Bruto: 2.7% | Netto: 1.925%
+[15:23:42] bankshopper_scraper_term_acc | 
+[15:23:42] bankshopper_scraper_term_acc |   None — AXA Certirente (4 jaar)
+[15:23:42] bankshopper_scraper_term_acc |     Bruto: 2.05% | Netto: 1.435%
+[15:23:42] bankshopper_scraper_term_acc | 
+[15:23:42] bankshopper_scraper_term_acc | OK
+
+==================================================
+[15:23:42] Starting: lecho_rss
+==================================================
+[15:23:43] lecho_rss | Successfully saved top_stories snapshot to: data/snapshots/lecho_top_stories_2026-05-11.json
+[15:23:43] lecho_rss | Successfully saved entreprises_banques snapshot to: data/snapshots/lecho_entreprises_banques_2026-05-11.json
+[15:23:43] lecho_rss | OK
+
+==================================================
+[15:23:43] Starting: playright_scraper
+==================================================
+[15:59:48] playright_scraper | ============================================================
+[15:59:48] playright_scraper |   Playwright Bank Scraper (Excel-Driven)
+[15:59:48] playright_scraper |   Date: 2026-05-11
+[15:59:48] playright_scraper | ============================================================
+[15:59:48] playright_scraper | [EXCEL] Loaded 52 URLs from 14 banks
+[15:59:48] playright_scraper |         29 product, 6 news, 17 PDF check pages
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | news | argenta_news
+[15:59:48] playright_scraper |   https://www.argenta.be/fr/a-propos-d-argenta/presse.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/a-propos-d-argenta/presse.html...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 3200 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 3200 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 6 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_news_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | tarif_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Found 8 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[15:59:48] playright_scraper |   [PDF] Removed PDF links:
+[15:59:48] playright_scraper |     - https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-tarif.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_tarif_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | regulated_savings | argenta_regulated_savings
+[15:59:48] playright_scraper |   https://www.argenta.be/fr/epargner/compte-d-epargne.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne.html...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 10178 characters
+[15:59:48] playright_scraper |   [CACHE] Unchanged, reused pw_argenta_regulated_savings_2026-05-10.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Found 4 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Found 5 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_1_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Found 5 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_2_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Found 5 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_3_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | term_accounts | argenta_term_accounts
+[15:59:48] playright_scraper |   https://www.argenta.be/fr/epargner/depot-a-terme.html#fonctionne
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/depot-a-terme.html#fonctionne...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 7099 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 7099 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 6 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Argenta | term_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/depot-a-terme.html#documents...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Found 4 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[15:59:48] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_argenta_term_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BNP Paribas Fortis | news | bnp_paribas_fortis_news
+[15:59:48] playright_scraper |   https://newsroom.bnpparibasfortis.be/fr
+[15:59:48] playright_scraper |   [PW] Navigating to https://newsroom.bnpparibasfortis.be/fr...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 5831 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 5831 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 12 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_bnp_paribas_fortis_news_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BNP Paribas Fortis | regulated_savings | bnp_paribas_fortis_regulated_savings
+[15:59:48] playright_scraper |   https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account-comparison
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account-comparison...
+[15:59:48] playright_scraper |   [PW] ERROR: Page.goto: Timeout 30000ms exceeded.
+[15:59:48] playright_scraper | Call log:
+[15:59:48] playright_scraper |   - navigating to "https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account-comparison", waiting until "domcontentloaded"
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   SKIPPED: No content
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BNP Paribas Fortis | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Direct PDF: https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf
+[15:59:48] playright_scraper |   [PDF] ERROR: HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=15)
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_bnp_paribas_fortis_regulated_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BNP Paribas Fortis | term_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Direct PDF: https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf
+[15:59:48] playright_scraper |   [PDF] ERROR: HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=15)
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_bnp_paribas_fortis_term_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BankB | regulated_savings | bankb_regulated_savings
+[15:59:48] playright_scraper |   https://www.bankb.be/fr-be/epargner/compte-depargne
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.bankb.be/fr-be/epargner/compte-depargne...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 8876 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 8876 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_bankb_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BankB | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Direct PDF: https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf
+[15:59:48] playright_scraper |   [PDF] PDF may have changed! Headers differ from previous.
+[15:59:48] playright_scraper |     Last-Modified: Tue, 27 Jan 2026 12:42:19 GMT
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_bankb_regulated_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BankB | term_accounts | bankb_term_accounts
+[15:59:48] playright_scraper |   https://www.bankb.be/fr-be/epargner/compte-terme
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.bankb.be/fr-be/epargner/compte-terme...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 5589 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 5589 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 5 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_bankb_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   BankB | term_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Direct PDF: https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf
+[15:59:48] playright_scraper |   [PDF] PDF may have changed! Headers differ from previous.
+[15:59:48] playright_scraper |     Last-Modified: Thu, 30 Apr 2026 07:16:49 GMT
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_bankb_term_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque CPH | regulated_savings | banque_cph_regulated_savings
+[15:59:48] playright_scraper |   https://www.cph.be/epargner/comptes-depargne-reglementes-commercialises-par-la-banque-cph/
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.cph.be/epargner/comptes-depargne-reglementes-commercialises-par-la-banque-cph/...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('Accepter tout')
+[15:59:48] playright_scraper |   [PW] Extracted 10149 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 10149 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 4 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_cph_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | news | banque_triodos_news
+[15:59:48] playright_scraper |   https://www.triodos.be/fr/actualite
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/actualite...
+[15:59:48] playright_scraper |   [PW] Extracted 4662 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 4662 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 0 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_news_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | tarif_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-a-terme
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-a-terme...
+[15:59:48] playright_scraper |   [PW] Found 0 PDF links on page
+[15:59:48] playright_scraper |   No PDF links found on parent page
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_tarif_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | regulated_savings | banque_triodos_regulated_savings
+[15:59:48] playright_scraper |   https://www.triodos.be/fr/epargner/protocole-transparence-epargne
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/protocole-transparence-epargne...
+[15:59:48] playright_scraper |   [PW] Extracted 9087 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 9087 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 3 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-epargne
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-epargne...
+[15:59:48] playright_scraper |   [PW] Found 0 PDF links on page
+[15:59:48] playright_scraper |   No PDF links found on parent page
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-epargne-fidelity
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-epargne-fidelity...
+[15:59:48] playright_scraper |   [PW] Found 1 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://www.triodos.be/binaries/content/assets/tbbe/fr/general/banque-triodos---exigences-minimales-2022.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_pdf_1_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-epargne-junior
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-epargne-junior...
+[15:59:48] playright_scraper |   [PW] Found 0 PDF links on page
+[15:59:48] playright_scraper |   No PDF links found on parent page
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_pdf_2_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | term_accounts | banque_triodos_term_accounts
+[15:59:48] playright_scraper |   https://www.triodos.be/fr/epargner/compte-a-terme
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-a-terme...
+[15:59:48] playright_scraper |   [PW] Extracted 12123 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 12123 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 9 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Banque Triodos | term_accounts | banque_triodos_term_accounts_1
+[15:59:48] playright_scraper |   https://www.triodos.be/fr/epargner/compte-a-terme-junior
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-a-terme-junior...
+[15:59:48] playright_scraper |   [PW] Extracted 11895 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 11895 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 9 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_term_accounts_1_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Belfius | regulated_savings | belfius_regulated_savings
+[15:59:48] playright_scraper |   https://www.belfius.be/site/retail/fr/produits/epargner/comptes-epargne-reglementes
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.belfius.be/site/retail/fr/produits/epargner/comptes-epargne-reglementes...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 7945 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 7945 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 3 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_belfius_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Crelan | term_accounts | crelan_term_accounts
+[15:59:48] playright_scraper |   https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 6919 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 6919 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 10 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_crelan_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Crelan | regulated_savings | crelan_regulated_savings
+[15:59:48] playright_scraper |   https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/le-compte-depargne
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/le-compte-depargne...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[15:59:48] playright_scraper |   [PW] Extracted 8961 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 8961 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 4 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_crelan_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   KBC Banque | regulated_savings | kbc_banque_regulated_savings
+[15:59:48] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html...
+[15:59:48] playright_scraper |   [PW] Extracted 6139 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 6139 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   KBC Banque | regulated_savings | kbc_banque_regulated_savings_1
+[15:59:48] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav...
+[15:59:48] playright_scraper |   [PW] Extracted 7161 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 7161 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_savings_1_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   KBC Banque | regulated_savings | kbc_banque_regulated_savings_2
+[15:59:48] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav...
+[15:59:48] playright_scraper |   [PW] Extracted 9597 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 9597 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_savings_2_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   KBC Banque | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html...
+[15:59:48] playright_scraper |   [PW] Found 4 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/NCI/0012_F.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3591_fr.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_pdf_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   KBC Banque | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav...
+[15:59:48] playright_scraper |   [PW] Found 4 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3770_fr.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_pdf_1_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   KBC Banque | regulated_pdf | PDF CHECK
+[15:59:48] playright_scraper |   Parent page: https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav...
+[15:59:48] playright_scraper |   [PW] Found 4 PDF links on page
+[15:59:48] playright_scraper |   [PDF] NEW PDF links detected!
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/NCI/0012_F.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3770_fr.pdf
+[15:59:48] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_pdf_2_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   KBC Banque | term_accounts | kbc_banque_term_accounts
+[15:59:48] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/compte-a-terme.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/compte-a-terme.html...
+[15:59:48] playright_scraper |   [PW] Extracted 6000 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 6000 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 2 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   MeDirect | regulated_savings | medirect_regulated_savings
+[15:59:48] playright_scraper |   https://www.medirect.be/nl-be/vergelijking-van-spaarrekeningen/
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.medirect.be/nl-be/vergelijking-van-spaarrekeningen/...
+[15:59:48] playright_scraper |   [PW] Extracted 9692 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 9692 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 4 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_medirect_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   MeDirect | term_accounts | medirect_term_accounts
+[15:59:48] playright_scraper |   https://www.medirect.be/nl-be/sparen/termijnrekening/
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.medirect.be/nl-be/sparen/termijnrekening/...
+[15:59:48] playright_scraper |   [PW] Extracted 5583 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 5583 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 9 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_medirect_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Revolut Bank UAB - Belgian Branch | news | revolut_bank_uab___belgian_branch_news
+[15:59:48] playright_scraper |   https://www.revolut.com/en-BE/news/
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.revolut.com/en-BE/news/...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('Accept all')
+[15:59:48] playright_scraper |   [PW] Extracted 6487 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 6487 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 10 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_revolut_bank_uab___belgian_branch_news_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Revolut Bank UAB - Belgian Branch | term_accounts | revolut_bank_uab___belgian_branch_term_accounts
+[15:59:48] playright_scraper |   https://www.revolut.com/en-BE/our-pricing-plans/
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.revolut.com/en-BE/our-pricing-plans/...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button:has-text('Accept all')
+[15:59:48] playright_scraper |   [PW] Extracted 11191 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 11191 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 4 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_revolut_bank_uab___belgian_branch_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Beobank | term_accounts | beobank_term_accounts
+[15:59:48] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-a-terme.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-a-terme.html...
+[15:59:48] playright_scraper |   [PW] Extracted 14233 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 14233 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 3 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_beobank_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Beobank | regulated_savings | beobank_regulated_savings
+[15:59:48] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-save-plus.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-save-plus.html...
+[15:59:48] playright_scraper |   [PW] Extracted 9628 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 9628 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_beobank_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Beobank | regulated_savings | beobank_regulated_savings_1
+[15:59:48] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-fidelity-plus.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-fidelity-plus.html...
+[15:59:48] playright_scraper |   [PW] Extracted 8992 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 8992 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_beobank_regulated_savings_1_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Beobank | regulated_savings | beobank_regulated_savings_2
+[15:59:48] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-classique.html
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-classique.html...
+[15:59:48] playright_scraper |   [PW] Extracted 8966 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 8966 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_beobank_regulated_savings_2_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Fintro | regulated_savings | fintro_regulated_savings
+[15:59:48] playright_scraper |   https://www.fintro.be/fr/public/particuliers/epargner-et-placer/epargner/comptes-epargne/comparatif
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.fintro.be/fr/public/particuliers/epargner-et-placer/epargner/comptes-epargne/comparatif...
+[15:59:48] playright_scraper |   [PW] ERROR: Page.goto: Timeout 30000ms exceeded.
+[15:59:48] playright_scraper | Call log:
+[15:59:48] playright_scraper |   - navigating to "https://www.fintro.be/fr/public/particuliers/epargner-et-placer/epargner/comptes-epargne/comparatif", waiting until "domcontentloaded"
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   SKIPPED: No content
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Keytrade | regulated_savings | keytrade_regulated_savings
+[15:59:48] playright_scraper |   https://www.keytradebank.be/en/banking/savings
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.keytradebank.be/en/banking/savings...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 6879 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 6879 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 2 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_keytrade_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Keytrade | news | keytrade_news
+[15:59:48] playright_scraper |   https://www.keytradebank.be/en/our-blog
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.keytradebank.be/en/our-blog...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 1668 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 1668 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 0 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_keytrade_news_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Keytrade | term_accounts | keytrade_term_accounts
+[15:59:48] playright_scraper |   https://www.keytradebank.be/en/banking/term-deposit-account
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.keytradebank.be/en/banking/term-deposit-account...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 5010 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 5010 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 30 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_keytrade_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Santander | regulated_savings | santander_regulated_savings
+[15:59:48] playright_scraper |   https://www.santanderconsumerbank.be/fr/comptes-depargne-reglementes
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/comptes-depargne-reglementes...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 8452 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 8452 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 4 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_santander_regulated_savings_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Santander | term_accounts | santander_term_accounts
+[15:59:48] playright_scraper |   https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-fix
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-fix...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 9599 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 9599 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 5 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_santander_term_accounts_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Santander | term_accounts | santander_term_accounts_1
+[15:59:48] playright_scraper |   https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-green
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-green...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 10104 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 10104 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 1 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_santander_term_accounts_1_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper |   ——————————————————————————————————————————————————
+[15:59:48] playright_scraper |   Santander | news | santander_news
+[15:59:48] playright_scraper |   https://www.santanderconsumerbank.be/fr/blog
+[15:59:48] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/blog...
+[15:59:48] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[15:59:48] playright_scraper |   [PW] Extracted 4573 characters
+[15:59:48] playright_scraper |   [NEW] Content changed. Running LLM...
+[15:59:48] playright_scraper |   [LLM] Sending 4573 chars to gpt-4o-mini...
+[15:59:48] playright_scraper |   [LLM] Extracted 6 items
+[15:59:48] playright_scraper |   [SAVE] data/snapshots/pw_santander_news_2026-05-11.json
+[15:59:48] playright_scraper | 
+[15:59:48] playright_scraper | ============================================================
+[15:59:48] playright_scraper |   DONE: 50/52 succeeded
+[15:59:48] playright_scraper |   Failed: 2
+[15:59:48] playright_scraper |   PDF changes detected: 10
+[15:59:48] playright_scraper | ============================================================
+[15:59:48] playright_scraper | OK
+
+==================================================
+[15:59:48] Starting: diff
+==================================================
+[15:59:48] diff | [DIFF] Auto-discovery mode — scanning data/snapshots/ for snapshot pairs...
+[15:59:48] diff | [DIFF] Found 3 source(s) with snapshot pairs.
+[15:59:48] diff | 
+[15:59:48] diff | ————————————————————————————————————————————————————————————
+[15:59:48] diff | [DIFF] Comparing: bankshopper_2026-05-10.json  →  bankshopper_2026-05-11.json
+[15:59:48] diff | [DIFF] Saved report → data/snapshots/diff_bankshopper_2026-05-10_to_2026-05-11.json
+[15:59:48] diff | 
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   DIFF REPORT: 2026-05-10 → 2026-05-11
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   Source:          bankshopper.be
+[15:59:48] diff |   Data type:       products
+[15:59:48] diff |   Checksums match: False
+[15:59:48] diff |   Total changes:   3
+[15:59:48] diff |     Rate changes:      2
+[15:59:48] diff |     Condition changes:  1
+[15:59:48] diff |     Rating changes:    0
+[15:59:48] diff |     Other changes:     0
+[15:59:48] diff |     Products added:     0
+[15:59:48] diff |     Products removed:   0
+[15:59:48] diff | 
+[15:59:48] diff | --- Changes ---
+[15:59:48] diff | 
+[15:59:48] diff |   [1] Beobank — Beobank Klassieke Spaarrekening
+[15:59:48] diff |       Type:   rate_change
+[15:59:48] diff |       Field:  base_rate
+[15:59:48] diff |       Before: 0.5
+[15:59:48] diff |       After:  0.45
+[15:59:48] diff | 
+[15:59:48] diff |   [2] Argenta — Argenta e-spaar
+[15:59:48] diff |       Type:   rate_change
+[15:59:48] diff |       Field:  fidelity_premium
+[15:59:48] diff |       Before: 0.35
+[15:59:48] diff |       After:  0.3
+[15:59:48] diff | 
+[15:59:48] diff |   [3] Crelan — Crelan Horizon Plus boekje
+[15:59:48] diff |       Type:   condition_change
+[15:59:48] diff |       Field:  max_deposit
+[15:59:48] diff |       Before: € 350,00
+[15:59:48] diff |       After:  € 250,00
+[15:59:48] diff | 
+[15:59:48] diff | ————————————————————————————————————————————————————————————
+[15:59:48] diff | [DIFF] Comparing: lecho_entreprises_banques_2026-05-10.json  →  lecho_entreprises_banques_2026-05-11.json
+[15:59:48] diff | [DIFF] Saved report → data/snapshots/diff_lecho_2026-05-10_to_2026-05-11.json
+[15:59:48] diff | 
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   DIFF REPORT: 2026-05-10 → 2026-05-11
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   Source:          lecho.be
+[15:59:48] diff |   Data type:       news
+[15:59:48] diff |   Checksums match: False
+[15:59:48] diff |   Total changes:   1
+[15:59:48] diff |     New articles:      1
+[15:59:48] diff |     Articles updated:  0
+[15:59:48] diff | 
+[15:59:48] diff | --- Changes ---
+[15:59:48] diff | 
+[15:59:48] diff |   [1] NEW ARTICLE
+[15:59:48] diff |       Title: 3.000 emplois supprimés chez Commerzbank, assez pour repousser l'offre d'UniCredit?
+[15:59:48] diff |       08/05 Commerzbank va supprimer 3.000 emplois et compte doubler ses bénéfices d'ici 2030. En faisant ...
+[15:59:48] diff |       Link:  https://www.lecho.be/r/t/1/id/10659714
+[15:59:48] diff | 
+[15:59:48] diff | ————————————————————————————————————————————————————————————
+[15:59:48] diff | [DIFF] Comparing: pw_argenta_regulated_savings_2026-05-10.json  →  pw_argenta_regulated_savings_2026-05-11.json
+[15:59:48] diff | [DIFF] Saved report → data/snapshots/diff_argenta_regulated_savings_2026-05-10_to_2026-05-11.json
+[15:59:48] diff | 
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   DIFF REPORT: 2026-05-10 → 2026-05-11
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   Source:          argenta_regulated_savings
+[15:59:48] diff |   Data type:       products
+[15:59:48] diff |   Checksums match: True
+[15:59:48] diff |   Total changes:   0
+[15:59:48] diff |     Rate changes:      0
+[15:59:48] diff |     Condition changes:  0
+[15:59:48] diff |     Rating changes:    0
+[15:59:48] diff |     Other changes:     0
+[15:59:48] diff |     Products added:     0
+[15:59:48] diff |     Products removed:   0
+[15:59:48] diff | 
+[15:59:48] diff |   No changes detected. Quiet day.
+[15:59:48] diff | 
+[15:59:48] diff | [DIFF] Added 2 PDF link changes to combined report
+[15:59:48] diff | 
+[15:59:48] diff | [DIFF] Saved combined report → data/snapshots/diff_all_2026-05-11.json
+[15:59:48] diff | 
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   COMBINED DAILY DIFF: 2026-05-11
+[15:59:48] diff | ============================================================
+[15:59:48] diff |   Sources processed:   3
+[15:59:48] diff |   Total changes:       6
+[15:59:48] diff | 
+[15:59:48] diff |   Product changes:
+[15:59:48] diff |     Rate changes:      2
+[15:59:48] diff |     Condition changes:  1
+[15:59:48] diff | 
+[15:59:48] diff |   News changes:
+[15:59:48] diff |     New articles:      1
+[15:59:48] diff | 
+[15:59:48] diff |   Per source:
+[15:59:48] diff |     bankshopper.be (products): 3 change(s)
+[15:59:48] diff |     lecho.be (news): 1 change(s)
+[15:59:48] diff |     argenta_regulated_savings (products): no changes
+[15:59:48] diff | OK
+
+==================================================
+[15:59:48] Starting: cross_reference
+==================================================
+[15:59:48] cross_reference | [XREF] Looking for product snapshots for 2026-05-11...
+[15:59:48] cross_reference | [XREF] Found 41 product sources
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference | [XREF] Saved report → data/snapshots/discrepancies_2026-05-11.json
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference | ============================================================
+[15:59:48] cross_reference |   CROSS-REFERENCE REPORT: 2026-05-11
+[15:59:48] cross_reference | ============================================================
+[15:59:48] cross_reference |   Sources compared:      41
+[15:59:48] cross_reference |   Products matched:      11
+[15:59:48] cross_reference |   Pairs skipped (same):  25
+[15:59:48] cross_reference |   Total discrepancies:   16
+[15:59:48] cross_reference |     Rate mismatches:     16
+[15:59:48] cross_reference |     Condition mismatches: 0
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference | --- Discrepancies ---
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [1] Beobank — Beobank Save Plus Spaarrekening
+[15:59:48] cross_reference |       Field: fidelity_premium
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.7%
+[15:59:48] cross_reference |       beobank_regulated_savings (direct:beobank): 0.5%
+[15:59:48] cross_reference |       Difference: 1.2 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Beobank Save Plus Spaarrekening"
+[15:59:48] cross_reference |         beobank_regulated_savings: "Compte d'épargne Save Plus"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [2] Keytrade Bank — Keytrade Bank High Fidelity
+[15:59:48] cross_reference |       Field: total_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 2.55%
+[15:59:48] cross_reference |       keytrade_regulated_savings (direct:keytrade): 1.9%
+[15:59:48] cross_reference |       Difference: 0.65 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Keytrade Bank High Fidelity"
+[15:59:48] cross_reference |         keytrade_regulated_savings: "High Fidelity savings account"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [3] Triodos Bank — Triodos Impact Savings
+[15:59:48] cross_reference |       Field: total_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.1%
+[15:59:48] cross_reference |       banque_triodos_regulated_savings (direct:banque_triodos): 0.5%
+[15:59:48] cross_reference |       Difference: 0.6 percentage points
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [4] Triodos Bank — Triodos Impact Savings
+[15:59:48] cross_reference |       Field: total_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.1%
+[15:59:48] cross_reference |       banque_triodos_regulated_savings_products (direct:banque_triodos): 0.5%
+[15:59:48] cross_reference |       Difference: 0.6 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Triodos Impact Savings"
+[15:59:48] cross_reference |         banque_triodos_regulated_savings_products: "Compte d'épargne Triodos Impact Savings"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [5] Keytrade Bank — Keytrade Bank High Fidelity
+[15:59:48] cross_reference |       Field: base_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.9%
+[15:59:48] cross_reference |       keytrade_regulated_savings (direct:keytrade): 0.4%
+[15:59:48] cross_reference |       Difference: 0.5 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Keytrade Bank High Fidelity"
+[15:59:48] cross_reference |         keytrade_regulated_savings: "High Fidelity savings account"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [6] Triodos Bank — Triodos Impact Savings
+[15:59:48] cross_reference |       Field: fidelity_premium
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[15:59:48] cross_reference |       banque_triodos_regulated_savings (direct:banque_triodos): 0.15%
+[15:59:48] cross_reference |       Difference: 0.4 percentage points
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [7] Triodos Bank — Triodos Impact Savings
+[15:59:48] cross_reference |       Field: fidelity_premium
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[15:59:48] cross_reference |       banque_triodos_regulated_savings_products (direct:banque_triodos): 0.15%
+[15:59:48] cross_reference |       Difference: 0.4 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Triodos Impact Savings"
+[15:59:48] cross_reference |         banque_triodos_regulated_savings_products: "Compte d'épargne Triodos Impact Savings"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [8] Keytrade Bank — Keytrade Bank AZUR Spaarrekening
+[15:59:48] cross_reference |       Field: total_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.5%
+[15:59:48] cross_reference |       keytrade_regulated_savings (direct:keytrade): 1.2%
+[15:59:48] cross_reference |       Difference: 0.3 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Keytrade Bank AZUR Spaarrekening"
+[15:59:48] cross_reference |         keytrade_regulated_savings: "Azur savings account"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [9] Beobank — Beobank Save Plus Spaarrekening
+[15:59:48] cross_reference |       Field: total_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.1%
+[15:59:48] cross_reference |       beobank_regulated_savings (direct:beobank): 0.8%
+[15:59:48] cross_reference |       Difference: 0.3 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Beobank Save Plus Spaarrekening"
+[15:59:48] cross_reference |         beobank_regulated_savings: "Compte d'épargne Save Plus"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [10] Keytrade Bank — Keytrade Bank AZUR Spaarrekening
+[15:59:48] cross_reference |       Field: base_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.0%
+[15:59:48] cross_reference |       keytrade_regulated_savings (direct:keytrade): 0.8%
+[15:59:48] cross_reference |       Difference: 0.2 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Keytrade Bank AZUR Spaarrekening"
+[15:59:48] cross_reference |         keytrade_regulated_savings: "Azur savings account"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [11] Triodos Bank — Triodos Impact Savings
+[15:59:48] cross_reference |       Field: base_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[15:59:48] cross_reference |       banque_triodos_regulated_savings (direct:banque_triodos): 0.35%
+[15:59:48] cross_reference |       Difference: 0.2 percentage points
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [12] Triodos Bank — Triodos Impact Savings
+[15:59:48] cross_reference |       Field: base_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[15:59:48] cross_reference |       banque_triodos_regulated_savings_products (direct:banque_triodos): 0.35%
+[15:59:48] cross_reference |       Difference: 0.2 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Triodos Impact Savings"
+[15:59:48] cross_reference |         banque_triodos_regulated_savings_products: "Compte d'épargne Triodos Impact Savings"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [13] Keytrade Bank — Keytrade Bank High Fidelity
+[15:59:48] cross_reference |       Field: fidelity_premium
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.65%
+[15:59:48] cross_reference |       keytrade_regulated_savings (direct:keytrade): 1.5%
+[15:59:48] cross_reference |       Difference: 0.15 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Keytrade Bank High Fidelity"
+[15:59:48] cross_reference |         keytrade_regulated_savings: "High Fidelity savings account"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [14] Keytrade Bank — Keytrade Bank AZUR Spaarrekening
+[15:59:48] cross_reference |       Field: fidelity_premium
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.5%
+[15:59:48] cross_reference |       keytrade_regulated_savings (direct:keytrade): 0.4%
+[15:59:48] cross_reference |       Difference: 0.1 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Keytrade Bank AZUR Spaarrekening"
+[15:59:48] cross_reference |         keytrade_regulated_savings: "Azur savings account"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [15] Beobank — Beobank Save Plus Spaarrekening
+[15:59:48] cross_reference |       Field: base_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.4%
+[15:59:48] cross_reference |       beobank_regulated_savings (direct:beobank): 0.3%
+[15:59:48] cross_reference |       Difference: 0.1 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Beobank Save Plus Spaarrekening"
+[15:59:48] cross_reference |         beobank_regulated_savings: "Compte d'épargne Save Plus"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference |   [16] Argenta — Argenta e-spaar
+[15:59:48] cross_reference |       Field: base_rate
+[15:59:48] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.2%
+[15:59:48] cross_reference |       argenta_regulated_savings (direct:argenta): 0.25%
+[15:59:48] cross_reference |       Difference: 0.05 percentage points
+[15:59:48] cross_reference |       Note: Name varies:
+[15:59:48] cross_reference |         bankshopper.be: "Argenta e-spaar"
+[15:59:48] cross_reference |         argenta_regulated_savings: "E-Épargne"
+[15:59:48] cross_reference | 
+[15:59:48] cross_reference | OK
+
+==================================================
+[15:59:48] Starting: classify_facts
+==================================================
+[15:59:56] classify_facts | Prompting llm...
+[15:59:56] classify_facts | LLM response preview: {
+[15:59:56] classify_facts |   "0": {
+[15:59:56] classify_facts |     "classification": {
+[15:59:56] classify_facts |       "taxonomy_category": "Rate change",
+[15:59:56] classify_facts |       "taxonomy_group": "Product & Structure",
+[15:59:56] classify_facts |       "impact": "Medium",
+[15:59:56] classify_facts |       "description": "Beobank decreased base rate ...
+[15:59:56] classify_facts | differences classified. Ouput:/home/kliti/code/becode/becode_projects/Market_Watch_Agent/data/outputs/2026-05-11_classified_test.json
+[15:59:56] classify_facts | OK
+[REPORT] Saved: data/daily_summaries/Summary_2026-05-11.txt
+[REPORT] ERROR: No module named 'summary_utils'
+
+##################################################
+Pipeline finished: 2026-05-11T15:59:57.571300
+Duration: 2176.6 seconds
+##################################################
+
+##################################################
+Pipeline started: 2026-05-11T16:31:55.308664
+##################################################
+
+==================================================
+[16:31:55] Starting: bankshopper_scraper
+==================================================
+[16:31:55] bankshopper_scraper | 
+[16:31:55] bankshopper_scraper | ============================================================
+[16:31:55] bankshopper_scraper |   Bankshopper Scraper — 2026-05-11
+[16:31:55] bankshopper_scraper | ============================================================
+[16:31:55] bankshopper_scraper | 
+[16:31:55] bankshopper_scraper | [SCRAPE] Fetching HTML from bankshopper.be ...
+[16:31:55] bankshopper_scraper | [SCRAPE] Saved raw HTML → /home/kliti/code/becode/becode_projects/Market_Watch_Agent/data/snapshots/bankshopper_2026-05-11.html (372,404 bytes)
+[16:31:55] bankshopper_scraper | [EXTRACT] Parsing product data ...
+[16:31:55] bankshopper_scraper | [EXTRACT] Saved structured data → /home/kliti/code/becode/becode_projects/Market_Watch_Agent/data/snapshots/bankshopper_2026-05-11.json (50 products)
+[16:31:55] bankshopper_scraper | 
+[16:31:55] bankshopper_scraper | --- Summary ---
+[16:31:55] bankshopper_scraper | Products found: 50
+[16:31:55] bankshopper_scraper | Checksum: 24bb23d1dadd7a0d...
+[16:31:55] bankshopper_scraper | 
+[16:31:55] bankshopper_scraper | Sample products:
+[16:31:55] bankshopper_scraper |   Beobank — Beobank Klassieke Spaarrekening
+[16:31:55] bankshopper_scraper |     Base: 0.45% | Fidelity: 0.55% | Total: 1.0%
+[16:31:55] bankshopper_scraper | 
+[16:31:55] bankshopper_scraper |   BNP Paribas Fortis — BNP Paribas Fortis Spaarrekening Plus
+[16:31:55] bankshopper_scraper |     Base: 0.5% | Fidelity: 1.25% | Total: 1.75%
+[16:31:55] bankshopper_scraper | 
+[16:31:55] bankshopper_scraper |   Triodos Bank — Triodos Bank Impact Savings Junior
+[16:31:55] bankshopper_scraper |     Base: 0.35% | Fidelity: 0.25% | Total: 0.6%
+[16:31:55] bankshopper_scraper | 
+[16:31:55] bankshopper_scraper | OK
+
+==================================================
+[16:31:55] Starting: bankshopper_scraper_term_acc
+==================================================
+[16:31:56] bankshopper_scraper_term_acc | 
+[16:31:56] bankshopper_scraper_term_acc | ============================================================
+[16:31:56] bankshopper_scraper_term_acc |   Bankshopper Scraper — 2026-05-11
+[16:31:56] bankshopper_scraper_term_acc | ============================================================
+[16:31:56] bankshopper_scraper_term_acc | 
+[16:31:56] bankshopper_scraper_term_acc | [SCRAPE] Fetching HTML from bankshopper.be ...
+[16:31:56] bankshopper_scraper_term_acc | [SCRAPE] Saved raw HTML → data/snapshots/bankshopper_term_acc_2026-05-11.html (692,431 bytes)
+[16:31:56] bankshopper_scraper_term_acc | [EXTRACT] Parsing product data ...
+[16:31:56] bankshopper_scraper_term_acc | [EXTRACT] Saved structured data → data/snapshots/bankshopper_term_acc_2026-05-11.json (145 products)
+[16:31:56] bankshopper_scraper_term_acc | 
+[16:31:56] bankshopper_scraper_term_acc | --- Summary ---
+[16:31:56] bankshopper_scraper_term_acc | Products found: 145
+[16:31:56] bankshopper_scraper_term_acc | Checksum: 1c469277a6d1f615...
+[16:31:56] bankshopper_scraper_term_acc | 
+[16:31:56] bankshopper_scraper_term_acc | Sample products:
+[16:31:56] bankshopper_scraper_term_acc |   None — AXA Certirente (2 jaar)
+[16:31:56] bankshopper_scraper_term_acc |     Bruto: 2.0% | Netto: 1.4%
+[16:31:56] bankshopper_scraper_term_acc | 
+[16:31:56] bankshopper_scraper_term_acc |   None — AXA Certirente (3 jaar)
+[16:31:56] bankshopper_scraper_term_acc |     Bruto: 2.7% | Netto: 1.925%
+[16:31:56] bankshopper_scraper_term_acc | 
+[16:31:56] bankshopper_scraper_term_acc |   None — AXA Certirente (4 jaar)
+[16:31:56] bankshopper_scraper_term_acc |     Bruto: 2.05% | Netto: 1.435%
+[16:31:56] bankshopper_scraper_term_acc | 
+[16:31:56] bankshopper_scraper_term_acc | OK
+
+==================================================
+[16:31:56] Starting: lecho_rss
+==================================================
+[16:31:56] lecho_rss | Successfully saved top_stories snapshot to: data/snapshots/lecho_top_stories_2026-05-11.json
+[16:31:56] lecho_rss | Successfully saved entreprises_banques snapshot to: data/snapshots/lecho_entreprises_banques_2026-05-11.json
+[16:31:56] lecho_rss | OK
+
+==================================================
+[16:31:56] Starting: playright_scraper
+==================================================
+[16:56:11] playright_scraper | ============================================================
+[16:56:11] playright_scraper |   Playwright Bank Scraper (Excel-Driven)
+[16:56:11] playright_scraper |   Date: 2026-05-11
+[16:56:11] playright_scraper | ============================================================
+[16:56:11] playright_scraper | [EXCEL] Loaded 52 URLs from 14 banks
+[16:56:11] playright_scraper |         29 product, 6 news, 17 PDF check pages
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | news | argenta_news
+[16:56:11] playright_scraper |   https://www.argenta.be/fr/a-propos-d-argenta/presse.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/a-propos-d-argenta/presse.html...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 3200 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 3200 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 6 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_news_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | tarif_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Found 8 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[16:56:11] playright_scraper |   [PDF] Removed PDF links:
+[16:56:11] playright_scraper |     - https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-tarif.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_tarif_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | regulated_savings | argenta_regulated_savings
+[16:56:11] playright_scraper |   https://www.argenta.be/fr/epargner/compte-d-epargne.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne.html...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 10178 characters
+[16:56:11] playright_scraper |   [CACHE] Unchanged, reused pw_argenta_regulated_savings_2026-05-10.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Found 4 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Found 5 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_1_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Found 5 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_2_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Found 5 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_regulated_pdf_3_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | term_accounts | argenta_term_accounts
+[16:56:11] playright_scraper |   https://www.argenta.be/fr/epargner/depot-a-terme.html#fonctionne
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/depot-a-terme.html#fonctionne...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 7099 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 7099 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 6 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Argenta | term_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.argenta.be/fr/epargner/depot-a-terme.html#documents...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Found 4 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf
+[16:56:11] playright_scraper |     + https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_argenta_term_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BNP Paribas Fortis | news | bnp_paribas_fortis_news
+[16:56:11] playright_scraper |   https://newsroom.bnpparibasfortis.be/fr
+[16:56:11] playright_scraper |   [PW] Navigating to https://newsroom.bnpparibasfortis.be/fr...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 5831 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 5831 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 12 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_bnp_paribas_fortis_news_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BNP Paribas Fortis | regulated_savings | bnp_paribas_fortis_regulated_savings
+[16:56:11] playright_scraper |   https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account-comparison
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account-comparison...
+[16:56:11] playright_scraper |   [PW] ERROR: Page.goto: Timeout 20000ms exceeded.
+[16:56:11] playright_scraper | Call log:
+[16:56:11] playright_scraper |   - navigating to "https://www.bnpparibasfortis.be/en/public/individuals/save-and-invest/savings-account-comparison", waiting until "domcontentloaded"
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   SKIPPED: No content
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BNP Paribas Fortis | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Direct PDF: https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf
+[16:56:11] playright_scraper |   [PDF] ERROR: HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=15)
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_bnp_paribas_fortis_regulated_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BNP Paribas Fortis | term_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Direct PDF: https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf
+[16:56:11] playright_scraper |   [PDF] ERROR: HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=15)
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_bnp_paribas_fortis_term_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BankB | regulated_savings | bankb_regulated_savings
+[16:56:11] playright_scraper |   https://www.bankb.be/fr-be/epargner/compte-depargne
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.bankb.be/fr-be/epargner/compte-depargne...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 8876 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 8876 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_bankb_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BankB | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Direct PDF: https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf
+[16:56:11] playright_scraper |   [PDF] PDF may have changed! Headers differ from previous.
+[16:56:11] playright_scraper |     Last-Modified: Tue, 27 Jan 2026 12:42:19 GMT
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_bankb_regulated_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BankB | term_accounts | bankb_term_accounts
+[16:56:11] playright_scraper |   https://www.bankb.be/fr-be/epargner/compte-terme
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.bankb.be/fr-be/epargner/compte-terme...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 5589 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 5589 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 5 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_bankb_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   BankB | term_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Direct PDF: https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf
+[16:56:11] playright_scraper |   [PDF] PDF may have changed! Headers differ from previous.
+[16:56:11] playright_scraper |     Last-Modified: Thu, 30 Apr 2026 07:16:49 GMT
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_bankb_term_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque CPH | regulated_savings | banque_cph_regulated_savings
+[16:56:11] playright_scraper |   https://www.cph.be/epargner/comptes-depargne-reglementes-commercialises-par-la-banque-cph/
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.cph.be/epargner/comptes-depargne-reglementes-commercialises-par-la-banque-cph/...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('Accepter tout')
+[16:56:11] playright_scraper |   [PW] Extracted 10213 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 10213 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 4 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_cph_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | news | banque_triodos_news
+[16:56:11] playright_scraper |   https://www.triodos.be/fr/actualite
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/actualite...
+[16:56:11] playright_scraper |   [PW] Extracted 4662 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 4662 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 0 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_news_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | tarif_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-a-terme
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-a-terme...
+[16:56:11] playright_scraper |   [PW] Found 0 PDF links on page
+[16:56:11] playright_scraper |   No PDF links found on parent page
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_tarif_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | regulated_savings | banque_triodos_regulated_savings
+[16:56:11] playright_scraper |   https://www.triodos.be/fr/epargner/protocole-transparence-epargne
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/protocole-transparence-epargne...
+[16:56:11] playright_scraper |   [PW] Extracted 9087 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 9087 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 3 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-epargne
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-epargne...
+[16:56:11] playright_scraper |   [PW] Found 0 PDF links on page
+[16:56:11] playright_scraper |   No PDF links found on parent page
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-epargne-fidelity
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-epargne-fidelity...
+[16:56:11] playright_scraper |   [PW] Found 1 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://www.triodos.be/binaries/content/assets/tbbe/fr/general/banque-triodos---exigences-minimales-2022.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_pdf_1_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.triodos.be/fr/epargner/compte-epargne-junior
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-epargne-junior...
+[16:56:11] playright_scraper |   [PW] Found 0 PDF links on page
+[16:56:11] playright_scraper |   No PDF links found on parent page
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_regulated_pdf_2_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | term_accounts | banque_triodos_term_accounts
+[16:56:11] playright_scraper |   https://www.triodos.be/fr/epargner/compte-a-terme
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-a-terme...
+[16:56:11] playright_scraper |   [PW] Extracted 12123 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 12123 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 9 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Banque Triodos | term_accounts | banque_triodos_term_accounts_1
+[16:56:11] playright_scraper |   https://www.triodos.be/fr/epargner/compte-a-terme-junior
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.triodos.be/fr/epargner/compte-a-terme-junior...
+[16:56:11] playright_scraper |   [PW] Extracted 11895 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 11895 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 9 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_banque_triodos_term_accounts_1_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Belfius | regulated_savings | belfius_regulated_savings
+[16:56:11] playright_scraper |   https://www.belfius.be/site/retail/fr/produits/epargner/comptes-epargne-reglementes
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.belfius.be/site/retail/fr/produits/epargner/comptes-epargne-reglementes...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 7945 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 7945 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 3 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_belfius_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Crelan | term_accounts | crelan_term_accounts
+[16:56:11] playright_scraper |   https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 6919 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 6919 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 10 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_crelan_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Crelan | regulated_savings | crelan_regulated_savings
+[16:56:11] playright_scraper |   https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/le-compte-depargne
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/le-compte-depargne...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('OK')
+[16:56:11] playright_scraper |   [PW] Extracted 8961 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 8961 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 4 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_crelan_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   KBC Banque | regulated_savings | kbc_banque_regulated_savings
+[16:56:11] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html...
+[16:56:11] playright_scraper |   [PW] Extracted 6139 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 6139 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   KBC Banque | regulated_savings | kbc_banque_regulated_savings_1
+[16:56:11] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav...
+[16:56:11] playright_scraper |   [PW] Extracted 7161 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 7161 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_savings_1_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   KBC Banque | regulated_savings | kbc_banque_regulated_savings_2
+[16:56:11] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav...
+[16:56:11] playright_scraper |   [PW] Extracted 9597 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 9597 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_savings_2_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   KBC Banque | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html...
+[16:56:11] playright_scraper |   [PW] Found 4 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3591_fr.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/NCI/0012_F.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_pdf_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   KBC Banque | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav...
+[16:56:11] playright_scraper |   [PW] Found 4 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3770_fr.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_pdf_1_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   KBC Banque | regulated_pdf | PDF CHECK
+[16:56:11] playright_scraper |   Parent page: https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav...
+[16:56:11] playright_scraper |   [PW] Found 4 PDF links on page
+[16:56:11] playright_scraper |   [PDF] NEW PDF links detected!
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3770_fr.pdf
+[16:56:11] playright_scraper |     + https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/NCI/0012_F.pdf
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_regulated_pdf_2_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   KBC Banque | term_accounts | kbc_banque_term_accounts
+[16:56:11] playright_scraper |   https://www.kbc.be/particuliers/fr/epargner/compte-a-terme.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.kbc.be/particuliers/fr/epargner/compte-a-terme.html...
+[16:56:11] playright_scraper |   [PW] Extracted 6000 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 6000 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 2 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_kbc_banque_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   MeDirect | regulated_savings | medirect_regulated_savings
+[16:56:11] playright_scraper |   https://www.medirect.be/nl-be/vergelijking-van-spaarrekeningen/
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.medirect.be/nl-be/vergelijking-van-spaarrekeningen/...
+[16:56:11] playright_scraper |   [PW] Extracted 9692 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 9692 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 4 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_medirect_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   MeDirect | term_accounts | medirect_term_accounts
+[16:56:11] playright_scraper |   https://www.medirect.be/nl-be/sparen/termijnrekening/
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.medirect.be/nl-be/sparen/termijnrekening/...
+[16:56:11] playright_scraper |   [PW] Extracted 5583 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 5583 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 9 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_medirect_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Revolut Bank UAB - Belgian Branch | news | revolut_bank_uab___belgian_branch_news
+[16:56:11] playright_scraper |   https://www.revolut.com/en-BE/news/
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.revolut.com/en-BE/news/...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('Accept all')
+[16:56:11] playright_scraper |   [PW] Extracted 6487 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 6487 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 10 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_revolut_bank_uab___belgian_branch_news_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Revolut Bank UAB - Belgian Branch | term_accounts | revolut_bank_uab___belgian_branch_term_accounts
+[16:56:11] playright_scraper |   https://www.revolut.com/en-BE/our-pricing-plans/
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.revolut.com/en-BE/our-pricing-plans/...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button:has-text('Accept all')
+[16:56:11] playright_scraper |   [PW] Extracted 11191 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 11191 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 4 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_revolut_bank_uab___belgian_branch_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Beobank | term_accounts | beobank_term_accounts
+[16:56:11] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-a-terme.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-a-terme.html...
+[16:56:11] playright_scraper |   [PW] Extracted 14233 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 14233 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 3 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_beobank_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Beobank | regulated_savings | beobank_regulated_savings
+[16:56:11] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-save-plus.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-save-plus.html...
+[16:56:11] playright_scraper |   [PW] Extracted 9628 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 9628 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_beobank_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Beobank | regulated_savings | beobank_regulated_savings_1
+[16:56:11] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-fidelity-plus.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-fidelity-plus.html...
+[16:56:11] playright_scraper |   [PW] Extracted 8992 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 8992 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_beobank_regulated_savings_1_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Beobank | regulated_savings | beobank_regulated_savings_2
+[16:56:11] playright_scraper |   https://www.beobank.be/fr/epargner/comptes-epargne/compte-classique.html
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.beobank.be/fr/epargner/comptes-epargne/compte-classique.html...
+[16:56:11] playright_scraper |   [PW] Extracted 8966 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 8966 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_beobank_regulated_savings_2_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Fintro | regulated_savings | fintro_regulated_savings
+[16:56:11] playright_scraper |   https://www.fintro.be/fr/public/particuliers/epargner-et-placer/epargner/comptes-epargne/comparatif
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.fintro.be/fr/public/particuliers/epargner-et-placer/epargner/comptes-epargne/comparatif...
+[16:56:11] playright_scraper |   [PW] ERROR: Page.goto: Timeout 20000ms exceeded.
+[16:56:11] playright_scraper | Call log:
+[16:56:11] playright_scraper |   - navigating to "https://www.fintro.be/fr/public/particuliers/epargner-et-placer/epargner/comptes-epargne/comparatif", waiting until "domcontentloaded"
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   SKIPPED: No content
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Keytrade | regulated_savings | keytrade_regulated_savings
+[16:56:11] playright_scraper |   https://www.keytradebank.be/en/banking/savings
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.keytradebank.be/en/banking/savings...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 6882 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 6882 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 2 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_keytrade_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Keytrade | news | keytrade_news
+[16:56:11] playright_scraper |   https://www.keytradebank.be/en/our-blog
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.keytradebank.be/en/our-blog...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 1671 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 1671 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 11 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_keytrade_news_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Keytrade | term_accounts | keytrade_term_accounts
+[16:56:11] playright_scraper |   https://www.keytradebank.be/en/banking/term-deposit-account
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.keytradebank.be/en/banking/term-deposit-account...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 5013 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 5013 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 30 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_keytrade_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Santander | regulated_savings | santander_regulated_savings
+[16:56:11] playright_scraper |   https://www.santanderconsumerbank.be/fr/comptes-depargne-reglementes
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/comptes-depargne-reglementes...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 8452 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 8452 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 4 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_santander_regulated_savings_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Santander | term_accounts | santander_term_accounts
+[16:56:11] playright_scraper |   https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-fix
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-fix...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 9599 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 9599 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 5 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_santander_term_accounts_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Santander | term_accounts | santander_term_accounts_1
+[16:56:11] playright_scraper |   https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-green
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-green...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 10104 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 10104 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 1 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_santander_term_accounts_1_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper |   ——————————————————————————————————————————————————
+[16:56:11] playright_scraper |   Santander | news | santander_news
+[16:56:11] playright_scraper |   https://www.santanderconsumerbank.be/fr/blog
+[16:56:11] playright_scraper |   [PW] Navigating to https://www.santanderconsumerbank.be/fr/blog...
+[16:56:11] playright_scraper |   [COOKIES] Accepted via: button#onetrust-accept-btn-handler
+[16:56:11] playright_scraper |   [PW] Extracted 4573 characters
+[16:56:11] playright_scraper |   [NEW] Content changed. Running LLM...
+[16:56:11] playright_scraper |   [LLM] Sending 4573 chars to gpt-4o-mini...
+[16:56:11] playright_scraper |   [LLM] Extracted 6 items
+[16:56:11] playright_scraper |   [SAVE] data/snapshots/pw_santander_news_2026-05-11.json
+[16:56:11] playright_scraper | 
+[16:56:11] playright_scraper | ============================================================
+[16:56:11] playright_scraper |   DONE: 50/52 succeeded
+[16:56:11] playright_scraper |   Failed: 2
+[16:56:11] playright_scraper |   PDF changes detected: 10
+[16:56:11] playright_scraper | ============================================================
+[16:56:11] playright_scraper | OK
+
+==================================================
+[16:56:11] Starting: diff
+==================================================
+[16:56:11] diff | [DIFF] Auto-discovery mode — scanning data/snapshots/ for snapshot pairs...
+[16:56:11] diff | [DIFF] Found 3 source(s) with snapshot pairs.
+[16:56:11] diff | 
+[16:56:11] diff | ————————————————————————————————————————————————————————————
+[16:56:11] diff | [DIFF] Comparing: bankshopper_2026-05-10.json  →  bankshopper_2026-05-11.json
+[16:56:11] diff | [DIFF] Saved report → data/snapshots/diff_bankshopper_2026-05-10_to_2026-05-11.json
+[16:56:11] diff | 
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   DIFF REPORT: 2026-05-10 → 2026-05-11
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   Source:          bankshopper.be
+[16:56:11] diff |   Data type:       products
+[16:56:11] diff |   Checksums match: False
+[16:56:11] diff |   Total changes:   3
+[16:56:11] diff |     Rate changes:      2
+[16:56:11] diff |     Condition changes:  1
+[16:56:11] diff |     Rating changes:    0
+[16:56:11] diff |     Other changes:     0
+[16:56:11] diff |     Products added:     0
+[16:56:11] diff |     Products removed:   0
+[16:56:11] diff | 
+[16:56:11] diff | --- Changes ---
+[16:56:11] diff | 
+[16:56:11] diff |   [1] Beobank — Beobank Klassieke Spaarrekening
+[16:56:11] diff |       Type:   rate_change
+[16:56:11] diff |       Field:  base_rate
+[16:56:11] diff |       Before: 0.5
+[16:56:11] diff |       After:  0.45
+[16:56:11] diff | 
+[16:56:11] diff |   [2] Argenta — Argenta e-spaar
+[16:56:11] diff |       Type:   rate_change
+[16:56:11] diff |       Field:  fidelity_premium
+[16:56:11] diff |       Before: 0.35
+[16:56:11] diff |       After:  0.3
+[16:56:11] diff | 
+[16:56:11] diff |   [3] Crelan — Crelan Horizon Plus boekje
+[16:56:11] diff |       Type:   condition_change
+[16:56:11] diff |       Field:  max_deposit
+[16:56:11] diff |       Before: € 350,00
+[16:56:11] diff |       After:  € 250,00
+[16:56:11] diff | 
+[16:56:11] diff | ————————————————————————————————————————————————————————————
+[16:56:11] diff | [DIFF] Comparing: lecho_entreprises_banques_2026-05-10.json  →  lecho_entreprises_banques_2026-05-11.json
+[16:56:11] diff | [DIFF] Saved report → data/snapshots/diff_lecho_2026-05-10_to_2026-05-11.json
+[16:56:11] diff | 
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   DIFF REPORT: 2026-05-10 → 2026-05-11
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   Source:          lecho.be
+[16:56:11] diff |   Data type:       news
+[16:56:11] diff |   Checksums match: False
+[16:56:11] diff |   Total changes:   1
+[16:56:11] diff |     New articles:      1
+[16:56:11] diff |     Articles updated:  0
+[16:56:11] diff | 
+[16:56:11] diff | --- Changes ---
+[16:56:11] diff | 
+[16:56:11] diff |   [1] NEW ARTICLE
+[16:56:11] diff |       Title: 3.000 emplois supprimés chez Commerzbank, assez pour repousser l'offre d'UniCredit?
+[16:56:11] diff |       08/05 Commerzbank va supprimer 3.000 emplois et compte doubler ses bénéfices d'ici 2030. En faisant ...
+[16:56:11] diff |       Link:  https://www.lecho.be/r/t/1/id/10659714
+[16:56:11] diff | 
+[16:56:11] diff | ————————————————————————————————————————————————————————————
+[16:56:11] diff | [DIFF] Comparing: pw_argenta_regulated_savings_2026-05-10.json  →  pw_argenta_regulated_savings_2026-05-11.json
+[16:56:11] diff | [DIFF] Saved report → data/snapshots/diff_argenta_regulated_savings_2026-05-10_to_2026-05-11.json
+[16:56:11] diff | 
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   DIFF REPORT: 2026-05-10 → 2026-05-11
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   Source:          argenta_regulated_savings
+[16:56:11] diff |   Data type:       products
+[16:56:11] diff |   Checksums match: True
+[16:56:11] diff |   Total changes:   0
+[16:56:11] diff |     Rate changes:      0
+[16:56:11] diff |     Condition changes:  0
+[16:56:11] diff |     Rating changes:    0
+[16:56:11] diff |     Other changes:     0
+[16:56:11] diff |     Products added:     0
+[16:56:11] diff |     Products removed:   0
+[16:56:11] diff | 
+[16:56:11] diff |   No changes detected. Quiet day.
+[16:56:11] diff | 
+[16:56:11] diff | [DIFF] Added 2 PDF link changes to combined report
+[16:56:11] diff | 
+[16:56:11] diff | [DIFF] Saved combined report → data/snapshots/diff_all_2026-05-11.json
+[16:56:11] diff | 
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   COMBINED DAILY DIFF: 2026-05-11
+[16:56:11] diff | ============================================================
+[16:56:11] diff |   Sources processed:   3
+[16:56:11] diff |   Total changes:       6
+[16:56:11] diff | 
+[16:56:11] diff |   Product changes:
+[16:56:11] diff |     Rate changes:      2
+[16:56:11] diff |     Condition changes:  1
+[16:56:11] diff | 
+[16:56:11] diff |   News changes:
+[16:56:11] diff |     New articles:      1
+[16:56:11] diff | 
+[16:56:11] diff |   Per source:
+[16:56:11] diff |     bankshopper.be (products): 3 change(s)
+[16:56:11] diff |     lecho.be (news): 1 change(s)
+[16:56:11] diff |     argenta_regulated_savings (products): no changes
+[16:56:11] diff | OK
+
+==================================================
+[16:56:11] Starting: cross_reference
+==================================================
+[16:56:11] cross_reference | [XREF] Looking for product snapshots for 2026-05-11...
+[16:56:11] cross_reference | [XREF] Found 41 product sources
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference | [XREF] Saved report → data/snapshots/discrepancies_2026-05-11.json
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference | ============================================================
+[16:56:11] cross_reference |   CROSS-REFERENCE REPORT: 2026-05-11
+[16:56:11] cross_reference | ============================================================
+[16:56:11] cross_reference |   Sources compared:      41
+[16:56:11] cross_reference |   Products matched:      11
+[16:56:11] cross_reference |   Pairs skipped (same):  30
+[16:56:11] cross_reference |   Total discrepancies:   16
+[16:56:11] cross_reference |     Rate mismatches:     16
+[16:56:11] cross_reference |     Condition mismatches: 0
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference | --- Discrepancies ---
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [1] Beobank — Beobank Save Plus Spaarrekening
+[16:56:11] cross_reference |       Field: fidelity_premium
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.7%
+[16:56:11] cross_reference |       beobank_regulated_savings (direct:beobank): 0.5%
+[16:56:11] cross_reference |       Difference: 1.2 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Beobank Save Plus Spaarrekening"
+[16:56:11] cross_reference |         beobank_regulated_savings: "Compte d'épargne Save Plus"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [2] Keytrade Bank — Keytrade Bank High Fidelity
+[16:56:11] cross_reference |       Field: total_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 2.55%
+[16:56:11] cross_reference |       keytrade_regulated_savings (direct:keytrade): 1.9%
+[16:56:11] cross_reference |       Difference: 0.65 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Keytrade Bank High Fidelity"
+[16:56:11] cross_reference |         keytrade_regulated_savings: "High Fidelity savings account"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [3] Triodos Bank — Triodos Impact Savings
+[16:56:11] cross_reference |       Field: total_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.1%
+[16:56:11] cross_reference |       banque_triodos_regulated_savings (direct:banque_triodos): 0.5%
+[16:56:11] cross_reference |       Difference: 0.6 percentage points
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [4] Triodos Bank — Triodos Impact Savings
+[16:56:11] cross_reference |       Field: total_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.1%
+[16:56:11] cross_reference |       banque_triodos_regulated_savings_products (direct:banque_triodos): 0.5%
+[16:56:11] cross_reference |       Difference: 0.6 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Triodos Impact Savings"
+[16:56:11] cross_reference |         banque_triodos_regulated_savings_products: "Compte d'épargne Triodos Impact Savings"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [5] Keytrade Bank — Keytrade Bank High Fidelity
+[16:56:11] cross_reference |       Field: base_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.9%
+[16:56:11] cross_reference |       keytrade_regulated_savings (direct:keytrade): 0.4%
+[16:56:11] cross_reference |       Difference: 0.5 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Keytrade Bank High Fidelity"
+[16:56:11] cross_reference |         keytrade_regulated_savings: "High Fidelity savings account"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [6] Triodos Bank — Triodos Impact Savings
+[16:56:11] cross_reference |       Field: fidelity_premium
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[16:56:11] cross_reference |       banque_triodos_regulated_savings (direct:banque_triodos): 0.15%
+[16:56:11] cross_reference |       Difference: 0.4 percentage points
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [7] Triodos Bank — Triodos Impact Savings
+[16:56:11] cross_reference |       Field: fidelity_premium
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[16:56:11] cross_reference |       banque_triodos_regulated_savings_products (direct:banque_triodos): 0.15%
+[16:56:11] cross_reference |       Difference: 0.4 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Triodos Impact Savings"
+[16:56:11] cross_reference |         banque_triodos_regulated_savings_products: "Compte d'épargne Triodos Impact Savings"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [8] Keytrade Bank — Keytrade Bank AZUR Spaarrekening
+[16:56:11] cross_reference |       Field: total_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.5%
+[16:56:11] cross_reference |       keytrade_regulated_savings (direct:keytrade): 1.2%
+[16:56:11] cross_reference |       Difference: 0.3 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Keytrade Bank AZUR Spaarrekening"
+[16:56:11] cross_reference |         keytrade_regulated_savings: "Azur savings account"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [9] Beobank — Beobank Save Plus Spaarrekening
+[16:56:11] cross_reference |       Field: total_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.1%
+[16:56:11] cross_reference |       beobank_regulated_savings (direct:beobank): 0.8%
+[16:56:11] cross_reference |       Difference: 0.3 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Beobank Save Plus Spaarrekening"
+[16:56:11] cross_reference |         beobank_regulated_savings: "Compte d'épargne Save Plus"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [10] Keytrade Bank — Keytrade Bank AZUR Spaarrekening
+[16:56:11] cross_reference |       Field: base_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.0%
+[16:56:11] cross_reference |       keytrade_regulated_savings (direct:keytrade): 0.8%
+[16:56:11] cross_reference |       Difference: 0.2 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Keytrade Bank AZUR Spaarrekening"
+[16:56:11] cross_reference |         keytrade_regulated_savings: "Azur savings account"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [11] Triodos Bank — Triodos Impact Savings
+[16:56:11] cross_reference |       Field: base_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[16:56:11] cross_reference |       banque_triodos_regulated_savings (direct:banque_triodos): 0.35%
+[16:56:11] cross_reference |       Difference: 0.2 percentage points
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [12] Triodos Bank — Triodos Impact Savings
+[16:56:11] cross_reference |       Field: base_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.55%
+[16:56:11] cross_reference |       banque_triodos_regulated_savings_products (direct:banque_triodos): 0.35%
+[16:56:11] cross_reference |       Difference: 0.2 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Triodos Impact Savings"
+[16:56:11] cross_reference |         banque_triodos_regulated_savings_products: "Compte d'épargne Triodos Impact Savings"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [13] Keytrade Bank — Keytrade Bank High Fidelity
+[16:56:11] cross_reference |       Field: fidelity_premium
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 1.65%
+[16:56:11] cross_reference |       keytrade_regulated_savings (direct:keytrade): 1.5%
+[16:56:11] cross_reference |       Difference: 0.15 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Keytrade Bank High Fidelity"
+[16:56:11] cross_reference |         keytrade_regulated_savings: "High Fidelity savings account"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [14] Keytrade Bank — Keytrade Bank AZUR Spaarrekening
+[16:56:11] cross_reference |       Field: fidelity_premium
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.5%
+[16:56:11] cross_reference |       keytrade_regulated_savings (direct:keytrade): 0.4%
+[16:56:11] cross_reference |       Difference: 0.1 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Keytrade Bank AZUR Spaarrekening"
+[16:56:11] cross_reference |         keytrade_regulated_savings: "Azur savings account"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [15] Beobank — Beobank Save Plus Spaarrekening
+[16:56:11] cross_reference |       Field: base_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.4%
+[16:56:11] cross_reference |       beobank_regulated_savings (direct:beobank): 0.3%
+[16:56:11] cross_reference |       Difference: 0.1 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Beobank Save Plus Spaarrekening"
+[16:56:11] cross_reference |         beobank_regulated_savings: "Compte d'épargne Save Plus"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference |   [16] Argenta — Argenta e-spaar
+[16:56:11] cross_reference |       Field: base_rate
+[16:56:11] cross_reference |       bankshopper.be (aggregator:bankshopper): 0.2%
+[16:56:11] cross_reference |       argenta_regulated_savings (direct:argenta): 0.25%
+[16:56:11] cross_reference |       Difference: 0.05 percentage points
+[16:56:11] cross_reference |       Note: Name varies:
+[16:56:11] cross_reference |         bankshopper.be: "Argenta e-spaar"
+[16:56:11] cross_reference |         argenta_regulated_savings: "E-Épargne"
+[16:56:11] cross_reference | 
+[16:56:11] cross_reference | OK
+
+==================================================
+[16:56:11] Starting: classify_facts
+==================================================
+[16:56:20] classify_facts | Prompting llm...
+[16:56:20] classify_facts | LLM response preview: {
+[16:56:20] classify_facts |   "0": {
+[16:56:20] classify_facts |     "classification": {
+[16:56:20] classify_facts |       "taxonomy_category": "Rate change",
+[16:56:20] classify_facts |       "taxonomy_group": "Product & Structure",
+[16:56:20] classify_facts |       "impact": "Medium",
+[16:56:20] classify_facts |       "description": "Beobank decreased base rate ...
+[16:56:20] classify_facts | differences classified. Ouput:/home/kliti/code/becode/becode_projects/Market_Watch_Agent/data/outputs/2026-05-11_classified_test.json
+[16:56:20] classify_facts | OK
+[REPORT] Saved: data/daily_summaries/Summary_2026-05-11.txt
+[EMAIL] ✅ Email successfully sent to: hoanghanhtien97@gmail.com, jan.kazimirowski@gmail.com, hamatajkliti@gmail.com, gaterafernand@gmail.com
+
+##################################################
+Pipeline finished: 2026-05-11T16:56:22.667718
+Duration: 1467.4 seconds
+##################################################

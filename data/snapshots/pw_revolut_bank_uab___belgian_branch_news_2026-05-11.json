@@ -1,7 +1,7 @@
 {
   "source": "revolut_bank_uab___belgian_branch_news",
   "url": "https://www.revolut.com/en-BE/news/",
-  "timestamp": "2026-05-11T10:21:51",
+  "timestamp": "2026-05-11T16:49:52",
   "date": "2026-05-11",
   "scraper": "playwright",
   "bank": "Revolut Bank UAB - Belgian Branch",
@@ -54,7 +54,7 @@
     },
     {
       "title": "Revolut becomes a Global Partner and Official Back of Shirt Partner of Manchester City men's and women's first teams",
-      "description": "Revolut has entered into a partnership with Manchester City, becoming a Global Partner and the Official Back of Shirt Partner for both the men's and women's teams.",
+      "description": "Revolut has entered into a partnership with Manchester City, becoming a global partner and the official back of shirt partner for both the men's and women's teams.",
       "pub_date": "2026-02-13",
       "link": null,
       "guid": "dfef95fbcdecc3de"
@@ -75,7 +75,7 @@
     },
     {
       "title": "Revolut to Enable Frictionless Checkout Across All Agentic Commerce Platforms for the UK and EEA",
-      "description": "Revolut is set to enable a frictionless checkout experience across all Agentic Commerce platforms in the UK and EEA.",
+      "description": "Revolut is set to enable frictionless checkout across all agentic commerce platforms in the UK and EEA, enhancing the customer experience.",
       "pub_date": "2026-01-19",
       "link": null,
       "guid": "00b55acb505ca89b"

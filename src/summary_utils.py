@@ -12,7 +12,8 @@ import pandas as pd
 
 # Update these paths to be safer
 BASE_DIR = Path(__file__).resolve().parents[1]
-EMAIL_FILE_PATH = BASE_DIR / "data" / "Email" / "team_emails.xlsx"
+EMAIL_FILE_PATH = BASE_DIR / "data" / "list_of_banks_ref_new.xlsx"
+EMAIL_SHEET_NAME = "Email"
 JSON_OUTPUT_DIR = BASE_DIR / "data" / "outputs"
 
 def get_latest_classified_file(search_dir: str) -> str:
@@ -115,61 +116,30 @@ def save_classification_summary(json_file_path: str, output_folder: str = "data/
     return str(file_path)
 
 
-def send_summary_email(txt_file_path: str, recipients: list[str], sender: str, password: str) -> str:
-    """
-    RECEIVES sender and password as direct strings.
-    """
-    # Double check if they arrived empty
+def send_summary_email(
+    txt_file_path: str, recipients: list[str], sender: str, password: str
+) -> str:
+    """Reads a text file and sends its content via Gmail."""
     if not sender:
         return "❌ Error: Sender email is empty."
     if not password:
         return "❌ Error: Password is empty."
-    """
-    Reads a text file and sends its content.
-    Credentials are passed directly to avoid environment scope issues.
-    """
-    if not sender or not password:
-        return "❌ Error: Credentials were not passed to the function."
 
     try:
-        with open(txt_file_path, 'r', encoding='utf-8') as f:
+        with open(txt_file_path, "r", encoding="utf-8") as f:
             body = f.read()
     except Exception as e:
         return f"❌ Error reading TXT file: {e}"
 
-    # 1. Get credentials from environment variables
-    from dotenv import load_dotenv
-    load_dotenv()
-
-    sender = os.environ.get("EMAIL_SENDER")
-    password = os.environ.get("EMAIL_PASSWORD")
-
-    # INTERNAL DEBUG - Let's see what the function sees
-    print(f"--- Function Internal Check ---")
-    print(f"Sender found: {sender}")
-    print(f"Password found: {'Yes' if password else 'No'}")
-
-    if not sender or not password:
-        return "❌ Error: EMAIL_SENDER or EMAIL_PASSWORD not set in environment."
-
-    # 2. Read the content of the TXT file
-    try:
-        with open(txt_file_path, 'r', encoding='utf-8') as f:
-            body = f.read()
-    except Exception as e:
-        return f"❌ Error reading TXT file: {e}"
-
-    # 3. Setup the email metadata
     date_str = datetime.now().strftime("%Y-%m-%d")
     subject = f"📊 Market Watch Summary — {date_str}"
 
     msg = MIMEMultipart()
-    msg['From'] = f"ING Market Watch <{sender}>"
-    msg['To'] = ", ".join(recipients)
-    msg['Subject'] = subject
-    msg.attach(MIMEText(body, 'plain', 'utf-8'))
+    msg["From"] = f"ING Market Watch <{sender}>"
+    msg["To"] = ", ".join(recipients)
+    msg["Subject"] = subject
+    msg.attach(MIMEText(body, "plain", "utf-8"))
 
-    # 4. Send the email
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(sender, password)
@@ -178,38 +148,30 @@ def send_summary_email(txt_file_path: str, recipients: list[str], sender: str, p
     except Exception as e:
         return f"❌ SMTP Error: {e}"
 
-# summary_utils.py (Add this to your existing file)
 
-
-
-def get_emails_from_excel(file_path: Path) -> list[str]:
-    """
-    Reads the email list from an Excel file with headers.
-    """
+def get_emails_from_excel(file_path: Path = EMAIL_FILE_PATH) -> list[str]:
+    """Read emails from the Email sheet in the main Excel file."""
     try:
         if not file_path.exists():
-            print(f"⚠️ File not found at: {file_path}")
+            print(f"⚠️ File not found: {file_path}")
             return []
 
-        # 1. Load the file NORMALLY (Pandas uses the first row as headers by default)
-        df = pd.read_excel(file_path)
+        df = pd.read_excel(file_path, sheet_name=EMAIL_SHEET_NAME)
 
-        # 2. Check if the 'Email' column actually exists to avoid crashing
-        if 'email' not in df.columns:
-            print("⚠️ Error: Could not find a column named 'Email' in the Excel file.")
+        if "email" not in df.columns:
+            print("⚠️ No 'email' column found in Email sheet.")
             return []
 
-        # 3. Extract the 'Email' column and clean it up
-        emails = df['email'].dropna().astype(str).str.strip().tolist()
-
-        # 4. Final safety check (ensure it contains an @ symbol)
+        emails = df["email"].dropna().astype(str).str.strip().tolist()
         emails = [e for e in emails if "@" in e]
 
+        print(f"[EMAIL] Found {len(emails)} recipients: {', '.join(emails)}")
         return emails
 
     except Exception as e:
-        print(f"⚠️ Error reading file: {e}")
+        print(f"⚠️ Error reading emails: {e}")
         return []
+
 
 def process_and_send_summary() -> str:
     """

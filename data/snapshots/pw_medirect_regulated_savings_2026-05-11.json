@@ -1,0 +1,63 @@
+{
+  "source": "medirect_regulated_savings",
+  "url": "https://www.medirect.be/nl-be/vergelijking-van-spaarrekeningen/",
+  "timestamp": "2026-05-11T16:48:32",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "MeDirect",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "90043a5c2cf2fb542316ace26e454bb1658e6bfa5ba08469c410fc391182820f",
+  "product_type": "regulated",
+  "num_products": 4,
+  "checksum": "d34758a3b4ccc21b06f2fd109e202c6d99242980c82e5f1a0956acd735b453de",
+  "products": [
+    {
+      "bank": "MeDirect Bank NV",
+      "product_name": "MeDirect Essential Sparen",
+      "base_rate": 1.3,
+      "fidelity_premium": 0.7,
+      "total_rate": 2.0,
+      "account_type": "gereglementeerde spaarrekening",
+      "min_deposit": 0,
+      "max_deposit": 25000,
+      "conditions": "Rekening uitsluitend bestemd voor online gebruik",
+      "duration": null
+    },
+    {
+      "bank": "MeDirect Bank NV",
+      "product_name": "MeDirect Fidelity Sparen",
+      "base_rate": 0.2,
+      "fidelity_premium": 1.4,
+      "total_rate": 1.6,
+      "account_type": "gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Geen voorwaarden, Rekening uitsluitend bestemd voor online gebruik",
+      "duration": null
+    },
+    {
+      "bank": "MeDirect Bank NV",
+      "product_name": "MeDirect Dynamic Sparen",
+      "base_rate": 1.1,
+      "fidelity_premium": 0.3,
+      "total_rate": 1.4,
+      "account_type": "gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Geen voorwaarden, Rekening uitsluitend bestemd voor online gebruik",
+      "duration": null
+    },
+    {
+      "bank": "MeDirect Bank NV",
+      "product_name": "MeDirect Maandsparen Max",
+      "base_rate": 0.05,
+      "fidelity_premium": 0.25,
+      "total_rate": 0.3,
+      "account_type": "gereglementeerde spaarrekening",
+      "min_deposit": 0,
+      "max_deposit": 500,
+      "conditions": "Rekening uitsluitend bestemd voor online gebruik, Deze rekening is momenteel niet meer beschikbaar",
+      "duration": null
+    }
+  ]
+}

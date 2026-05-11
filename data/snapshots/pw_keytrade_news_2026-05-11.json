@@ -1,0 +1,91 @@
+{
+  "source": "keytrade_news",
+  "url": "https://www.keytradebank.be/en/our-blog",
+  "timestamp": "2026-05-11T16:53:27",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Keytrade",
+  "link_type": "news",
+  "raw_text_checksum": "84baa778d8279af796438c770dbd56f0225a97466f63c9bdd0201516491e69b7",
+  "num_articles": 11,
+  "checksum": "cd120d8f03b29301283ccaf1ab42db1140aa3b756f81a92b2255fabd78af30aa",
+  "articles": [
+    {
+      "title": "Sell first, ask questions later? What conflicts do to the stock markets",
+      "description": "This article discusses the impact of conflicts on stock markets and the importance of strategic decision-making in investing.",
+      "pub_date": null,
+      "link": null,
+      "guid": "823a074331b4a7bc"
+    },
+    {
+      "title": "Phishing is on the rise: don't give fraudsters a chance",
+      "description": "An overview of the increasing phishing threats and tips on how to protect yourself from fraud.",
+      "pub_date": null,
+      "link": null,
+      "guid": "a08b574692852ffd"
+    },
+    {
+      "title": "Investing over public Wi-Fi: why you should never place orders on a public network",
+      "description": "This article highlights the risks associated with investing over public Wi-Fi and offers advice on secure practices.",
+      "pub_date": null,
+      "link": null,
+      "guid": "94d6a10dbde35f5d"
+    },
+    {
+      "title": "Staying invested pays off, even in 2026",
+      "description": "A discussion on the benefits of long-term investment strategies and the potential returns by 2026.",
+      "pub_date": null,
+      "link": null,
+      "guid": "a0441b45540d5fdf"
+    },
+    {
+      "title": "8 tips for investing wisely in ETFs",
+      "description": "This article provides eight practical tips for making informed decisions when investing in ETFs.",
+      "pub_date": null,
+      "link": null,
+      "guid": "b38852aa36f06f65"
+    },
+    {
+      "title": "A look back at ten years of Keyprivate",
+      "description": "Reflecting on a decade of Keyprivate and its evolution in the investment landscape.",
+      "pub_date": null,
+      "link": null,
+      "guid": "4d55b299655d9e19"
+    },
+    {
+      "title": "Investing in Australia: commodities, growth and a gateway to Asia",
+      "description": "An exploration of investment opportunities in Australia, focusing on commodities and growth potential.",
+      "pub_date": null,
+      "link": null,
+      "guid": "c7352a5aaa31f0ce"
+    },
+    {
+      "title": "Is investing in companies where the founder is still the boss a smart move?",
+      "description": "This article examines the advantages and disadvantages of investing in founder-led companies.",
+      "pub_date": null,
+      "link": null,
+      "guid": "0ba11d5310e68c50"
+    },
+    {
+      "title": "Panic may once again be a poor guide right now",
+      "description": "A commentary on market reactions and the importance of maintaining a level head during volatility.",
+      "pub_date": null,
+      "link": null,
+      "guid": "35c677963a777955"
+    },
+    {
+      "title": "Why you should keep your account statements",
+      "description": "An explanation of the importance of retaining account statements for personal finance management.",
+      "pub_date": null,
+      "link": null,
+      "guid": "1c17e379d1f035b4"
+    },
+    {
+      "title": "ChatGPT as financial adviser: reliable or not?",
+      "description": "A critical look at the use of AI, specifically ChatGPT, as a financial adviser and its reliability.",
+      "pub_date": null,
+      "link": null,
+      "guid": "943cc3a143f82d74"
+    }
+  ]
+}

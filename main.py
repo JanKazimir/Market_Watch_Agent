@@ -107,8 +107,8 @@ def main():
         log_file.write(f"{'#'*50}\n")
 
         ## Reloading links from excel
-        #print("[1/6] Retrieving links from Excel...")
-        #run_step(read_excel_file, log_file)
+        # print("[1/6] Retrieving links from Excel...")
+        # run_step(read_excel_file, log_file)
 
         ##
         ## SCRAPPING:
@@ -132,9 +132,9 @@ def main():
         run_step(playright_scraper, log_file)
 
         # PDF
-        #print("Getting pdfs...")
-        #run_step(pdf_scrapper, log_file)
-        #print("Pdf downloaded and checked")
+        # print("Getting pdfs...")
+        # run_step(pdf_scrapper, log_file)
+        # print("Pdf downloaded and checked")
 
         # Apify : they prefer playright
         # print("Apify scraping begun, this will take a few minutes.")
@@ -178,10 +178,21 @@ def main():
                 print(f"  Report saved: {txt_path}")
                 log_file.write(f"[REPORT] Saved: {txt_path}\n")
 
-                team = ["hoanghanhtien97@gmail.com"]
-                result = send_summary_email(txt_path, team, sender, password)
-                print(f"  {result}")
-                log_file.write(f"[EMAIL] {result}\n")
+                from src.summary_utils import (
+                    save_classification_summary,
+                    get_latest_classified_file,
+                    send_summary_email,
+                    get_emails_from_excel,
+                )
+
+                team = get_emails_from_excel()
+                if team:
+                    result = send_summary_email(txt_path, team, sender, password)
+                    print(f"  {result}")
+                    log_file.write(f"[EMAIL] {result}\n")
+                else:
+                    print("  WARNING: No recipients found in Excel Email sheet.")
+                    log_file.write(f"[EMAIL] No recipients found.\n")
 
         except Exception as e:
             print(f"  Error in report/email: {e}")

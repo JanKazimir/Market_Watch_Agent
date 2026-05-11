@@ -1,0 +1,56 @@
+{
+  "source": "santander_news",
+  "url": "https://www.santanderconsumerbank.be/fr/blog",
+  "timestamp": "2026-05-11T16:56:11",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Santander",
+  "link_type": "news",
+  "raw_text_checksum": "384316e565a278af40e018de374c9c7beb966eaeb2d848535ea374f35a1e8d91",
+  "num_articles": 6,
+  "checksum": "7023ff936e13c6b0e865c67feacd531d4ec44e6598c1c7061a09fc0b268b19f2",
+  "articles": [
+    {
+      "title": "Qu’est-ce que le phishing et comment ne pas se faire avoir ?",
+      "description": "Depuis des années, les cybercriminels tentent de se procurer les données d’utilisateurs finaux par le biais du phishing, et de nouvelles formes et techniques apparaissent constamment en vue d’attirer les gens dans le piège.",
+      "pub_date": "2026-01-23",
+      "link": null,
+      "guid": "9d541b7361377653"
+    },
+    {
+      "title": "De quel montant d'épargne devriez-vous disposer ?",
+      "description": "Épargner est sage. Non seulement pour se constituer une réserve en cas de dépenses imprévues, mais aussi parce que les comptes d'épargne commencent à rapporter davantage.",
+      "pub_date": "2024-03-25",
+      "link": null,
+      "guid": "7fc27afe7bed617b"
+    },
+    {
+      "title": "Épargner en tant qu'étudiant : 10 conseils pratiques pour une vie étudiante moins chère",
+      "description": "Cela ne semble pas évident, mais les étudiants peuvent également épargner ! Mettez de l'argent de côté grâce à nos conseils !",
+      "pub_date": "2022-11-07",
+      "link": null,
+      "guid": "0aa3943ec28746e4"
+    },
+    {
+      "title": "Le syndrome de l’autruche : pourquoi il vaut mieux ne pas ignorer vos finances",
+      "description": "Nous préférons éviter les mauvaises décisions financières. Pourtant, personne n’y échappe totalement.",
+      "pub_date": "2026-04-13",
+      "link": null,
+      "guid": "a2538f7e66c8b126"
+    },
+    {
+      "title": "Les solides résultats annuels de Banco Santander contribuent à une base stable pour votre environnement d’épargne",
+      "description": "Santander Consumer Bank fait partie du groupe espagnol Banco Santander, l’un des plus grands groupes bancaires au monde.",
+      "pub_date": "2026-04-13",
+      "link": null,
+      "guid": "2ab5ab0f82c4d5da"
+    },
+    {
+      "title": "Détox financière : 5 conseils pour reprendre le contrôle sur votre argent",
+      "description": "Autrefois une obligation religieuse stricte, le Carême est devenu, pour de nombreux Belges, l’occasion de réexaminer leurs habitudes quotidiennes.",
+      "pub_date": "2026-03-05",
+      "link": null,
+      "guid": "6ab6ba1ab92f548e"
+    }
+  ]
+}
