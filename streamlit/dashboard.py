@@ -13,7 +13,7 @@ st.set_page_config(page_title="Daily Market Watch", page_icon="📊", layout="wi
 
 # ── ADMIN SYSTEM ──────────────────────────────────────────────────────────────
 
-ADMIN_PASSWORD = "admin123"  # change ça
+ADMIN_PASSWORD = "admin123"
 
 if "is_admin" not in st.session_state:
     st.session_state.is_admin = False
