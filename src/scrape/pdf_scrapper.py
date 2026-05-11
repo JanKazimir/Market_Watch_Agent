@@ -11,9 +11,11 @@ import shutil
 import pandas as pd
 from pathlib import Path
 
-## Importing pdf_diff.py
+## Importing from sibling modules in src/
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from pdf_diff import diff_pdfs
+from llm.classify_facts import talk_to_llm, dump_and_save_json
+
 
 
 # Should have a way to update the pdf link by looking at the new url from the url scraping diff.
@@ -39,13 +41,32 @@ LATEST_DIR = DATA_DIR / "pdfs" / "latest"
 ARCHIVE_DIR = DATA_DIR / "pdfs" / "archive"
 OUTPUT_DIR = DATA_DIR / "outputs"
 SNAPSHOT_DIR = DATA_DIR / "snapshots"
+REPORT_DIR = DATA_DIR / "pdfs" / "reports"
+
+# LLM PROMPT
+PDF_REPORT_PROMPT = """You are part of a Market Watch system monitoring Belgian savings accounts. You will receive a PDF monitoring report containing a download summary and content diffs for changed PDF documents.
+
+Your job: classify and summarise the changes. 
+Start your summary by reproducing the sumamry of changes found at the top of the data sent to you. 
+For changes found, you will receive: context before the change, the change (before and after), and context after the change. 
+Focus your summary on thigns RELEVANT to SAVINGS ACCOUNTS (rate changes, change in conditions, product modifications, fee updates, etc...). 
+Ignore formatting-only changes, page number shifts, or unchanged boilerplate.
+
+Return valid JSON as a list of objects, each with:
+- "bank": bank name
+- "source_key": from the input
+- "category": one of "Rate change", "T&C modification", "Fee/tariff change", "New product", "Product removed", "Other"
+- "impact": "low", "medium", or "high". The impact of any change that is not related to savings accounts MUST be set to low.
+- "description": what changed, max 25 words. Include old and new values when available.
+
+If there are no meaningful changes, return: {"changes": "No meaningful pdf changes"}
+"""
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/pdf,*/*",
 }
 
-print(BASE_DIR)
 
 
 #
@@ -128,13 +149,9 @@ def build_pdf_list(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-
-
-
 #
 ## PDF SCRAPPER
 #
-
 
 def checksum(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -278,10 +295,18 @@ def main():
     # Combine report + diffs into a single snapshot
     snapshot = {**report, "pdf_diffs": diffs}
 
-    SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
-    snapshot_path = SNAPSHOT_DIR / f"pdf_diff_{today}.json"
-    snapshot_path.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False))
-    print(f"{len(diffs)} PDF diff(s) saved to {snapshot_path}")
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    report_path = REPORT_DIR / f"{today}_pdf_diff_report.json"
+    report_path.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False))
+    print(f"{len(diffs)} PDF diff(s) — report saved to {report_path}")
+
+    # Classify with LLM
+    print("Classifying PDF report with LLM...")
+    classified = talk_to_llm(snapshot, PDF_REPORT_PROMPT)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    classified_path = OUTPUT_DIR / f"{today}_pdf_report_classified.json"
+    dump_and_save_json(classified, classified_path)
+    print(f"Classified output saved to {classified_path}")
 
 
 if __name__ == "__main__":

@@ -22,6 +22,8 @@ load_dotenv(BASE_DIR / ".env")
 
 
 api_key = os.environ.get("API_KEY")
+test_string = os.environ.get("TEST_STRING")
+
 llm_small_model = "gpt-4o-mini"
 today = datetime.date.today().isoformat()
 ## Open ai client:
