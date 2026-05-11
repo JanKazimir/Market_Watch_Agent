@@ -5,7 +5,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-from summary_utils import process_and_send_summary
+from s.summary_utils import process_and_send_summary
 
 if __name__ == "__main__":
     # Just run the engine

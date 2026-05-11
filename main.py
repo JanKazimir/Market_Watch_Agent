@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+## Main function that runs the whole pipeline. 
+## We are logging results to file using subprocesses.
+
+=======
 """
 Pipeline Orchestrator
 ======================
@@ -15,10 +20,22 @@ Usage:
 Logs:
     data/logs/YYYY-MM-DD_pipeline.log
 """
+>>>>>>> origin/main
 
 import subprocess
 import datetime
 from pathlib import Path
+<<<<<<< HEAD
+
+
+## Paths
+BASE_DIR = Path.parent
+LOG_DIR = Path("data/outputs")
+today = datetime.date.today().isoformat()
+log_path = LOG_DIR / f"{today}_pipeline.log"
+
+def run_step(script, log_file):
+=======
 import os
 from dotenv import load_dotenv
 
@@ -62,6 +79,7 @@ classify_script = SRC_DIR / "llm" / "classify_facts.py"
 
 def run_step(script, log_file=log_path):
     """Run a Python script as subprocess and log its output."""
+>>>>>>> origin/main
     name = Path(script).stem
     now = datetime.datetime.now().strftime("%H:%M:%S")
     log_file.write(f"\n{'='*50}\n")
@@ -90,6 +108,12 @@ def run_step(script, log_file=log_path):
     return result.returncode == 0
 
 
+<<<<<<< HEAD
+
+def main():
+    print("testing main...")
+    run_step()
+=======
 # ---------------------------------------------------------------------------
 # MAIN PIPELINE
 # ---------------------------------------------------------------------------
@@ -195,10 +219,13 @@ def main():
         log_file.write(f"Pipeline finished: {end_time.isoformat()}\n")
         log_file.write(f"Duration: {duration.total_seconds():.1f} seconds\n")
         log_file.write(f"{'#'*50}\n")
+>>>>>>> origin/main
 
 
 if __name__ == "__main__":
     main()
+<<<<<<< HEAD
+=======
 
 """
 import os
@@ -240,3 +267,4 @@ except Exception as e:
     print(f"⚠️ Error: {e}")
 
 """
+>>>>>>> origin/main

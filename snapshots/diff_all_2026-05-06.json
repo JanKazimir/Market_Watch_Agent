@@ -1,0 +1,144 @@
+{
+  "combined": true,
+  "date_old": "2026-05-05",
+  "date_new": "2026-05-06",
+  "generated_at": "2026-05-06T14:34:37",
+  "num_sources": 4,
+  "sources": [
+    {
+      "source": "medirect_essential",
+      "data_type": "products",
+      "date_old": "2026-05-06",
+      "date_new": "2026-05-06",
+      "checksums_match": false,
+      "total_changes": 1,
+      "summary": {
+        "rate_changes": 1,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "bankshopper.be",
+      "data_type": "products",
+      "date_old": "2026-05-05",
+      "date_new": "2026-05-06",
+      "checksums_match": true,
+      "total_changes": 0,
+      "summary": {
+        "rate_changes": 0,
+        "condition_changes": 0,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "kbc.be",
+      "data_type": "products",
+      "date_old": "2026-05-05",
+      "date_new": "2026-05-05",
+      "checksums_match": false,
+      "total_changes": 2,
+      "summary": {
+        "rate_changes": 1,
+        "condition_changes": 1,
+        "rating_changes": 0,
+        "other_changes": 0,
+        "products_added": 0,
+        "products_removed": 0
+      }
+    },
+    {
+      "source": "lecho.be",
+      "data_type": "news",
+      "date_old": "2026-05-05",
+      "date_new": "2026-05-05",
+      "checksums_match": false,
+      "total_changes": 3,
+      "summary": {
+        "new_articles": 1,
+        "articles_updated": 2
+      }
+    }
+  ],
+  "total_changes": 6,
+  "summary": {
+    "rate_changes": 2,
+    "condition_changes": 1,
+    "rating_changes": 0,
+    "other_changes": 0,
+    "products_added": 0,
+    "products_removed": 0,
+    "new_articles": 1,
+    "articles_updated": 2
+  },
+  "changes": [
+    {
+      "change_type": "rate_change",
+      "bank": "MeDirect",
+      "product_name": "MeDirect Essential Sparen",
+      "field": "base_rate",
+      "before": 1.1,
+      "after": 1.3,
+      "source": "medirect_essential",
+      "data_type": "products"
+    },
+    {
+      "change_type": "rate_change",
+      "bank": "KBC",
+      "product_name": "1. KBC-Start2Save",
+      "field": "base_rate",
+      "before": 0.73,
+      "after": 0.75,
+      "source": "kbc.be",
+      "data_type": "products"
+    },
+    {
+      "change_type": "condition_change",
+      "bank": "KBC",
+      "product_name": "1. KBC-Start2Save",
+      "field": "account_type",
+      "before": "Compte d'épargne réglementé",
+      "after": "Compte d'épargnedfgsdgszdds réglementé",
+      "source": "kbc.be",
+      "data_type": "products"
+    },
+    {
+      "change_type": "article_updated",
+      "field": "title",
+      "before": "ING Belgique se lance dans les plans d'investissement en ETF avec des tarifs plancher",
+      "after": "ING Belgique se lance dans les plans d'investissement",
+      "title": "ING Belgique se lance dans les plans d'investissement",
+      "link": "https://www.lecho.be/r/t/1/id/10659203",
+      "guid": "https://www.lecho.be/r/t/1/id/10659203",
+      "source": "lecho.be",
+      "data_type": "news"
+    },
+    {
+      "change_type": "article_updated",
+      "field": "title",
+      "before": "BNP Paribas Fortis lance un nouveau compte d'épargne à 2,9%, mais sous conditions",
+      "after": " conditions",
+      "title": " conditions",
+      "link": "https://www.lecho.be/r/t/1/id/10659037",
+      "guid": "https://www.lecho.be/r/t/1/id/10659036",
+      "source": "lecho.be",
+      "data_type": "news"
+    },
+    {
+      "change_type": "new_article",
+      "title": "Marc Raisière (Belfius): \"Free money for everyone\"",
+      "description": "02/05 Depuis le restaurant italien qu’il vient de racheter avec Mehdi Bayat, Marc Raisière regarde dans le rétroviseur après ses 12 années à la tête de Belfius. Une «aventure financière, sociétale, et humai...",
+      "link": "https://www.lecho.be/r/t/1/id/10658464",
+      "pub_date": "Sat, 02 May 2026 02:56:14 GMT",
+      "guid": "https://www.lecho.be/r/t/1/id/10658464",
+      "source": "lecho.be",
+      "data_type": "news"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "source": "kbc_banque_product",
+  "url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html",
+  "timestamp": "2026-05-07T16:25:30",
+  "date": "2026-05-07",
+  "scraper": "playwright",
+  "bank": "KBC Banque",
+  "raw_text_checksum": "b3ec2bb8e4e02dbca5f282033f4d91bdd9a6fe9760407b09d3904d9c7795fa2c",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "693a20031531f2656a15d1923eb2541614c41a8bd31b215ae1961c5590b1adc7",
+  "products": [
+    {
+      "bank": "KBC Bank",
+      "product_name": "Compte d'épargne KBC",
+      "base_rate": 0.4,
+      "fidelity_premium": 0.2,
+      "total_rate": 0.6,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Prime de fidélité acquise sur les montants qui restent sur le compte d’épargne pendant 12 mois complets consécutifs.",
+      "duration": null
+    }
+  ]
+}
