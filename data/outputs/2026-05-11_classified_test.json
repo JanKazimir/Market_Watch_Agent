@@ -1,0 +1,98 @@
+{
+  "0": {
+    "change_type": "rate_change",
+    "bank": "Beobank",
+    "product_name": "Beobank Klassieke Spaarrekening",
+    "field": "base_rate",
+    "before": 0.5,
+    "after": 0.45,
+    "source": "bankshopper.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Rate change",
+      "taxonomy_group": "Product & Structure",
+      "impact": "Medium",
+      "description": "Beobank decreased base rate from 0.5% to 0.45% for Klassieke Spaarrekening."
+    }
+  },
+  "1": {
+    "change_type": "rate_change",
+    "bank": "Argenta",
+    "product_name": "Argenta e-spaar",
+    "field": "fidelity_premium",
+    "before": 0.35,
+    "after": 0.3,
+    "source": "bankshopper.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Rate change",
+      "taxonomy_group": "Product & Structure",
+      "impact": "Medium",
+      "description": "Argenta reduced fidelity premium from 0.35% to 0.3% for e-spaar."
+    }
+  },
+  "2": {
+    "change_type": "condition_change",
+    "bank": "Crelan",
+    "product_name": "Crelan Horizon Plus boekje",
+    "field": "max_deposit",
+    "before": "€ 350,00",
+    "after": "€ 250,00",
+    "source": "bankshopper.be",
+    "data_type": "products",
+    "classification": {
+      "taxonomy_category": "Eligibility / conditions",
+      "taxonomy_group": "Product & Structure",
+      "impact": "Medium",
+      "description": "Crelan lowered max deposit from €350 to €250 for Horizon Plus boekje."
+    }
+  },
+  "3": {
+    "change_type": "new_article",
+    "title": "3.000 emplois supprimés chez Commerzbank, assez pour repousser l'offre d'UniCredit?",
+    "description": "08/05 Commerzbank va supprimer 3.000 emplois et compte doubler ses bénéfices d'ici 2030. En faisant grimper la valeur de son action, la banque allemande veut bloquer l'offre de rachat par UniCredit en la re...",
+    "link": "https://www.lecho.be/r/t/1/id/10659714",
+    "pub_date": "Fri, 08 May 2026 10:06:20 GMT",
+    "guid": "https://www.lecho.be/r/t/1/id/10659714",
+    "source": "lecho.be",
+    "data_type": "news",
+    "classification": {
+      "taxonomy_category": "News articles or press release on rate changes",
+      "taxonomy_group": "News & External Signals",
+      "impact": "HIGH",
+      "description": "Commerzbank to cut 3,000 jobs, aiming to double profits by 2030."
+    }
+  },
+  "4": {
+    "change_type": "pdf_link_added",
+    "source": "argenta_tarif_pdf",
+    "data_type": "pdf",
+    "bank": "Argenta",
+    "link_type": "tarif_pdf",
+    "field": "pdf_links",
+    "before": null,
+    "after": "https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf",
+    "classification": {
+      "taxonomy_category": "New marketing message",
+      "taxonomy_group": "Communication & Positioning",
+      "impact": "low",
+      "description": "Argenta added new PDF link for e-spaar service mobility."
+    }
+  },
+  "5": {
+    "change_type": "pdf_link_removed",
+    "source": "argenta_tarif_pdf",
+    "data_type": "pdf",
+    "bank": "Argenta",
+    "link_type": "tarif_pdf",
+    "field": "pdf_links",
+    "before": "https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-tarif.pdf",
+    "after": null,
+    "classification": {
+      "taxonomy_category": "New marketing message",
+      "taxonomy_group": "Communication & Positioning",
+      "impact": "low",
+      "description": "Argenta removed old PDF link for e-spaar service mobility."
+    }
+  }
+}

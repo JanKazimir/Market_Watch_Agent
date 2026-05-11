@@ -9,11 +9,11 @@ __pycache__/
 .venv/
 
 # Data (generated at runtime)
-data/snapshots/
-data/logs/
-data/outputs/
-data/pdfs/
-data/pdf_links_csv/
+#data/snapshots/
+#data/logs/
+#data/outputs/
+#data/pdfs/
+#data/pdf_links_csv/
 
 # OS
 .DS_Store

@@ -1,0 +1,25 @@
+{
+  "source": "lecho.be",
+  "data_type": "news",
+  "date_old": "2026-05-10",
+  "date_new": "2026-05-11",
+  "generated_at": "2026-05-11T10:22:33",
+  "checksum_old": "cddf1cf8aea2c976714200bfd7c9dff63de4c8b8bf846f7886e0f7acc350ed759",
+  "checksum_new": "cddf1cf8aea2c976714200bfd7c9dff63dec8b8bf846f7886e0f7acc350ed759",
+  "checksums_match": false,
+  "total_changes": 1,
+  "summary": {
+    "new_articles": 1,
+    "articles_updated": 0
+  },
+  "changes": [
+    {
+      "change_type": "new_article",
+      "title": "3.000 emplois supprimés chez Commerzbank, assez pour repousser l'offre d'UniCredit?",
+      "description": "08/05 Commerzbank va supprimer 3.000 emplois et compte doubler ses bénéfices d'ici 2030. En faisant grimper la valeur de son action, la banque allemande veut bloquer l'offre de rachat par UniCredit en la re...",
+      "link": "https://www.lecho.be/r/t/1/id/10659714",
+      "pub_date": "Fri, 08 May 2026 10:06:20 GMT",
+      "guid": "https://www.lecho.be/r/t/1/id/10659714"
+    }
+  ]
+}
