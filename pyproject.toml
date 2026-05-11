@@ -8,6 +8,10 @@ dependencies = [
     "apify-client>=2.5.0",
     "apscheduler>=3.11.2",
     "beautifulsoup4>=4.14.3",
+<<<<<<< HEAD
+=======
+    "feedparser>=6.0.12",
+>>>>>>> origin/main
     "httpx>=0.28.1",
     "jsondiff>=2.2.1",
     "logging>=0.4.9.6",

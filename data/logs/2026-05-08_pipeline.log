@@ -1,0 +1,873 @@
+
+==================================================
+[11:56:32] Starting: test_function
+==================================================
+[11:56:32] test_function | testing the looging function
+[11:56:32] test_function | OK
+
+==================================================
+[12:07:50] Starting: test_function
+==================================================
+[12:07:50] test_function | testing the looging function
+[12:07:50] test_function | OK
+
+==================================================
+[13:50:25] Starting: test_function
+==================================================
+[13:50:25] test_function | testing the looging function
+[13:50:25] test_function | OK
+
+==================================================
+[13:51:19] Starting: read_excel_file
+==================================================
+[13:51:23] read_excel_file |                    source_key                bank                                                                                                                                url product_type language                                                                                                  pdf_source
+[13:51:23] read_excel_file | 0              argenta_saving             Argenta        https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf    regulated       fr                             https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[13:51:23] read_excel_file | 1              argenta_saving             Argenta                             https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf    regulated       fr                                 https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[13:51:23] read_excel_file | 2              argenta_saving             Argenta  https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf    regulated       fr                                          https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[13:51:23] read_excel_file | 3              argenta_saving             Argenta       https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf    regulated       fr                                        https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[13:51:23] read_excel_file | 4               argenta_terms             Argenta                  https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf  unregulated       fr                                             https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[13:51:23] read_excel_file | 5               argenta_tarif             Argenta                                       https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf        tarif       fr                                              https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[13:51:23] read_excel_file | 6   bnp_paribas_fortis_saving  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf    regulated                                                                                                                     
+[13:51:23] read_excel_file | 7    bnp_paribas_fortis_terms  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf  unregulated                                                                                                                     
+[13:51:23] read_excel_file | 8                bankb_saving               BankB                             https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf    regulated                                                                                                                     
+[13:51:23] read_excel_file | 9                 bankb_terms               BankB                        https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf  unregulated                                                                                                                     
+[13:51:23] read_excel_file | 10       banque_triodos_terms      Banque Triodos                                                                                                          there is only a dead link  unregulated                                                                                                                     
+[13:51:23] read_excel_file | 11       banque_triodos_tarif      Banque Triodos       https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40        tarif       fr                                                           https://www.triodos.be/fr/epargner/compte-a-terme
+[13:51:23] read_excel_file | 12               crelan_terms              Crelan                                          https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme  unregulated       fr                                                                                                            
+[13:51:23] read_excel_file | 13          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf    regulated       fr                           https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[13:51:23] read_excel_file | 14          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr    https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[13:51:23] read_excel_file | 15          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr  https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[13:51:23] read_excel_file | 16             medirect_terms            MeDirect                                                                              https://www.medirect.be/nl-be/sparen/termijnrekening/  unregulated       nl                                                                                                            
+[13:51:23] read_excel_file | 
+[13:51:23] read_excel_file | Wrote 17 rows to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdf_links_csv/2026-05-08_pdf_list.csv
+[13:51:23] read_excel_file | OK
+
+==================================================
+[13:52:40] Starting: read_excel_file
+==================================================
+[13:52:41] read_excel_file |                    source_key                bank                                                                                                                                url product_type language                                                                                                  pdf_source
+[13:52:41] read_excel_file | 0              argenta_saving             Argenta        https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf    regulated       fr                             https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[13:52:41] read_excel_file | 1              argenta_saving             Argenta                             https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf    regulated       fr                                 https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[13:52:41] read_excel_file | 2              argenta_saving             Argenta  https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf    regulated       fr                                          https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[13:52:41] read_excel_file | 3              argenta_saving             Argenta       https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf    regulated       fr                                        https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[13:52:41] read_excel_file | 4               argenta_terms             Argenta                  https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf  unregulated       fr                                             https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[13:52:41] read_excel_file | 5               argenta_tarif             Argenta                                       https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf        tarif       fr                                              https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[13:52:41] read_excel_file | 6   bnp_paribas_fortis_saving  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf    regulated                                                                                                                     
+[13:52:41] read_excel_file | 7    bnp_paribas_fortis_terms  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf  unregulated                                                                                                                     
+[13:52:41] read_excel_file | 8                bankb_saving               BankB                             https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf    regulated                                                                                                                     
+[13:52:41] read_excel_file | 9                 bankb_terms               BankB                        https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf  unregulated                                                                                                                     
+[13:52:41] read_excel_file | 10       banque_triodos_terms      Banque Triodos                                                                                                          there is only a dead link  unregulated                                                                                                                     
+[13:52:41] read_excel_file | 11       banque_triodos_tarif      Banque Triodos       https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40        tarif       fr                                                           https://www.triodos.be/fr/epargner/compte-a-terme
+[13:52:41] read_excel_file | 12               crelan_terms              Crelan                                          https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme  unregulated       fr                                                                                                            
+[13:52:41] read_excel_file | 13          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf    regulated       fr                           https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[13:52:41] read_excel_file | 14          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr    https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[13:52:41] read_excel_file | 15          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr  https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[13:52:41] read_excel_file | 16             medirect_terms            MeDirect                                                                              https://www.medirect.be/nl-be/sparen/termijnrekening/  unregulated       nl                                                                                                            
+[13:52:41] read_excel_file | 
+[13:52:41] read_excel_file | Wrote 17 rows to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdf_links_csv/2026-05-08_pdf_list.csv
+[13:52:41] read_excel_file | OK
+
+==================================================
+[13:52:41] Starting: pdf_scrapper
+==================================================
+[13:53:43] pdf_scrapper | Starting pdf...
+[13:53:43] pdf_scrapper | Downloading and checking pdf files...
+[13:53:43] pdf_scrapper | Updated: 0  Unchanged: 11  Dead links: 0  Webpages: 3  Not a link: 1  Errors: 2
+[13:53:43] pdf_scrapper | Report saved to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/outputs/2026-05-08_pdf_diff.json
+[13:53:43] pdf_scrapper | OK
+
+==================================================
+[14:04:06] Starting: read_excel_file
+==================================================
+[14:04:06] read_excel_file |                    source_key                bank                                                                                                                                url product_type language                                                                                                  pdf_source
+[14:04:06] read_excel_file | 0              argenta_saving             Argenta        https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf    regulated       fr                             https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[14:04:06] read_excel_file | 1              argenta_saving             Argenta                             https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf    regulated       fr                                 https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[14:04:06] read_excel_file | 2              argenta_saving             Argenta  https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf    regulated       fr                                          https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[14:04:06] read_excel_file | 3              argenta_saving             Argenta       https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf    regulated       fr                                        https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[14:04:06] read_excel_file | 4               argenta_terms             Argenta                  https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf  unregulated       fr                                             https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[14:04:06] read_excel_file | 5               argenta_tarif             Argenta                                       https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf        tarif       fr                                              https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[14:04:06] read_excel_file | 6   bnp_paribas_fortis_saving  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf    regulated                                                                                                                     
+[14:04:06] read_excel_file | 7    bnp_paribas_fortis_terms  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf  unregulated                                                                                                                     
+[14:04:06] read_excel_file | 8                bankb_saving               BankB                             https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf    regulated                                                                                                                     
+[14:04:06] read_excel_file | 9                 bankb_terms               BankB                        https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf  unregulated                                                                                                                     
+[14:04:06] read_excel_file | 10       banque_triodos_terms      Banque Triodos                                                                                                          there is only a dead link  unregulated                                                                                                                     
+[14:04:06] read_excel_file | 11       banque_triodos_tarif      Banque Triodos       https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40        tarif       fr                                                           https://www.triodos.be/fr/epargner/compte-a-terme
+[14:04:06] read_excel_file | 12               crelan_terms              Crelan                                          https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme  unregulated       fr                                                                                                            
+[14:04:06] read_excel_file | 13          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf    regulated       fr                           https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[14:04:06] read_excel_file | 14          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr    https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[14:04:06] read_excel_file | 15          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr  https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[14:04:06] read_excel_file | 16             medirect_terms            MeDirect                                                                              https://www.medirect.be/nl-be/sparen/termijnrekening/  unregulated       nl                                                                                                            
+[14:04:06] read_excel_file | 
+[14:04:06] read_excel_file | Wrote 17 rows to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdf_links_csv/2026-05-08_pdf_list.csv
+[14:04:06] read_excel_file | OK
+
+==================================================
+[14:04:06] Starting: pdf_scrapper
+==================================================
+[14:05:09] pdf_scrapper | Starting pdf...
+[14:05:09] pdf_scrapper | Downloading and checking pdf files...
+[14:05:09] pdf_scrapper | Updated: 0  Unchanged: 11  Dead links: 0  Webpages: 3  Not a link: 1  Errors: 2
+[14:05:09] pdf_scrapper | Report saved to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/outputs/2026-05-08_pdf_diff.json
+[14:05:09] pdf_scrapper | OK
+
+==================================================
+[14:06:34] Starting: read_excel_file
+==================================================
+[14:06:35] read_excel_file |                    source_key                bank                                                                                                                                url product_type language                                                                                                  pdf_source
+[14:06:35] read_excel_file | 0              argenta_saving             Argenta        https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf    regulated       fr                             https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[14:06:35] read_excel_file | 1              argenta_saving             Argenta                             https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf    regulated       fr                                 https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[14:06:35] read_excel_file | 2              argenta_saving             Argenta  https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf    regulated       fr                                          https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[14:06:35] read_excel_file | 3              argenta_saving             Argenta       https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf    regulated       fr                                        https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[14:06:35] read_excel_file | 4               argenta_terms             Argenta                  https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf  unregulated       fr                                             https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[14:06:35] read_excel_file | 5               argenta_tarif             Argenta                                       https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf        tarif       fr                                              https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[14:06:35] read_excel_file | 6   bnp_paribas_fortis_saving  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf    regulated                                                                                                                     
+[14:06:35] read_excel_file | 7    bnp_paribas_fortis_terms  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf  unregulated                                                                                                                     
+[14:06:35] read_excel_file | 8                bankb_saving               BankB                             https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf    regulated                                                                                                                     
+[14:06:35] read_excel_file | 9                 bankb_terms               BankB                        https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf  unregulated                                                                                                                     
+[14:06:35] read_excel_file | 10       banque_triodos_terms      Banque Triodos                                                                                                          there is only a dead link  unregulated                                                                                                                     
+[14:06:35] read_excel_file | 11       banque_triodos_tarif      Banque Triodos       https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40        tarif       fr                                                           https://www.triodos.be/fr/epargner/compte-a-terme
+[14:06:35] read_excel_file | 12               crelan_terms              Crelan                                          https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme  unregulated       fr                                                                                                            
+[14:06:35] read_excel_file | 13          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf    regulated       fr                           https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[14:06:35] read_excel_file | 14          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr    https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[14:06:35] read_excel_file | 15          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr  https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[14:06:35] read_excel_file | 16             medirect_terms            MeDirect                                                                              https://www.medirect.be/nl-be/sparen/termijnrekening/  unregulated       nl                                                                                                            
+[14:06:35] read_excel_file | 
+[14:06:35] read_excel_file | Wrote 17 rows to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdf_links_csv/2026-05-08_pdf_list.csv
+[14:06:35] read_excel_file | OK
+
+==================================================
+[14:06:35] Starting: pdf_scrapper
+==================================================
+[14:07:37] pdf_scrapper | Starting pdf...
+[14:07:37] pdf_scrapper | Downloading and checking pdf files...
+[14:07:37] pdf_scrapper | Updated: 0  Unchanged: 11  Dead links: 0  Webpages: 3  Not a link: 1  Errors: 2
+[14:07:37] pdf_scrapper | Report saved to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/outputs/2026-05-08_pdf_diff.json
+[14:07:37] pdf_scrapper | OK
+
+==================================================
+[14:07:37] Starting: apify_scraper
+==================================================
+[14:07:37] apify_scraper | ============================================================
+[14:07:37] apify_scraper |   Apify Bank Scraper (Excel-Driven)
+[14:07:37] apify_scraper |   2026-05-08
+[14:07:37] apify_scraper | ============================================================
+[14:07:37] apify_scraper | ERROR: APIFY_API_TOKEN not set. Add to .env
+[14:07:37] apify_scraper | FAILED (1)
+
+==================================================
+[14:32:53] Starting: read_excel_file
+==================================================
+[14:32:54] read_excel_file |                    source_key                bank                                                                                                                                url product_type language                                                                                                  pdf_source
+[14:32:54] read_excel_file | 0              argenta_saving             Argenta        https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf    regulated       fr                             https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[14:32:54] read_excel_file | 1              argenta_saving             Argenta                             https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf    regulated       fr                                 https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[14:32:54] read_excel_file | 2              argenta_saving             Argenta  https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf    regulated       fr                                          https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[14:32:54] read_excel_file | 3              argenta_saving             Argenta       https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf    regulated       fr                                        https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[14:32:54] read_excel_file | 4               argenta_terms             Argenta                  https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf  unregulated       fr                                             https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[14:32:54] read_excel_file | 5               argenta_tarif             Argenta                                       https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf        tarif       fr                                              https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[14:32:54] read_excel_file | 6   bnp_paribas_fortis_saving  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf    regulated                                                                                                                     
+[14:32:54] read_excel_file | 7    bnp_paribas_fortis_terms  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf  unregulated                                                                                                                     
+[14:32:54] read_excel_file | 8                bankb_saving               BankB                             https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf    regulated                                                                                                                     
+[14:32:54] read_excel_file | 9                 bankb_terms               BankB                        https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf  unregulated                                                                                                                     
+[14:32:54] read_excel_file | 10       banque_triodos_terms      Banque Triodos                                                                                                          there is only a dead link  unregulated                                                                                                                     
+[14:32:54] read_excel_file | 11       banque_triodos_tarif      Banque Triodos       https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40        tarif       fr                                                           https://www.triodos.be/fr/epargner/compte-a-terme
+[14:32:54] read_excel_file | 12               crelan_terms              Crelan                                          https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme  unregulated       fr                                                                                                            
+[14:32:54] read_excel_file | 13          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf    regulated       fr                           https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[14:32:54] read_excel_file | 14          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr    https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[14:32:54] read_excel_file | 15          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr  https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[14:32:54] read_excel_file | 16             medirect_terms            MeDirect                                                                              https://www.medirect.be/nl-be/sparen/termijnrekening/  unregulated       nl                                                                                                            
+[14:32:54] read_excel_file | 
+[14:32:54] read_excel_file | Wrote 17 rows to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdf_links_csv/2026-05-08_pdf_list.csv
+[14:32:54] read_excel_file | OK
+
+==================================================
+[14:32:54] Starting: apify_scraper
+==================================================
+[14:32:54] apify_scraper | ============================================================
+[14:32:54] apify_scraper |   Apify Bank Scraper (Excel-Driven)
+[14:32:54] apify_scraper |   2026-05-08
+[14:32:54] apify_scraper | ============================================================
+[14:32:54] apify_scraper | ERROR: APIFY_API_TOKEN not set. Add to .env
+[14:32:54] apify_scraper | FAILED (1)
+
+==================================================
+[14:33:02] Starting: read_excel_file
+==================================================
+[14:33:03] read_excel_file |                    source_key                bank                                                                                                                                url product_type language                                                                                                  pdf_source
+[14:33:03] read_excel_file | 0              argenta_saving             Argenta        https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf    regulated       fr                             https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html
+[14:33:03] read_excel_file | 1              argenta_saving             Argenta                             https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-compte-de-fidelite.pdf    regulated       fr                                 https://www.argenta.be/fr/epargner/compte-d-epargne/compte-de-fidelite.html
+[14:33:03] read_excel_file | 2              argenta_saving             Argenta  https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20e-epargne.pdf    regulated       fr                                          https://www.argenta.be/fr/epargner/compte-d-epargne/e-epargne.html
+[14:33:03] read_excel_file | 3              argenta_saving             Argenta       https://www.argenta.be/content/dam/argenta/documents/epargner/Informations%20cles%20pour%20l%27epargnant%20Compte%20Maxi.pdf    regulated       fr                                        https://www.argenta.be/fr/epargner/compte-d-epargne/compte-maxi.html
+[14:33:03] read_excel_file | 4               argenta_terms             Argenta                  https://www.argenta.be/content/dam/argenta/documents/epargner/depot-a-terme/fiche-d-information-depot-a-terme.pdf  unregulated       fr                                             https://www.argenta.be/fr/epargner/depot-a-terme.html#documents
+[14:33:03] read_excel_file | 5               argenta_tarif             Argenta                                       https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf        tarif       fr                                              https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre
+[14:33:03] read_excel_file | 6   bnp_paribas_fortis_saving  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf    regulated                                                                                                                     
+[14:33:03] read_excel_file | 7    bnp_paribas_fortis_terms  BNP Paribas Fortis                                         https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf  unregulated                                                                                                                     
+[14:33:03] read_excel_file | 8                bankb_saving               BankB                             https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf    regulated                                                                                                                     
+[14:33:03] read_excel_file | 9                 bankb_terms               BankB                        https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf  unregulated                                                                                                                     
+[14:33:03] read_excel_file | 10       banque_triodos_terms      Banque Triodos                                                                                                          there is only a dead link  unregulated                                                                                                                     
+[14:33:03] read_excel_file | 11       banque_triodos_tarif      Banque Triodos       https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40        tarif       fr                                                           https://www.triodos.be/fr/epargner/compte-a-terme
+[14:33:03] read_excel_file | 12               crelan_terms              Crelan                                          https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/comptes-terme  unregulated       fr                                                                                                            
+[14:33:03] read_excel_file | 13          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf    regulated       fr                           https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html
+[14:33:03] read_excel_file | 14          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr    https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav
+[14:33:03] read_excel_file | 15          kbc_banque_saving          KBC Banque                                                       https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf    regulated       fr  https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav
+[14:33:03] read_excel_file | 16             medirect_terms            MeDirect                                                                              https://www.medirect.be/nl-be/sparen/termijnrekening/  unregulated       nl                                                                                                            
+[14:33:03] read_excel_file | 
+[14:33:03] read_excel_file | Wrote 17 rows to /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/pdf_links_csv/2026-05-08_pdf_list.csv
+[14:33:03] read_excel_file | OK
+
+==================================================
+[14:33:03] Starting: apify_scraper
+==================================================
+[14:33:03] apify_scraper | ============================================================
+[14:33:03] apify_scraper |   Apify Bank Scraper (Excel-Driven)
+[14:33:03] apify_scraper |   2026-05-08
+[14:33:03] apify_scraper | ============================================================
+[14:33:03] apify_scraper | ERROR: APIFY_API_TOKEN not set. Add to .env
+[14:33:03] apify_scraper | FAILED (1)
+
+==================================================
+[14:33:03] Starting: diff
+==================================================
+[14:33:03] diff | [DIFF] Auto-discovery mode — scanning snapshots/ for snapshot pairs...
+[14:33:03] diff | [DIFF] Found 32 source(s) with snapshot pairs.
+[14:33:03] diff | 
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: apify_bnp_savings_2026-05-06.json  →  apify_bnp_savings_2026-05-07.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_bnp_savings_2026-05-06_to_2026-05-07.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-06 → 2026-05-07
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          bnp_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: apify_bnp_term_2026-05-06.json  →  apify_bnp_term_2026-05-07.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_bnp_term_2026-05-06_to_2026-05-07.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-06 → 2026-05-07
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          bnp_term
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: apify_crelan_term_2026-05-06.json  →  apify_crelan_term_2026-05-07.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_crelan_term_2026-05-06_to_2026-05-07.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-06 → 2026-05-07
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          crelan_term
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: apify_medirect_savings_2026-05-06.json  →  apify_medirect_savings_2026-05-07.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_medirect_savings_2026-05-06_to_2026-05-07.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-06 → 2026-05-07
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          medirect_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: apify_medirect_term_2026-05-06.json  →  apify_medirect_term_2026-05-07.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_medirect_term_2026-05-06_to_2026-05-07.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-06 → 2026-05-07
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          medirect_term
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_argenta_product_1_2026-05-07.json  →  pw_argenta_product_1_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_argenta_product_1_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          argenta_product_1
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_argenta_product_2026-05-07.json  →  pw_argenta_product_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_argenta_product_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          argenta_product
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_argenta_product_2_2026-05-07.json  →  pw_argenta_product_2_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_argenta_product_2_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          argenta_product_2
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_argenta_product_3_2026-05-07.json  →  pw_argenta_product_3_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_argenta_product_3_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          argenta_product_3
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_argenta_regulated_2026-05-07.json  →  pw_argenta_regulated_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_argenta_regulated_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          argenta_regulated
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_argenta_term_2026-05-07.json  →  pw_argenta_term_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_argenta_term_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          argenta_term
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_bankb_regulated_2026-05-07.json  →  pw_bankb_regulated_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_bankb_regulated_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          bankb_regulated
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_bankb_savings_2026-05-07.json  →  pw_bankb_savings_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_bankb_savings_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          bankb_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_cph_regulated_2026-05-07.json  →  pw_banque_cph_regulated_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_cph_regulated_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_cph_regulated
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_news_2026-05-07.json  →  pw_banque_triodos_news_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_news_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_news
+[14:33:03] diff |   Data type:       news
+[14:33:03] diff |   Checksums match: False
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     New articles:      0
+[14:33:03] diff |     Articles updated:  0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_product_1_2026-05-07.json  →  pw_banque_triodos_product_1_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_product_1_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_product_1
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_product_2026-05-07.json  →  pw_banque_triodos_product_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_product_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_product
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_product_2_2026-05-07.json  →  pw_banque_triodos_product_2_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_product_2_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_product_2
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_regulated_2026-05-07.json  →  pw_banque_triodos_regulated_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_regulated_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_regulated
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_savings_2026-05-07.json  →  pw_banque_triodos_savings_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_savings_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_term_1_2026-05-07.json  →  pw_banque_triodos_term_1_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_term_1_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_term_1
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_banque_triodos_term_2026-05-07.json  →  pw_banque_triodos_term_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_banque_triodos_term_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          banque_triodos_term
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_belfius_savings_2026-05-07.json  →  pw_belfius_savings_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_belfius_savings_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          belfius_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_bnp_paribas_fortis_news_2026-05-07.json  →  pw_bnp_paribas_fortis_news_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_bnp_paribas_fortis_news_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          bnp_paribas_fortis_news
+[14:33:03] diff |   Data type:       news
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     New articles:      0
+[14:33:03] diff |     Articles updated:  0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_crelan_savings_2026-05-07.json  →  pw_crelan_savings_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_crelan_savings_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          crelan_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_kbc_banque_product_1_2026-05-07.json  →  pw_kbc_banque_product_1_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_kbc_banque_product_1_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          kbc_banque_product_1
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_kbc_banque_product_2026-05-07.json  →  pw_kbc_banque_product_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_kbc_banque_product_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          kbc_banque_product
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_kbc_banque_product_2_2026-05-07.json  →  pw_kbc_banque_product_2_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_kbc_banque_product_2_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          kbc_banque_product_2
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_kbc_banque_term_2026-05-07.json  →  pw_kbc_banque_term_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_kbc_banque_term_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          kbc_banque_term
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_medirect_savings_2026-05-07.json  →  pw_medirect_savings_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_medirect_savings_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          medirect_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_revolut_bank_uab___belgian_branch_news_2026-05-07.json  →  pw_revolut_bank_uab___belgian_branch_news_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_revolut_bank_uab___belgian_branch_news_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          revolut_bank_uab___belgian_branch_news
+[14:33:03] diff |   Data type:       news
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     New articles:      0
+[14:33:03] diff |     Articles updated:  0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | ————————————————————————————————————————————————————————————
+[14:33:03] diff | [DIFF] Comparing: pw_revolut_bank_uab___belgian_branch_savings_2026-05-07.json  →  pw_revolut_bank_uab___belgian_branch_savings_2026-05-08.json
+[14:33:03] diff | [DIFF] Saved report → snapshots/diff_revolut_bank_uab___belgian_branch_savings_2026-05-07_to_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   DIFF REPORT: 2026-05-07 → 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Source:          revolut_bank_uab___belgian_branch_savings
+[14:33:03] diff |   Data type:       products
+[14:33:03] diff |   Checksums match: True
+[14:33:03] diff |   Total changes:   0
+[14:33:03] diff |     Rate changes:      0
+[14:33:03] diff |     Condition changes:  0
+[14:33:03] diff |     Rating changes:    0
+[14:33:03] diff |     Other changes:     0
+[14:33:03] diff |     Products added:     0
+[14:33:03] diff |     Products removed:   0
+[14:33:03] diff | 
+[14:33:03] diff |   No changes detected. Quiet day.
+[14:33:03] diff | 
+[14:33:03] diff | [DIFF] Saved combined report → snapshots/diff_all_2026-05-08.json
+[14:33:03] diff | 
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   COMBINED DAILY DIFF: 2026-05-08
+[14:33:03] diff | ============================================================
+[14:33:03] diff |   Sources processed:   32
+[14:33:03] diff |   Total changes:       0
+[14:33:03] diff | 
+[14:33:03] diff |   All quiet across all sources.
+[14:33:03] diff | 
+[14:33:03] diff |   Per source:
+[14:33:03] diff |     bnp_savings (products): no changes
+[14:33:03] diff |     bnp_term (products): no changes
+[14:33:03] diff |     crelan_term (products): no changes
+[14:33:03] diff |     medirect_savings (products): no changes
+[14:33:03] diff |     medirect_term (products): no changes
+[14:33:03] diff |     argenta_product_1 (products): no changes
+[14:33:03] diff |     argenta_product (products): no changes
+[14:33:03] diff |     argenta_product_2 (products): no changes
+[14:33:03] diff |     argenta_product_3 (products): no changes
+[14:33:03] diff |     argenta_regulated (products): no changes
+[14:33:03] diff |     argenta_term (products): no changes
+[14:33:03] diff |     bankb_regulated (products): no changes
+[14:33:03] diff |     bankb_savings (products): no changes
+[14:33:03] diff |     banque_cph_regulated (products): no changes
+[14:33:03] diff |     banque_triodos_news (news): 0 change(s)
+[14:33:03] diff |     banque_triodos_product_1 (products): no changes
+[14:33:03] diff |     banque_triodos_product (products): no changes
+[14:33:03] diff |     banque_triodos_product_2 (products): no changes
+[14:33:03] diff |     banque_triodos_regulated (products): no changes
+[14:33:03] diff |     banque_triodos_savings (products): no changes
+[14:33:03] diff |     banque_triodos_term_1 (products): no changes
+[14:33:03] diff |     banque_triodos_term (products): no changes
+[14:33:03] diff |     belfius_savings (products): no changes
+[14:33:03] diff |     bnp_paribas_fortis_news (news): no changes
+[14:33:03] diff |     crelan_savings (products): no changes
+[14:33:03] diff |     kbc_banque_product_1 (products): no changes
+[14:33:03] diff |     kbc_banque_product (products): no changes
+[14:33:03] diff |     kbc_banque_product_2 (products): no changes
+[14:33:03] diff |     kbc_banque_term (products): no changes
+[14:33:03] diff |     medirect_savings (products): no changes
+[14:33:03] diff |     revolut_bank_uab___belgian_branch_news (news): no changes
+[14:33:03] diff |     revolut_bank_uab___belgian_branch_savings (products): no changes
+[14:33:03] diff | OK

@@ -2,13 +2,35 @@ import json
 import datetime
 from pathlib import Path
 import streamlit as st
-import pandas as pd 
+import pandas as pd
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
 SNAPSHOTS_DIR = Path(__file__).parent.parent / "snapshots"
 EXCEL_PATH = Path("/Users/fefe/Desktop/Market_Watch_Agent/data/list_of_banks_ref_new.xlsx")
+
 st.set_page_config(page_title="Daily Market Watch", page_icon="📊", layout="wide")
+
+# ── ADMIN SYSTEM ──────────────────────────────────────────────────────────────
+
+ADMIN_PASSWORD = "admin123"  # change ça
+
+if "is_admin" not in st.session_state:
+    st.session_state.is_admin = False
+
+with st.sidebar:
+    st.markdown("### 🔐 Admin")
+
+    if not st.session_state.is_admin:
+        pwd = st.text_input("Password", type="password")
+        if st.button("Login"):
+            if pwd == ADMIN_PASSWORD:
+                st.session_state.is_admin = True
+                st.success("Admin mode ON")
+            else:
+                st.error("Wrong password")
+    else:
+        st.success("Logged in as admin")
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 
@@ -35,38 +57,23 @@ st.markdown("""
     .kpi-box.disc { background: #1a3d1a; border-left: 4px solid #27ae60; }
     .kpi-label { font-size: 13px; color: #aaa; margin-bottom: 6px; }
     .kpi-value { font-size: 42px; font-weight: bold; color: #fff; }
-    .kpi-box.high .kpi-value { color: #e74c3c; }
-    .kpi-box.medium .kpi-value { color: #e67e22; }
-    .kpi-box.disc .kpi-value { color: #2ecc71; }
 
     .section-box { background: #242424; border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; }
     .section-title { font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 14px; }
 
-    .change-row {
-        display: flex; align-items: center; gap: 12px;
-        padding: 10px 0; border-bottom: 1px solid #333;
-    }
-    .change-row:last-child { border-bottom: none; }
-    .badge { font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 4px; min-width: 42px; text-align: center; }
-    .badge-HIGH { background: #c0392b; color: white; }
-    .badge-MED  { background: #d4800a; color: white; }
-    .badge-LOW  { background: #555; color: #ccc; }
-    .change-bank { font-weight: bold; color: #fff; min-width: 120px; }
-    .change-desc { color: #ccc; font-size: 14px; flex: 1; }
-    .change-source { color: #666; font-size: 12px; }
-
-    .disc-item { background: #1e1e1e; border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
-    .disc-title { font-weight: bold; color: #fff; margin-bottom: 6px; }
-    .disc-diff { color: #e67e22; font-size: 13px; font-weight: bold; margin-top: 4px; }
-
     .news-item { padding: 12px 0; border-bottom: 1px solid #333; }
-    .news-item:last-child { border-bottom: none; }
     .news-title a { color: #4da6ff; text-decoration: none; font-weight: bold; font-size: 14px; }
     .news-meta { color: #666; font-size: 12px; margin-top: 3px; }
+
+    .change-row { display:flex; gap:10px; padding:8px 0; border-bottom:1px solid #333; }
+    .badge { padding:2px 6px; border-radius:4px; font-size:11px; }
+    .badge-HIGH { background:#c0392b; }
+    .badge-MED { background:#d4800a; }
+    .badge-LOW { background:#555; }
 </style>
 """, unsafe_allow_html=True)
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+# ── HELPERS ───────────────────────────────────────────────────────────────────
 
 def load_json(path):
     if Path(path).exists():
@@ -84,216 +91,134 @@ def classify_impact(change):
         return "HIGH" if diff >= 0.1 else "MED"
     if ct in ("product_added", "product_removed"):
         return "HIGH"
-    if ct == "condition_change":
-        return "MED"
     return "LOW"
 
 def describe_change(change):
-    ct = change.get("change_type", "")
-    field = change.get("field", "")
-    before = change.get("before")
-    after = change.get("after")
-    product = change.get("product_name", "")
-    title = change.get("title", "")
+    return f"{change.get('product_name','')} - {change.get('change_type','')}"
 
-    if ct == "rate_change":
-        return f"{product} — {field}: {before}% → {after}%"
-    if ct == "condition_change":
-        return f"{product} — {field}: {before} → {after}"
-    if ct == "other_change":
-        return f"{product} — {field} updated"
-    if ct == "new_article":
-        return f"New article: {title}"
-    if ct == "article_updated":
-        return f"Article updated: {title or after}"
-    if ct in ("product_added", "product_removed"):
-        return f"{ct.replace('_', ' ').title()}: {product}"
-    return f"{ct}: {product or title}"
-
-# ── Sidebar ───────────────────────────────────────────────────────────────────
+# ── SIDEBAR ───────────────────────────────────────────────────────────────────
 
 with st.sidebar:
     st.markdown("### 📅 Date")
     dates = get_available_dates()
     if not dates:
-        st.error(f"No diff_all_*.json found in:\n{SNAPSHOTS_DIR}")
+        st.error("No data found")
         st.stop()
+
     selected_date = st.selectbox("Select date", dates)
 
-# ── Load data ─────────────────────────────────────────────────────────────────
+# ── LOAD DATA ─────────────────────────────────────────────────────────────────
 
-diff_all      = load_json(SNAPSHOTS_DIR / f"diff_all_{selected_date}.json")
+diff_all = load_json(SNAPSHOTS_DIR / f"diff_all_{selected_date}.json")
 discrepancies = load_json(SNAPSHOTS_DIR / f"discrepancies_{selected_date}.json")
-lecho         = load_json(SNAPSHOTS_DIR / f"lecho_entreprises_banques_{selected_date}.json")
+lecho = load_json(SNAPSHOTS_DIR / f"lecho_entreprises_banques_{selected_date}.json")
 
-changes  = diff_all.get("changes", [])
-sources  = [s["source"] for s in diff_all.get("sources", [])]
+changes = diff_all.get("changes", [])
 articles = lecho.get("articles", [])
-discs    = discrepancies.get("discrepancies", [])
+discs = discrepancies.get("discrepancies", [])
 
-high_count = sum(1 for c in changes if classify_impact(c) == "HIGH")
-med_count  = sum(1 for c in changes if classify_impact(c) == "MED")
-
-# ── Header ────────────────────────────────────────────────────────────────────
+# ── HEADER ────────────────────────────────────────────────────────────────────
 
 st.markdown(f"""
 <div class="header-box">
     <div class="header-logo">MW</div>
     <div>
         <div class="header-title">Daily Market Watch</div>
-        <div class="header-sub">{selected_date} — {len(sources)} sources monitored</div>
+        <div class="header-sub">{selected_date}</div>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-# ── KPIs ──────────────────────────────────────────────────────────────────────
-
-c1, c2, c3, c4 = st.columns(4)
-with c1:
-    st.markdown(f'<div class="kpi-box"><div class="kpi-label">Total changes</div><div class="kpi-value">{len(changes)}</div></div>', unsafe_allow_html=True)
-with c2:
-    st.markdown(f'<div class="kpi-box high"><div class="kpi-label">High impact</div><div class="kpi-value">{high_count}</div></div>', unsafe_allow_html=True)
-with c3:
-    st.markdown(f'<div class="kpi-box medium"><div class="kpi-label">Medium impact</div><div class="kpi-value">{med_count}</div></div>', unsafe_allow_html=True)
-with c4:
-    st.markdown(f'<div class="kpi-box disc"><div class="kpi-label">Discrepancies</div><div class="kpi-value">{len(discs)}</div></div>', unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-# ── Changes + Discrepancies ───────────────────────────────────────────────────
-
-col_left, col_right = st.columns([3, 2])
-
-with col_left:
-    st.markdown('<div class="section-box"><div class="section-title">Today\'s changes</div>', unsafe_allow_html=True)
-    if not changes:
-        st.markdown('<div style="color:#666">No changes detected.</div>', unsafe_allow_html=True)
-    else:
-        for c in changes:
-            impact = classify_impact(c)
-            bank = c.get("bank", c.get("source", "—"))
-            st.markdown(f"""
-            <div class="change-row">
-                <span class="badge badge-{impact}">{impact}</span>
-                <span class="change-bank">{bank}</span>
-                <span class="change-desc">{describe_change(c)}</span>
-                <span class="change-source">{c.get("source", "")}</span>
-            </div>""", unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with col_right:
-    st.markdown('<div class="section-box"><div class="section-title">Data discrepancies</div>', unsafe_allow_html=True)
-    if not discs:
-        st.markdown('<div style="color:#666">No discrepancies detected.</div>', unsafe_allow_html=True)
-    else:
-        for d in discs:
-            field = d.get("field", "")
-            product = d.get("product_name", "")
-            sources_data = d.get("sources", {})
-            diff = d.get("difference")
-            keys = list(sources_data.keys())
-            v1 = sources_data.get(keys[0], "—") if keys else "—"
-            v2 = sources_data.get(keys[1], "—") if len(keys) > 1 else "—"
-            s1 = keys[0] if keys else ""
-            s2 = keys[1] if len(keys) > 1 else ""
-            diff_str = f"{diff}% difference" if diff else "value differs"
-            st.markdown(f"""
-            <div class="disc-item">
-                <div class="disc-title">{product} — {field}</div>
-                <div style="color:#aaa;font-size:13px">{s1}: <b style="color:#2ecc71">{v1}</b> &nbsp;|&nbsp; {s2}: <b style="color:#e74c3c">{v2}</b></div>
-                <div class="disc-diff">{diff_str}</div>
-            </div>""", unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-# ── News ──────────────────────────────────────────────────────────────────────
+# ── NEWS ──────────────────────────────────────────────────────────────────────
 
 st.markdown('<div class="section-box"><div class="section-title">News headlines</div>', unsafe_allow_html=True)
+
 if not articles:
-    st.markdown('<div style="color:#666">No articles found.</div>', unsafe_allow_html=True)
+    st.markdown('<div style="color:#666">🚫 No news today.</div>', unsafe_allow_html=True)
+
 else:
     for article in articles[:6]:
         title = article.get("title", "")
-        link  = article.get("link", "#")
-        pub   = article.get("pub_date", "")
+        link = article.get("link", "#")
+        pub = article.get("pub_date", "")
+
         try:
             dt = datetime.datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
             pub_fmt = dt.strftime("%d %b %Y")
-        except Exception:
+        except:
             pub_fmt = pub[:16] if pub else ""
+
         st.markdown(f"""
         <div class="news-item">
             <div class="news-title"><a href="{link}" target="_blank">{title}</a></div>
             <div class="news-meta">lecho.be — {pub_fmt}</div>
-        </div>""", unsafe_allow_html=True)
+        </div>
+        """, unsafe_allow_html=True)
+
 st.markdown('</div>', unsafe_allow_html=True)
 
+# ── CHANGES ───────────────────────────────────────────────────────────────────
 
-st.markdown('</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-box"><div class="section-title">Changes</div>', unsafe_allow_html=True)
 
-# ── Excel Editor ─────────────────────────────────────────────────────────────
-
-st.markdown(
-    '<div class="section-box"><div class="section-title">Bank Reference Excel</div>',
-    unsafe_allow_html=True
-)
-
-if EXCEL_PATH.exists():
-
-    excel_file = pd.ExcelFile(EXCEL_PATH)
-
-    sheet_names = excel_file.sheet_names
-
-    selected_sheet = st.selectbox(
-        "Select sheet",
-        sheet_names
-    )
-
-    df_excel = pd.read_excel(
-        EXCEL_PATH,
-        sheet_name=selected_sheet
-    )
-
-    st.markdown(
-        '<div style="color:#888; margin-bottom:10px;">'
-        'Edit the Excel file directly from the dashboard.'
-        '</div>',
-        unsafe_allow_html=True
-    )
-
-    edited_df = st.data_editor(
-        df_excel,
-        use_container_width=True,
-        num_rows="dynamic"
-    )
-
-    col_save, col_download = st.columns([1, 1])
-
-    with col_save:
-        if st.button("💾 Save Excel"):
-            with pd.ExcelWriter(
-                EXCEL_PATH,
-                engine="openpyxl",
-                mode="a",
-                if_sheet_exists="replace"
-            ) as writer:
-
-                edited_df.to_excel(
-                    writer,
-                    sheet_name=selected_sheet,
-                    index=False
-                )
-            st.success("Excel file updated successfully.")
-
-    with col_download:
-        with open(EXCEL_PATH, "rb") as f:
-            st.download_button(
-                label="⬇️ Download Excel",
-                data=f,
-                file_name="list_of_banks_ref.xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
-
+if not changes:
+    st.markdown('<div style="color:#666">No changes detected.</div>', unsafe_allow_html=True)
 else:
-    st.error(f"Excel file not found: {EXCEL_PATH}")
+    for c in changes:
+        impact = classify_impact(c)
+        st.markdown(f"""
+        <div class="change-row">
+            <span class="badge badge-{impact}">{impact}</span>
+            <span>{describe_change(c)}</span>
+        </div>
+        """, unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
+
+# ── DISCREPANCIES ────────────────────────────────────────────────────────────
+
+st.markdown('<div class="section-box"><div class="section-title">Discrepancies</div>', unsafe_allow_html=True)
+
+if not discs:
+    st.markdown('<div style="color:#666">No discrepancies detected.</div>', unsafe_allow_html=True)
+else:
+    for d in discs:
+        st.markdown(f"""
+        <div style="padding:8px 0;border-bottom:1px solid #333">
+            {d.get('product_name','')} — {d.get('field','')}
+        </div>
+        """, unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+# ── EXCEL (ADMIN ONLY) ───────────────────────────────────────────────────────
+
+if st.session_state.is_admin:
+
+    st.markdown('<div class="section-box"><div class="section-title">Excel Editor (Admin)</div>', unsafe_allow_html=True)
+
+    if EXCEL_PATH.exists():
+
+        excel_file = pd.ExcelFile(EXCEL_PATH)
+        sheet = st.selectbox("Sheet", excel_file.sheet_names)
+
+        df = pd.read_excel(EXCEL_PATH, sheet_name=sheet)
+
+        edited = st.data_editor(df, use_container_width=True, num_rows="dynamic")
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            if st.button("💾 Save"):
+                with pd.ExcelWriter(EXCEL_PATH, engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
+                    edited.to_excel(writer, sheet_name=sheet, index=False)
+                st.success("Saved")
+
+        with col2:
+            with open(EXCEL_PATH, "rb") as f:
+                st.download_button("⬇️ Download", f, file_name="banks.xlsx")
+
+    else:
+        st.error("Excel not found")
+
+    st.markdown('</div>', unsafe_allow_html=True)

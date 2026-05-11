@@ -26,6 +26,10 @@ jobs:
 
       - name: Run pipeline
         env:
+<<<<<<< HEAD
+=======
+          API_KEY: ${{ secrets.API_KEY }}
+>>>>>>> origin/main
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
         run: python main.py

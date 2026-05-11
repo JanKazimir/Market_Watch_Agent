@@ -1,0 +1,27 @@
+{
+  "source": "kbc_banque_regulated_savings_products_2",
+  "url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav",
+  "timestamp": "2026-05-11T10:16:25",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "KBC Banque",
+  "link_type": "regulated_savings_products",
+  "raw_text_checksum": "c0e968815fdcf5e7e160a44250da89e1a788c0220ea99e2d4a01d6bab92aa066",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "30cd34f86b47c699fe8e5305c1879af5156e2bc9e19c1a3d875afa6226e6e0a1",
+  "products": [
+    {
+      "bank": "KBC Bank",
+      "product_name": "Compte d’épargne KBC pour Tiers",
+      "base_rate": 0.4,
+      "fidelity_premium": 0.2,
+      "total_rate": 0.6,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Prime de fidélité acquise sur les montants qui restent sur le compte d’épargne pendant 12 mois complets consécutifs.",
+      "duration": null
+    }
+  ]
+}

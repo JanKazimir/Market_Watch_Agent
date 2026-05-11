@@ -1,0 +1,45 @@
+{
+  "source": "bankshopper.be",
+  "data_type": "products",
+  "date_old": "2026-05-10",
+  "date_new": "2026-05-11",
+  "generated_at": "2026-05-11T10:22:33",
+  "checksum_old": "24bb23d1dadd7a0d610b1acabdde10affacabcc4b1ef2cf47517aab2c2532538",
+  "checksum_new": "24bb23d1dadd7a0d610b1acabdde10affacabcc4b1ef2cf47517aaa2c2532538",
+  "checksums_match": false,
+  "total_changes": 3,
+  "summary": {
+    "rate_changes": 2,
+    "condition_changes": 1,
+    "rating_changes": 0,
+    "other_changes": 0,
+    "products_added": 0,
+    "products_removed": 0
+  },
+  "changes": [
+    {
+      "change_type": "rate_change",
+      "bank": "Beobank",
+      "product_name": "Beobank Klassieke Spaarrekening",
+      "field": "base_rate",
+      "before": 0.5,
+      "after": 0.45
+    },
+    {
+      "change_type": "rate_change",
+      "bank": "Argenta",
+      "product_name": "Argenta e-spaar",
+      "field": "fidelity_premium",
+      "before": 0.35,
+      "after": 0.3
+    },
+    {
+      "change_type": "condition_change",
+      "bank": "Crelan",
+      "product_name": "Crelan Horizon Plus boekje",
+      "field": "max_deposit",
+      "before": "€ 350,00",
+      "after": "€ 250,00"
+    }
+  ]
+}
