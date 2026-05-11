@@ -3,6 +3,7 @@
 import csv
 import hashlib
 import json
+import sys
 import requests
 import datetime
 import re
@@ -10,9 +11,9 @@ import shutil
 import pandas as pd
 from pathlib import Path
 
-
-
-from pathlib import Path
+## Importing pdf_diff.py
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from pdf_diff import diff_pdfs
 
 
 # Should have a way to update the pdf link by looking at the new url from the url scraping diff.
@@ -37,6 +38,12 @@ CSV_PATH = DATA_DIR / "pdf_links_csv" / f"{today}_pdf_list.csv"
 LATEST_DIR = DATA_DIR / "pdfs" / "latest"
 ARCHIVE_DIR = DATA_DIR / "pdfs" / "archive"
 OUTPUT_DIR = DATA_DIR / "outputs"
+SNAPSHOT_DIR = DATA_DIR / "snapshots"
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/pdf,*/*",
+}
 
 print(BASE_DIR)
 
@@ -138,10 +145,6 @@ def is_pdf_url(url: str) -> bool:
     return url.startswith("http") and url.lower().endswith(".pdf")
 
 
-def is_webpage_url(url: str) -> bool:
-    """A URL that is valid but not a PDF."""
-    return url.startswith("http") and not url.lower().endswith(".pdf")
-
 
 def load_links(csv_path: Path) -> list[dict]:
     with open(csv_path, newline="") as f:
@@ -154,7 +157,7 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
     archive_dir.mkdir(parents=True, exist_ok=True)
 
     results = []
-    counts = {"unchanged": 0, "updated": 0, "not_a_link": 0, "webpage": 0, "dead_link": 0, "error": 0}
+    counts = {"unchanged": 0, "updated": 0, "not_a_link": 0, "dead_link": 0, "error": 0}
 
     for row in rows:
         url = row.get("url", "").strip()
@@ -168,20 +171,14 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
             results.append(entry)
             continue
 
-        # URL but not a PDF (webpage)
-        if is_webpage_url(url):
-            entry["status"] = "webpage"
-            entry["detail"] = "URL points to a webpage, not a PDF"
-            counts["webpage"] += 1
-            results.append(entry)
-            continue
-
-        # It's a PDF URL — try to download
-        filename = url.split("/")[-1]
+        # Build a filename from the URL; add .pdf if the URL doesn't end with it
+        filename = url.split("/")[-1].split("?")[0]
+        if not filename.lower().endswith(".pdf"):
+            filename = filename + ".pdf"
         filepath = latest_dir / filename
 
         try:
-            response = requests.get(url, timeout=30)
+            response = requests.get(url, timeout=(10, 120), headers=HEADERS)
             if response.status_code != 200:
                 entry["status"] = "dead_link"
                 entry["detail"] = f"HTTP {response.status_code}"
@@ -229,6 +226,30 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
     }
 
 
+def run_pdf_diffs(report: dict, latest_dir: Path = LATEST_DIR, archive_dir: Path = ARCHIVE_DIR) -> list[dict]:
+    """For every PDF that changed, diff the archived (old) vs latest (new) version."""
+    diffs = []
+    for entry in report["entries"]:
+        if entry.get("detail") != "Content changed":
+            continue
+
+        filename = entry["url"].strip().split("/")[-1]
+        old_path = archive_dir / f"{today}_{filename}"
+        new_path = latest_dir / filename
+
+        if not old_path.exists() or not new_path.exists():
+            print(f"  Skipping diff for {filename}: file(s) missing")
+            continue
+
+        print(f"  Diffing {filename} ...")
+        diff_result = diff_pdfs(str(old_path), str(new_path))
+        diff_result["source_key"] = entry.get("source_key", "")
+        diff_result["bank"] = entry.get("bank", "")
+        diffs.append(diff_result)
+
+    return diffs
+
+
 def main():
     ## Read Excel, back it up, 
     backup_excel()
@@ -239,21 +260,28 @@ def main():
     print(pdf_df.to_string())
     print(f"\nWrote {len(pdf_df)} rows to {OUTPUT_PATH}")
     
-    
-    print("Starting pdf...")
+    ## Pdf download
+    print("Starting pdf download...")
     rows = load_links(CSV_PATH)
     print("Downloading and checking pdf files...")
     report = download_and_check(rows)
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = OUTPUT_DIR / f"{today}_pdf_diff.json"
-    output_path.write_text(json.dumps(report, indent=2, ensure_ascii=False))
-
     s = report["summary"]
     print(f"Updated: {s['updated']}  Unchanged: {s['unchanged']}  "
-          f"Dead links: {s['dead_link']}  Webpages: {s['webpage']}  "
+          f"Dead links: {s['dead_link']}  "
           f"Not a link: {s['not_a_link']}  Errors: {s['error']}")
-    print(f"Report saved to {output_path}")
+
+    # Diff changed PDFs
+    print("Running PDF content diffs...")
+    diffs = run_pdf_diffs(report)
+
+    # Combine report + diffs into a single snapshot
+    snapshot = {**report, "pdf_diffs": diffs}
+
+    SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+    snapshot_path = SNAPSHOT_DIR / f"pdf_diff_{today}.json"
+    snapshot_path.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False))
+    print(f"{len(diffs)} PDF diff(s) saved to {snapshot_path}")
 
 
 if __name__ == "__main__":
