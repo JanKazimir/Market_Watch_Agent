@@ -1,0 +1,83 @@
+{
+  "date": "2026-05-11",
+  "summary": {
+    "unchanged": 10,
+    "updated": 1,
+    "not_a_link": 0,
+    "webpage": 4,
+    "dead_link": 0,
+    "error": 2
+  },
+  "entries": [
+    {
+      "source_key": "argenta_tarif",
+      "bank": "Argenta",
+      "url": "https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf",
+      "product_type": "tarif",
+      "language": "fr",
+      "pdf_source": "https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre",
+      "status": "updated",
+      "detail": "Content changed"
+    },
+    {
+      "source_key": "bnp_paribas_fortis_saving",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "regulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "source_key": "bnp_paribas_fortis_terms",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "unregulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "source_key": "banque_triodos_tarif",
+      "bank": "Banque Triodos",
+      "url": "https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40",
+      "product_type": "tarif",
+      "language": "fr",
+      "pdf_source": "https://www.triodos.be/fr/epargner/compte-a-terme",
+      "status": "webpage",
+      "detail": "URL points to a webpage, not a PDF"
+    },
+    {
+      "source_key": "banque_triodos_saving",
+      "bank": "Banque Triodos",
+      "url": "https://www.triodos.be/fr/downloads/informations-cles-pour-lepargnant-triodos-impact-savings?id=31ff894e2429",
+      "product_type": "regulated",
+      "language": "fr",
+      "pdf_source": "https://www.triodos.be/fr/epargner/compte-epargne",
+      "status": "webpage",
+      "detail": "URL points to a webpage, not a PDF"
+    },
+    {
+      "source_key": "banque_triodos_saving",
+      "bank": "Banque Triodos",
+      "url": "https://www.triodos.be/fr/downloads/informations-cles-pour-lepargnant-triodos-impact-savings-fidelity?id=1b64c09f7400",
+      "product_type": "regulated",
+      "language": "fr",
+      "pdf_source": "https://www.triodos.be/fr/epargner/compte-epargne-fidelity",
+      "status": "webpage",
+      "detail": "URL points to a webpage, not a PDF"
+    },
+    {
+      "source_key": "banque_triodos_saving",
+      "bank": "Banque Triodos",
+      "url": "https://www.triodos.be/fr/downloads/informations-cles-pour-lepargnant-triodos-impact-savings-junior?id=42ca350f1905",
+      "product_type": "regulated",
+      "language": "fr",
+      "pdf_source": "https://www.triodos.be/fr/epargner/compte-epargne-junior",
+      "status": "webpage",
+      "detail": "URL points to a webpage, not a PDF"
+    }
+  ]
+}

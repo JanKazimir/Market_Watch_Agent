@@ -1,0 +1,14 @@
+{
+  "source": "bankb_saving_accounts",
+  "url": "https://www.bankb.be/fr-be/epargner",
+  "timestamp": "2026-05-11T10:00:36",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "BankB",
+  "link_type": "saving_accounts",
+  "raw_text_checksum": "e429c3b3abc6b2262354dba73f4ee61ea28d58fdf0a8ea3b7bdad6b06f34b33c",
+  "product_type": "regulated",
+  "num_products": 0,
+  "checksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "products": []
+}

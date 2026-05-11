@@ -28,7 +28,7 @@ today = datetime.date.today().isoformat()
 client = OpenAI(api_key=api_key)
 
 # File path for testing purposes:
-#/Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/snapshots/diff_test.json
+# /Users/jkzmr/Developer/Market_watch/Market_Watch_Agent/data/snapshots/diff_test.json
 testing_input_path = BASE_DIR / "data" / "snapshots" / f"diff_all_{today}.json"
 testing_output_path = BASE_DIR / "data" / "outputs" / f"{today}_classified_test.json"
 
@@ -62,12 +62,9 @@ impact : low, Medium, HIGH.
 The description summary for each entry MUST NOT BE longer than 25 words, preferably under 15. It should contain : name of the bank, the change observed (include the old and new value : like increased xyz from a to b) and the name of the product (omit the name of the bank if it's present in the product name)"""
 
 
-
 ## Options/ideas for later :
 # - include an extra summary of all changes at the top
 # - (for later?) keep the number in your answer, so we can keep track of things
-
-
 
 
 ##======================
@@ -82,27 +79,39 @@ def open_and_load_json(input_path):
     return data
 
 def dump_and_save_json(data, output_path):
-  with open (output_path, "w", encoding="utf-8") as f:
-    output_file = json.dump(data, f, ensure_ascii=False, indent=2)
-
+    with open (output_path, "w", encoding="utf-8") as f:
+        output_file = json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 ## LLM functions:
 
-def talk_to_llm(data, prompt) :
-  """Function to summarise in plain language changes detected.
-  Takes a dict, return a dict of key + short summary of changes"""
-  client = OpenAI(api_key=api_key)
-  response = client.chat.completions.create(
-      model=llm_small_model,
-      messages=[
-          {"role": "system", "content": prompt},
-          {"role": "user", "content": str(data)}
-      ]
-  )
-  print("Prompting llm...")
-  return json.loads(response.choices[0].message.content)
 
+def talk_to_llm(data, prompt):
+    client = OpenAI(api_key=api_key)
+    response = client.chat.completions.create(
+        model=llm_small_model,
+        temperature=0,
+        response_format={"type": "json_object"},
+        messages=[
+            {
+                "role": "system",
+                "content": prompt + "\n\nIMPORTANT: Return valid JSON only.",
+            },
+            {"role": "user", "content": json.dumps(data, ensure_ascii=False)},
+        ],
+    )
+    print("Prompting llm...")
+    result_text = response.choices[0].message.content.strip()
+
+    # Debug: see what the LLM returned
+    print(f"LLM response preview: {result_text[:200]}...")
+
+    # Clean up markdown code fences
+    if result_text.startswith("```"):
+        result_text = result_text.split("\n", 1)[1]
+        result_text = result_text.rsplit("```", 1)[0].strip()
+
+    return json.loads(result_text)
 
 
 def get_llm_summary_fact_and_write_to_json(input_path=testing_input_path, output_path=testing_output_path, prompt=CLASSIFY_SYSTEM_PROMT):
@@ -120,10 +129,9 @@ def get_llm_summary_fact_and_write_to_json(input_path=testing_input_path, output
   print(f"differences classified. Ouput:{output_path}")
 
 
-
 ## test run:
 
-#get_llm_summary_fact_and_write_to_json(testing_input_path, testing_output_path, CLASSIFY_SYSTEM_PROMT)
+# get_llm_summary_fact_and_write_to_json(testing_input_path, testing_output_path, CLASSIFY_SYSTEM_PROMT)
 
 # run script with:
 # python src/llm/classify_facts.py

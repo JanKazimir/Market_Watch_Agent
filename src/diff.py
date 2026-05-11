@@ -406,8 +406,11 @@ def find_snapshot_pairs(snapshot_dir: Path = SNAPSHOT_DIR) -> list[tuple[Path, P
     # Find all snapshot JSON files (exclude diff_ and classified_ and report_ files)
     all_files = sorted(snapshot_dir.glob("*.json"))
     snapshot_files = [
-        f for f in all_files
+        f
+        for f in all_files
         if not f.name.startswith(("diff_", "classified_", "report_", "discrepancies_"))
+        and "_pdf_" not in f.name
+        and not f.name.endswith("_pdf.json")
     ]
 
     if not snapshot_files:
@@ -515,6 +518,84 @@ def merge_reports(reports: list[dict]) -> dict:
     return combined
 
 
+def diff_pdf_snapshots(snapshot_dir: Path = SNAPSHOT_DIR) -> list[dict]:
+    """Compare PDF check snapshots across days and return changes."""
+    import re
+
+    date_pattern = re.compile(r"^(.+)_(\d{4}-\d{2}-\d{2})$")
+
+    # Find all PDF snapshot files
+    all_files = sorted(snapshot_dir.glob("*.json"))
+    pdf_files = [
+        f
+        for f in all_files
+        if ("_pdf_" in f.name or f.name.endswith("_pdf.json"))
+        and not f.name.startswith(("diff_",))
+    ]
+
+    # Group by prefix
+    groups = {}
+    for f in pdf_files:
+        match = date_pattern.match(f.stem)
+        if not match:
+            continue
+        prefix = match.group(1)
+        if prefix not in groups:
+            groups[prefix] = []
+        groups[prefix].append(f)
+
+    # Compare pairs
+    changes = []
+    for prefix, files in groups.items():
+        files.sort()
+        if len(files) < 2:
+            continue
+
+        old_file, new_file = files[-2], files[-1]
+
+        try:
+            old_data = json.loads(old_file.read_text(encoding="utf-8"))
+            new_data = json.loads(new_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, IOError):
+            continue
+
+        old_links = set(old_data.get("pdf_links", []))
+        new_links = set(new_data.get("pdf_links", []))
+        bank = new_data.get("bank", "")
+
+        # New PDF links
+        for link in new_links - old_links:
+            changes.append(
+                {
+                    "change_type": "pdf_link_added",
+                    "source": new_data.get("source", prefix),
+                    "data_type": "pdf",
+                    "bank": bank,
+                    "link_type": new_data.get("link_type", ""),
+                    "field": "pdf_links",
+                    "before": None,
+                    "after": link,
+                }
+            )
+
+        # Removed PDF links
+        for link in old_links - new_links:
+            changes.append(
+                {
+                    "change_type": "pdf_link_removed",
+                    "source": new_data.get("source", prefix),
+                    "data_type": "pdf",
+                    "bank": bank,
+                    "link_type": new_data.get("link_type", ""),
+                    "field": "pdf_links",
+                    "before": link,
+                    "after": None,
+                }
+            )
+
+    return changes
+
+
 def save_combined_report(report: dict) -> Path:
     """Save the combined diff report."""
     SNAPSHOT_DIR.mkdir(exist_ok=True)
@@ -614,10 +695,18 @@ def main():
         # Merge all reports into one combined daily diff
         if all_reports:
             combined = merge_reports(all_reports)
+
+            pdf_changes = diff_pdf_snapshots()
+            if pdf_changes:
+                combined["changes"].extend(pdf_changes)
+                combined["total_changes"] = len(combined["changes"])
+                combined["summary"]["pdf_links_changed"] = len(pdf_changes)
+                print(
+                    f"\n[DIFF] Added {len(pdf_changes)} PDF link changes to combined report"
+                )
+
             save_combined_report(combined)
             print_combined_summary(combined)
-
-        return all_reports
 
     else:
         print("Usage:")

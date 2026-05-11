@@ -1,0 +1,51 @@
+{
+  "source": "belfius_saving_accounts",
+  "url": "https://www.belfius.be/site/retail/fr/produits/epargner/comptes-epargne-reglementes",
+  "timestamp": "2026-05-11T10:12:17",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Belfius",
+  "link_type": "saving_accounts",
+  "raw_text_checksum": "468ea9e3954b0b62af0636f314812b6fc55ef353b040d82f02c64c91587dc84c",
+  "product_type": "regulated",
+  "num_products": 3,
+  "checksum": "bbf3a9e66b02dd6291ca9af28595fba8750876f8cd548ff2cbf0e4342387e943",
+  "products": [
+    {
+      "bank": "Belfius",
+      "product_name": "Belfius Flow compte d'épargne",
+      "base_rate": 1.3,
+      "fidelity_premium": 1.5,
+      "total_rate": 2.8,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": 500,
+      "max_deposit": 600,
+      "conditions": "Les dépôts en espèces ne sont pas possibles. Uniquement pour les personnes physiques à des fins privées et maximum un compte par client.",
+      "duration": null
+    },
+    {
+      "bank": "Belfius",
+      "product_name": "Belfius Fidelity compte d'épargne",
+      "base_rate": 0.15,
+      "fidelity_premium": 1.25,
+      "total_rate": 1.4,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Aucune",
+      "duration": null
+    },
+    {
+      "bank": "Belfius",
+      "product_name": "Compte d'épargne",
+      "base_rate": 0.3,
+      "fidelity_premium": 0.3,
+      "total_rate": 0.6,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Aucune",
+      "duration": null
+    }
+  ]
+}

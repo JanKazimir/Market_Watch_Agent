@@ -1,0 +1,51 @@
+{
+  "source": "banque_triodos_regulated_savings",
+  "url": "https://www.triodos.be/fr/epargner/protocole-transparence-epargne",
+  "timestamp": "2026-05-11T10:05:13",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Banque Triodos",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "53bbe72d3ce70448021edabca516f6e19dae793d837ef420482fa587bb75fb9c",
+  "product_type": "regulated",
+  "num_products": 3,
+  "checksum": "ef5acfddff031dc8d78e4b56a88f39a2715b593ed37bb3537810743532586fac",
+  "products": [
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Triodos Impact Savings Junior",
+      "base_rate": 0.15,
+      "fidelity_premium": 0.95,
+      "total_rate": 1.1,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Jusque 17 ans",
+      "duration": null
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Triodos Impact Savings Fidelity",
+      "base_rate": 0.15,
+      "fidelity_premium": 0.95,
+      "total_rate": 1.1,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "N/A",
+      "duration": null
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Triodos Impact Savings",
+      "base_rate": 0.35,
+      "fidelity_premium": 0.15,
+      "total_rate": 0.5,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "À partir de 18 ans",
+      "duration": null
+    }
+  ]
+}

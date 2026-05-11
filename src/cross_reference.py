@@ -1,9 +1,18 @@
 """
-Compares product data across different sources on the SAME day
-to find discrepancies.
+Cross-Reference Module
+=======================
+Compares product data across DIFFERENT data providers on the SAME day.
 
 This is different from diff.py which compares the SAME source across days.
 
+Smart comparison rules:
+  - Aggregator vs direct bank scraper (Bankshopper vs KBC website)
+  - Aggregator vs aggregator (Bankshopper vs Spaargids)
+  - Skips same-bank comparisons (different pages from same bank)
+  - Skips different product types (regulated vs term)
+  - Handles Dutch/French language differences
+  - Focuses on rate discrepancies (what ING cares about)
+  - Condition discrepancies only for numeric values (avoids language false positives)
 """
 
 import json
@@ -13,273 +22,180 @@ import datetime
 from pathlib import Path
 
 SNAPSHOT_DIR = Path("data/snapshots")
-
-# Minimum rate difference to flag (in percentage points)
-# flag anything above 0.01% difference
 RATE_THRESHOLD = 0.01
-
-# Fields to cross-reference
 RATE_FIELDS = ["base_rate", "fidelity_premium", "total_rate"]
-CONDITION_FIELDS = ["min_deposit", "max_deposit", "account_type"]
+
+# Language normalization for product names
+NAME_TRANSLATIONS = {
+    "spaarrekening": "savings",
+    "compte d'épargne": "savings",
+    "épargne": "savings",
+    "sparen": "savings",
+    "spaar": "savings",
+    "rekening": "account",
+    "compte": "account",
+    "termijn": "term",
+    "terme": "term",
+    "getrouwheid": "fidelity",
+    "fidélité": "fidelity",
+    "groei": "growth",
+    "croissance": "growth",
+    "klassiek": "classic",
+    "classique": "classic",
+}
+
+AGGREGATOR_PREFIXES = ["bankshopper", "spaargids", "guide_epargne", "mes_finances"]
 
 
-# ---------------------------------------------------------------------------
-# PRODUCT MATCHING
-# ---------------------------------------------------------------------------
-
-# Common words that sources add/remove inconsistently
-NOISE_WORDS = [
-    "spaarrekening",
-    "savings",
-    "account",
-    "compte",
-    "épargne",
-    "rekening",
-    "sparen",
-    "spaar",
-]
-
-
-def normalize_name(name: str) -> str:
-    """Normalize a product name for matching.
-
-    Strips numbering, hyphens, extra spaces, and common variations.
-    """
+def normalize_product_name(name):
     if not name:
         return ""
+    result = (
+        re.sub(r"^\d+\.\s*", "", name.lower().strip())
+        .replace("-", " ")
+        .replace("  ", " ")
+        .strip()
+    )
+    for original, replacement in NAME_TRANSLATIONS.items():
+        result = result.replace(original, replacement)
+    noise = ["savings", "account", "de", "d'", "le", "la", "het", "van", "du"]
+    return " ".join(w for w in result.split() if w not in noise).strip()
 
-    # Lowercase
-    result = name.lower().strip()
 
-    # Remove leading numbering like "1. " or "2. "
-    result = re.sub(r"^\d+\.\s*", "", result)
-
-    # Remove hyphens and extra spaces
-    result = result.replace("-", " ").replace("  ", " ").strip()
-
+def normalize_bank(bank):
+    if not bank:
+        return ""
+    result = bank.lower().strip()
+    for old, new in [
+        ("bnp paribas fortis", "bnp"),
+        ("banque triodos", "triodos"),
+        ("triodos bank", "triodos"),
+    ]:
+        result = result.replace(old, new)
     return result
 
 
-def strip_noise(name: str) -> str:
-    """Remove common noise words to get the product name.
-    'kbc start2save spaarrekening' → 'kbc start2save'
-    """
-    words = name.split()
-    core = [w for w in words if w not in NOISE_WORDS]
-    return " ".join(core).strip()
+def get_provider(source):
+    s = source.lower()
+    for prefix in AGGREGATOR_PREFIXES:
+        if prefix in s:
+            return f"aggregator:{prefix}"
+    bank = re.sub(r"^pw_", "", s)
+    bank = re.sub(
+        r"_(regulated_savings|saving_accounts|savings|term_accounts|term|news|product|regulated).*$",
+        "",
+        bank,
+    )
+    return f"direct:{bank}"
 
 
-def normalize_bank(bank: str) -> str:
-    """Normalize bank name for matching across sources."""
-    if not bank:
-        return ""
-    return bank.lower().strip()
+def should_compare(source_a, source_b):
+    pa, pb = get_provider(source_a), get_provider(source_b)
+    if pa == pb:
+        return False
+    if pa.startswith("direct:") and pb.startswith("direct:"):
+        return False
+    ta = "unregulated" if "term" in source_a.lower() else "regulated"
+    tb = "unregulated" if "term" in source_b.lower() else "regulated"
+    if ta != tb:
+        return False
+    return True
 
 
-def make_match_key(product: dict) -> str:
-    """Create a normalized key for matching across sources."""
+def make_match_key(product):
     bank = normalize_bank(product.get("bank", ""))
-    name = normalize_name(product.get("product_name", ""))
-    return f"{bank}|{name}"
+    name = normalize_product_name(product.get("product_name", ""))
+    bank_words = bank.split()
+    name_words = name.split()
+    while name_words and bank_words and name_words[0] in bank_words:
+        name_words.pop(0)
+    return f"{bank}|{' '.join(name_words).strip()}"
 
 
-def make_fuzzy_key(product: dict) -> str:
-    """Create a fuzzy key with noise words stripped."""
-    bank = normalize_bank(product.get("bank", ""))
-    name = normalize_name(product.get("product_name", ""))
-    core = strip_noise(name)
-    # Also strip the bank name from the product name if it's there
-    # e.g. "kbc start2save" → "start2save" (bank is already in the key)
-    core_words = core.split()
-    if core_words and core_words[0] == bank:
-        core = " ".join(core_words[1:])
-    return f"{bank}|{core}"
-
-
-def build_master_lookup(snapshots: list[dict]) -> dict:
-    """Build a master lookup matching products across sources.
-
-    Uses two-pass matching:
-    1. Exact normalized name match
-    2. Fuzzy match (noise words stripped) for unmatched products
-    """
-    # Pass 1: Group by exact normalized key
-    exact_master = {}
-    for snapshot in snapshots:
-        source = snapshot.get("source", "unknown")
-        for product in snapshot.get("products", []):
-            key = make_match_key(product)
-            if key not in exact_master:
-                exact_master[key] = {}
-            exact_master[key][source] = product
-
-    # Find products that only appear in one source (unmatched)
-    matched_keys = {k for k, v in exact_master.items() if len(v) >= 2}
-    unmatched = {}  # fuzzy_key → list of (source, product, exact_key)
-
-    for key, sources_data in exact_master.items():
-        if len(sources_data) < 2:
-            for source, product in sources_data.items():
-                fkey = make_fuzzy_key(product)
-                if fkey not in unmatched:
-                    unmatched[fkey] = []
-                unmatched[fkey].append((source, product, key))
-
-    # Pass 2: Fuzzy match unmatched products
-    master = dict(exact_master)  # Start with exact matches
-
-    for fkey, entries in unmatched.items():
-        if len(entries) >= 2:
-            # Multiple sources have this fuzzy key → they're the same product
-            # Merge them under one key
-            merge_key = entries[0][2]  # Use first product's exact key
-
-            # Remove old separate entries
-            for source, product, old_key in entries:
-                if old_key in master and len(master[old_key]) == 1:
-                    del master[old_key]
-
-            # Create merged entry
-            if merge_key not in master:
-                master[merge_key] = {}
-            for source, product, old_key in entries:
-                master[merge_key][source] = product
-
-    return master
-
-
-def find_product_snapshots(date: str, snapshot_dir: Path = SNAPSHOT_DIR) -> list[Path]:
-    """Find all product snapshot files for a given date."""
-    if not snapshot_dir.exists():
-        return []
-
-    date_pattern = re.compile(r"^(.+)_(\d{4}-\d{2}-\d{2})\.json$")
-    files = []
-
-    for f in sorted(snapshot_dir.glob("*.json")):
-        # Skip diff, classified, report, and discrepancy files
-        if f.name.startswith(("diff_", "classified_", "report_", "discrepancies_")):
-            continue
-
-        match = date_pattern.match(f.name)
-        if not match:
-            continue
-
-        file_date = match.group(2)
-        if file_date != date:
-            continue
-
-        # Check if it's a product file (not news)
-        try:
-            data = json.loads(f.read_text(encoding="utf-8"))
-            if "products" in data:
-                files.append(f)
-        except (json.JSONDecodeError, IOError):
-            continue
-
-    return files
-
-
-# ---------------------------------------------------------------------------
-# CROSS-REFERENCE LOGIC
-# ---------------------------------------------------------------------------
-
-
-def cross_reference(snapshots: list[dict]) -> dict:
-    """Compare products across multiple sources and find discrepancies."""
+def cross_reference(snapshots):
     if len(snapshots) < 2:
-        return {
-            "error": "Need at least 2 product sources to cross-reference",
-            "num_sources": len(snapshots),
-        }
+        return {"error": "Need at least 2 sources", "num_sources": len(snapshots)}
 
-    # Build a master lookup: match_key - { source: product_data }
-    master = build_master_lookup(snapshots)
+    # Build master lookup
+    groups = {}
+    for snap in snapshots:
+        source = snap.get("source", "unknown")
+        for product in snap.get("products", []):
+            key = make_match_key(product)
+            if key not in groups:
+                groups[key] = {}
+            groups[key][source] = product
 
-    # Find products that appear in multiple sources
-    discrepancies = []
-    matches_checked = 0
+    discrepancies, matches_checked, pairs_skipped = [], 0, 0
 
-    for key, sources_data in master.items():
+    for key, sources_data in groups.items():
         if len(sources_data) < 2:
-            # Only in one source - can't cross-reference
             continue
-
-        matches_checked += 1
         source_names = list(sources_data.keys())
 
-        # Compare every pair of sources
         for i in range(len(source_names)):
             for j in range(i + 1, len(source_names)):
-                source_a = source_names[i]
-                source_b = source_names[j]
-                product_a = sources_data[source_a]
-                product_b = sources_data[source_b]
+                sa, sb = source_names[i], source_names[j]
+                if not should_compare(sa, sb):
+                    pairs_skipped += 1
+                    continue
 
-                # Check rate fields
+                matches_checked += 1
+                pa, pb = sources_data[sa], sources_data[sb]
+
                 for field in RATE_FIELDS:
-                    val_a = product_a.get(field)
-                    val_b = product_b.get(field)
-
-                    # Skip if either is None
-                    if val_a is None or val_b is None:
+                    va, vb = pa.get(field), pb.get(field)
+                    if va is None or vb is None:
                         continue
-
-                    # Convert to float for comparison
                     try:
-                        float_a = float(val_a)
-                        float_b = float(val_b)
+                        fa, fb = float(va), float(vb)
                     except (ValueError, TypeError):
                         continue
-
-                    diff = abs(float_a - float_b)
+                    diff = abs(fa - fb)
                     if diff >= RATE_THRESHOLD:
                         discrepancies.append(
                             {
                                 "type": "rate_discrepancy",
-                                "bank": product_a.get("bank", ""),
-                                "product_name": product_a.get("product_name", ""),
+                                "bank": pa.get("bank", ""),
+                                "product_name": pa.get("product_name", ""),
                                 "field": field,
-                                "sources": {
-                                    source_a: float_a,
-                                    source_b: float_b,
-                                },
+                                "sources": {sa: fa, sb: fb},
                                 "difference": round(diff, 4),
                                 "product_name_per_source": {
-                                    source_a: product_a.get("product_name", ""),
-                                    source_b: product_b.get("product_name", ""),
+                                    sa: pa.get("product_name", ""),
+                                    sb: pb.get("product_name", ""),
                                 },
+                                "provider_a": get_provider(sa),
+                                "provider_b": get_provider(sb),
                             }
                         )
 
-                # Check condition fields
-                for field in CONDITION_FIELDS:
-                    val_a = product_a.get(field)
-                    val_b = product_b.get(field)
-
-                    # Skip if both are None
-                    if val_a is None and val_b is None:
+                for field in ["min_deposit", "max_deposit"]:
+                    va, vb = pa.get(field), pb.get(field)
+                    if va is None and vb is None:
                         continue
-
-                    if val_a != val_b:
+                    try:
+                        na = float(re.sub(r"[^\d.]", "", str(va))) if va else None
+                        nb = float(re.sub(r"[^\d.]", "", str(vb))) if vb else None
+                    except (ValueError, TypeError):
+                        na, nb = None, None
+                    if na is not None and nb is not None and na != nb:
                         discrepancies.append(
                             {
                                 "type": "condition_discrepancy",
-                                "bank": product_a.get("bank", ""),
-                                "product_name": product_a.get("product_name", ""),
+                                "bank": pa.get("bank", ""),
+                                "product_name": pa.get("product_name", ""),
                                 "field": field,
-                                "sources": {
-                                    source_a: val_a,
-                                    source_b: val_b,
-                                },
+                                "sources": {sa: va, sb: vb},
                                 "product_name_per_source": {
-                                    source_a: product_a.get("product_name", ""),
-                                    source_b: product_b.get("product_name", ""),
+                                    sa: pa.get("product_name", ""),
+                                    sb: pb.get("product_name", ""),
                                 },
+                                "provider_a": get_provider(sa),
+                                "provider_b": get_provider(sb),
                             }
                         )
 
-    # Sort: rate discrepancies first, then by difference (largest first)
     discrepancies.sort(
         key=lambda d: (
             0 if d["type"] == "rate_discrepancy" else 1,
@@ -287,16 +203,13 @@ def cross_reference(snapshots: list[dict]) -> dict:
         )
     )
 
-    # Build report
-    today = datetime.date.today().isoformat()
-    now = datetime.datetime.now().isoformat(timespec="seconds")
-
-    report = {
-        "date": snapshots[0].get("date", today),
-        "generated_at": now,
+    return {
+        "date": snapshots[0].get("date", datetime.date.today().isoformat()),
+        "generated_at": datetime.datetime.now().isoformat(timespec="seconds"),
         "num_sources": len(snapshots),
         "sources": [s.get("source", "unknown") for s in snapshots],
         "products_matched_across_sources": matches_checked,
+        "pairs_skipped_same_provider": pairs_skipped,
         "total_discrepancies": len(discrepancies),
         "rate_discrepancies": len(
             [d for d in discrepancies if d["type"] == "rate_discrepancy"]
@@ -307,36 +220,27 @@ def cross_reference(snapshots: list[dict]) -> dict:
         "discrepancies": discrepancies,
     }
 
-    return report
 
-
-# ---------------------------------------------------------------------------
-# SAVE & PRINT
-# ---------------------------------------------------------------------------
-
-
-def save_report(report: dict) -> Path:
-    """Save cross-reference report to snapshots folder."""
+def save_report(report):
     SNAPSHOT_DIR.mkdir(exist_ok=True)
-    date = report.get("date", datetime.date.today().isoformat())
-    filepath = SNAPSHOT_DIR / f"discrepancies_{date}.json"
-    filepath.write_text(
-        json.dumps(report, indent=2, ensure_ascii=False),
-        encoding="utf-8",
+    fp = (
+        SNAPSHOT_DIR
+        / f"discrepancies_{report.get('date', datetime.date.today().isoformat())}.json"
     )
-    print(f"\n[XREF] Saved report → {filepath}")
-    return filepath
+    fp.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"\n[XREF] Saved report → {fp}")
+    return fp
 
 
-def print_report(report: dict):
-    """Print a human-readable summary."""
+def print_report(report):
     print(f"\n{'='*60}")
     print(f"  CROSS-REFERENCE REPORT: {report['date']}")
     print(f"{'='*60}")
-    print(f"  Sources compared:    {', '.join(report['sources'])}")
-    print(f"  Products matched:    {report['products_matched_across_sources']}")
-    print(f"  Total discrepancies: {report['total_discrepancies']}")
-    print(f"    Rate mismatches:   {report['rate_discrepancies']}")
+    print(f"  Sources compared:      {len(report['sources'])}")
+    print(f"  Products matched:      {report['products_matched_across_sources']}")
+    print(f"  Pairs skipped (same):  {report.get('pairs_skipped_same_provider', 0)}")
+    print(f"  Total discrepancies:   {report['total_discrepancies']}")
+    print(f"    Rate mismatches:     {report['rate_discrepancies']}")
     print(f"    Condition mismatches: {report['condition_discrepancies']}")
 
     if report["total_discrepancies"] == 0:
@@ -345,109 +249,79 @@ def print_report(report: dict):
 
     print(f"\n--- Discrepancies ---\n")
     for i, d in enumerate(report["discrepancies"], 1):
-        bank = d["bank"]
-        product = d["product_name"]
-        field = d["field"]
-        sources = d["sources"]
-
-        if d["type"] == "rate_discrepancy":
-            diff = d["difference"]
-            print(f"  [{i}] {bank} — {product}")
-            print(f"      Field: {field}")
-            for src, val in sources.items():
-                print(f"      {src}: {val}%")
-            print(f"      Difference: {diff} percentage points")
-
-            # Flag if names differ across sources
-            names = d.get("product_name_per_source", {})
-            unique_names = set(names.values())
-            if len(unique_names) > 1:
-                print(f"      Note: Name varies across sources:")
-                for src, name in names.items():
-                    print(f'        {src}: "{name}"')
-
-        elif d["type"] == "condition_discrepancy":
-            print(f"  [{i}] {bank} — {product}")
-            print(f"      Field: {field}")
-            for src, val in sources.items():
-                print(f"      {src}: {val}")
-
+        print(f"  [{i}] {d['bank']} — {d['product_name']}")
+        print(f"      Field: {d['field']}")
+        for src, val in d["sources"].items():
+            print(
+                f"      {src} ({get_provider(src)}): {val}{'%' if d['type'] == 'rate_discrepancy' else ''}"
+            )
+        if d.get("difference"):
+            print(f"      Difference: {d['difference']} percentage points")
+        names = d.get("product_name_per_source", {})
+        if len(set(names.values())) > 1:
+            print(f"      Note: Name varies:")
+            for src, name in names.items():
+                print(f'        {src}: "{name}"')
         print()
 
 
-# ---------------------------------------------------------------------------
-# MAIN
-# ---------------------------------------------------------------------------
+def find_product_snapshots(date, snapshot_dir=SNAPSHOT_DIR):
+    if not snapshot_dir.exists():
+        return []
+    pattern = re.compile(r"^(.+)_(\d{4}-\d{2}-\d{2})\.json$")
+    files = []
+    for f in sorted(snapshot_dir.glob("*.json")):
+        if f.name.startswith(("diff_", "classified_", "report_", "discrepancies_")):
+            continue
+        if "_pdf_" in f.name or f.name.endswith("_pdf.json"):
+            continue
+        m = pattern.match(f.name)
+        if not m or m.group(2) != date:
+            continue
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+            if "products" in data:
+                files.append(f)
+        except (json.JSONDecodeError, IOError):
+            continue
+    return files
 
 
 def main():
     if len(sys.argv) == 1:
-        # Auto mode: find today's product snapshots
         today = datetime.date.today().isoformat()
         print(f"[XREF] Looking for product snapshots for {today}...")
         files = find_product_snapshots(today)
-
         if len(files) < 2:
-            # Try yesterday
             yesterday = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
             print(f"[XREF] Not enough for today. Trying {yesterday}...")
             files = find_product_snapshots(yesterday)
-
         if len(files) < 2:
             print(f"[XREF] Need at least 2 product snapshots from the same day.")
-            print(
-                f"       Found {len(files)} file(s). Add more sources to cross-reference."
-            )
             sys.exit(1)
-
-        print(f"[XREF] Found {len(files)} product sources:")
-        for f in files:
-            print(f"       {f.name}")
-
-        snapshots = [json.loads(f.read_text(encoding="utf-8")) for f in files]
-
     elif len(sys.argv) == 2 and re.match(r"\d{4}-\d{2}-\d{2}", sys.argv[1]):
-        # Date mode: find snapshots for a specific date
         date = sys.argv[1]
         print(f"[XREF] Looking for product snapshots for {date}...")
         files = find_product_snapshots(date)
-
         if len(files) < 2:
             print(f"[XREF] Need at least 2 product snapshots for {date}.")
-            print(f"       Found {len(files)} file(s).")
             sys.exit(1)
-
-        print(f"[XREF] Found {len(files)} product sources:")
-        for f in files:
-            print(f"       {f.name}")
-
-        snapshots = [json.loads(f.read_text(encoding="utf-8")) for f in files]
-
     else:
-        # Manual mode: specific files
         files = sys.argv[1:]
         if len(files) < 2:
-            print("Usage:")
-            print(
-                "  python cross_reference.py                        (auto-find today's snapshots)"
-            )
-            print("  python cross_reference.py 2026-05-05             (specific date)")
-            print("  python cross_reference.py file1.json file2.json  (specific files)")
+            print("Usage: python cross_reference.py [date] [file1.json file2.json]")
             sys.exit(1)
+        snapshots = [json.loads(Path(f).read_text(encoding="utf-8")) for f in files]
+        report = cross_reference(snapshots)
+        save_report(report)
+        print_report(report)
+        return
 
-        snapshots = []
-        for f in files:
-            path = Path(f)
-            if not path.exists():
-                print(f"ERROR: File not found: {f}")
-                sys.exit(1)
-            snapshots.append(json.loads(path.read_text(encoding="utf-8")))
-
-    # Run cross-reference
+    print(f"[XREF] Found {len(files)} product sources")
+    snapshots = [json.loads(f.read_text(encoding="utf-8")) for f in files]
     report = cross_reference(snapshots)
     save_report(report)
     print_report(report)
-    return report
 
 
 if __name__ == "__main__":

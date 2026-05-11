@@ -1,0 +1,63 @@
+{
+  "source": "revolut_bank_uab___belgian_branch_saving_accounts",
+  "url": "https://www.revolut.com/en-BE/our-pricing-plans/",
+  "timestamp": "2026-05-11T10:22:33",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Revolut Bank UAB - Belgian Branch",
+  "link_type": "saving_accounts",
+  "raw_text_checksum": "10bc97dd5ba87035198ecca31914b696f61adcb3b05d236e5922655f08518f4f",
+  "product_type": "regulated",
+  "num_products": 4,
+  "checksum": "0f88a5e985883111d1ab901973847404524cf1db278eb98988beb2775b73e5ed",
+  "products": [
+    {
+      "bank": "Revolut Bank UAB",
+      "product_name": "Instant Access Savings (EUR)",
+      "base_rate": 0.01,
+      "fidelity_premium": null,
+      "total_rate": 0.01,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    },
+    {
+      "bank": "Revolut Bank UAB",
+      "product_name": "Instant Access Savings (EUR)",
+      "base_rate": 0.01,
+      "fidelity_premium": null,
+      "total_rate": 0.0125,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    },
+    {
+      "bank": "Revolut Bank UAB",
+      "product_name": "Instant Access Savings (EUR)",
+      "base_rate": 0.01,
+      "fidelity_premium": null,
+      "total_rate": 0.02,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    },
+    {
+      "bank": "Revolut Bank UAB",
+      "product_name": "Instant Access Savings (EUR)",
+      "base_rate": 0.01,
+      "fidelity_premium": null,
+      "total_rate": 0.0225,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    }
+  ]
+}

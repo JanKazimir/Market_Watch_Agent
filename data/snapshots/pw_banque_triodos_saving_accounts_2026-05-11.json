@@ -1,0 +1,99 @@
+{
+  "source": "banque_triodos_saving_accounts",
+  "url": "https://www.triodos.be/fr/epargner",
+  "timestamp": "2026-05-11T10:03:40",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Banque Triodos",
+  "link_type": "saving_accounts",
+  "raw_text_checksum": "f482ff07de2adfd80168975d1371d94535e6f25bec6fa6da35e6ccd2625e6919",
+  "product_type": "regulated",
+  "num_products": 7,
+  "checksum": "a100ec1a82ffa5207740039b8d93e10a3f510fda83afa02612cf7ec68739f6d1",
+  "products": [
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Triodos Impact Savings",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Prime de fidélité acquise sur les montants qui restent sur le compte pendant 12 mois consécutifs.",
+      "duration": null
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Triodos Impact Savings Fidelity",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Prime de fidélité acquise sur les montants qui restent sur le compte pendant 12 mois consécutifs.",
+      "duration": null
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Triodos Impact Savings Junior",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Prime de fidélité acquise sur les montants qui restent sur le compte pendant 12 mois consécutifs.",
+      "duration": null
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": "Durée fixe"
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Triodos Junior",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": "Durée fixe"
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte d'épargne Business",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    },
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Compte à terme Business",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    }
+  ]
+}

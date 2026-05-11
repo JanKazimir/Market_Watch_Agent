@@ -1,0 +1,63 @@
+{
+  "source": "argenta_regulated_savings",
+  "url": "https://www.argenta.be/fr/epargner/compte-d-epargne.html",
+  "timestamp": "2026-05-11T08:09:03",
+  "date": "2026-05-10",
+  "scraper": "playwright",
+  "bank": "Argenta",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "0b43f6f2cc1a4035e6e10d629145a51b87a83d2a75ca6f303d9181963bb7d1a2",
+  "product_type": "regulated",
+  "num_products": 4,
+  "checksum": "833cbdc69a9442bd58c83028868125a32eb25a2bc0e0d95b14de651bbe4a55abf",
+  "products": [
+    {
+      "bank": "Argenta",
+      "product_name": "Compte d'accroissement",
+      "base_rate": 1.1,
+      "fidelity_premium": 1.5,
+      "total_rate": 2.6,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": 500,
+      "conditions": "Épargner régulièrement jusqu'à 500 euros par mois",
+      "duration": null
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "Compte de fidélité",
+      "base_rate": 0.1,
+      "fidelity_premium": 1.0,
+      "total_rate": 1.1,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Mettre de l'argent de côté pendant minimum 12 mois",
+      "duration": null
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "E-Épargne",
+      "base_rate": 0.25,
+      "fidelity_premium": 0.3,
+      "total_rate": 0.5,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Épargner pour des dépenses imprévues",
+      "duration": null
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "Compte Maxi",
+      "base_rate": 0.2,
+      "fidelity_premium": 0.3,
+      "total_rate": 0.5,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": 1500000,
+      "conditions": "Épargner pour des dépenses imprévues",
+      "duration": null
+    }
+  ]
+}
