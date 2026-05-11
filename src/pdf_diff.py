@@ -339,11 +339,11 @@ def diff_pdfs(old_path: str, new_path: str, context: int = 3) -> dict:
         "tables_removed": table_result["tables_removed"],
     }
 
-pdf_test_1 = BASE_DIR / "data/pdfs/latest/Liste%20des%20tarifs.pdf"
-pdf_test_2 = BASE_DIR / "data/pdfs/archive/2026-05-11_Liste%20des%20tarifs.pdf"
+#pdf_test_1 = BASE_DIR / "data/pdfs/latest/Liste%20des%20tarifs.pdf"
+#pdf_test_2 = BASE_DIR / "data/pdfs/archive/2026-05-11_Liste%20des%20tarifs.pdf"
 
-diff_pdf_test = diff_pdfs(pdf_test_2, pdf_test_1, 3)
-print(diff_pdf_test)
+#diff_pdf_test = diff_pdfs(pdf_test_2, pdf_test_1, 3)
+#print(diff_pdf_test)
 
 
 
