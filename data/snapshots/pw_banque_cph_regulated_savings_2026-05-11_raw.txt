@@ -1,4 +1,4 @@
-Uw webbrowser (Chrome 120) is verouderd. Update uw browser voor meer veiligheid, snelheid en om deze site optimaal te kunnen gebruiken.
+Uw webbrowser (Other) is verouderd. Update uw browser voor meer veiligheid, snelheid en om deze site optimaal te kunnen gebruiken.
 Browser updaten Negeren
 Aller au contenu principal
 Passer au contenu principal
@@ -123,6 +123,12 @@ Principaux risques
 Autres
 Fiscalité
 Plaintes
+
+Trouvez une agence
+
+Contactez-nous
+
+Appelez-nous : 0800/30.333
 
 À PROPOS DE NOUS
 

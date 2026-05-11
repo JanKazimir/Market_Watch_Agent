@@ -1,0 +1,19 @@
+{
+  "source": "argenta_regulated_pdf",
+  "url": "https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html",
+  "timestamp": "2026-05-11T16:33:33",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Argenta",
+  "link_type": "regulated_pdf",
+  "known_pdf_url": "https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf",
+  "parent_url": "https://www.argenta.be/fr/epargner/compte-d-epargne/compte-d-accroissement.html",
+  "num_pdf_links": 4,
+  "checksum": "67fde38d6fc7c633570065bce15576237d03ae1a75769898b0d92e3cac5e2809",
+  "pdf_links": [
+    "https://www.argenta.be/content/dam/argenta/documents/general/rgo/R%C3%A8glement%20G%C3%A9n%C3%A9ral%20des%20Op%C3%A9rations.pdf",
+    "https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf",
+    "https://www.argenta.be/content/dam/argenta/documents/documents-juridiques/Fiche%20d%27information%20sur%20la%20protection%20des%20depots.pdf",
+    "https://www.argenta.be/content/dam/argenta/documents/epargner/informations-cles-pour-l-epargnant-compte-d-accroissement.pdf"
+  ]
+}

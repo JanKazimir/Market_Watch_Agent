@@ -1,0 +1,75 @@
+{
+  "source": "santander_term_accounts",
+  "url": "https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-fix",
+  "timestamp": "2026-05-11T16:55:39",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Santander",
+  "link_type": "term_accounts",
+  "raw_text_checksum": "46ab5332be3e0b9f163219d0b54ecbf4ff234d7df0eecf7496afe2a1b79d0730",
+  "product_type": "unregulated",
+  "num_products": 5,
+  "checksum": "79432ce871fada08af5fb6ec04a6934fdceacad2b9efcebb5e91933dada0919b",
+  "products": [
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Compte à terme Vision Fix",
+      "base_rate": 0.022,
+      "fidelity_premium": null,
+      "total_rate": 0.01103,
+      "account_type": "term deposit",
+      "min_deposit": 1000,
+      "max_deposit": 200000,
+      "conditions": "Un seul versement est accepté par dépôt à terme. Vous pouvez ouvrir 12 comptes à terme par compte d'épargne.",
+      "duration": 0.5
+    },
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Compte à terme Vision Fix",
+      "base_rate": 0.025,
+      "fidelity_premium": null,
+      "total_rate": 0.0175,
+      "account_type": "term deposit",
+      "min_deposit": 1000,
+      "max_deposit": 200000,
+      "conditions": "Un seul versement est accepté par dépôt à terme. Vous pouvez ouvrir 12 comptes à terme par compte d'épargne.",
+      "duration": 1
+    },
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Compte à terme Vision Fix",
+      "base_rate": 0.0255,
+      "fidelity_premium": null,
+      "total_rate": 0.0179,
+      "account_type": "term deposit",
+      "min_deposit": 1000,
+      "max_deposit": 200000,
+      "conditions": "Un seul versement est accepté par dépôt à terme. Vous pouvez ouvrir 12 comptes à terme par compte d'épargne.",
+      "duration": 2
+    },
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Compte à terme Vision Fix",
+      "base_rate": 0.026,
+      "fidelity_premium": null,
+      "total_rate": 0.0184,
+      "account_type": "term deposit",
+      "min_deposit": 1000,
+      "max_deposit": 200000,
+      "conditions": "Un seul versement est accepté par dépôt à terme. Vous pouvez ouvrir 12 comptes à terme par compte d'épargne.",
+      "duration": 3
+    },
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Compte à terme Vision Fix",
+      "base_rate": 0.026,
+      "fidelity_premium": null,
+      "total_rate": 0.0184,
+      "account_type": "term deposit",
+      "min_deposit": 1000,
+      "max_deposit": 200000,
+      "conditions": "Un seul versement est accepté par dépôt à terme. Vous pouvez ouvrir 12 comptes à terme par compte d'épargne.",
+      "duration": 4
+    }
+  ]
+}

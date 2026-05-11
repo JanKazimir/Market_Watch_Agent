@@ -1,0 +1,27 @@
+{
+  "source": "beobank_regulated_savings_1",
+  "url": "https://www.beobank.be/fr/epargner/comptes-epargne/compte-fidelity-plus.html",
+  "timestamp": "2026-05-11T16:51:45",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Beobank",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "7f997751d44a6c80f1d2c6bce39977b9c9d67416ef3a22b3d741fdf7b24f3b19",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "e13013c674a39088697698bb56b39b4b64d416cc1175cbbe9bf343be7dbe6239",
+  "products": [
+    {
+      "bank": "Beobank",
+      "product_name": "Compte d'épargne Fidelity Plus",
+      "base_rate": 0.15,
+      "fidelity_premium": 0.65,
+      "total_rate": 0.8,
+      "account_type": "Compte d'épargne",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "La prime de fidélité est acquise pour les montants restant sur le compte pendant 12 mois sans interruption.",
+      "duration": null
+    }
+  ]
+}

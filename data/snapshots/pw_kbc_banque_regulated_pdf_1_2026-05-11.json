@@ -1,0 +1,19 @@
+{
+  "source": "kbc_banque_regulated_pdf_1",
+  "url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav",
+  "timestamp": "2026-05-11T16:47:09",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "KBC Banque",
+  "link_type": "regulated_pdf",
+  "known_pdf_url": "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf",
+  "parent_url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne-pour-tiers.html?zone=topnav",
+  "num_pdf_links": 4,
+  "checksum": "39af480b3f5d103a05da0f30905d2634f1ec97a9f9b2b2d3fd066a9c5f20b26f",
+  "pdf_links": [
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3770_fr.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf"
+  ]
+}

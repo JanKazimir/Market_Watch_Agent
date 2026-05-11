@@ -1,7 +1,7 @@
 {
   "source": "banque_triodos_news",
   "url": "https://www.triodos.be/fr/actualite",
-  "timestamp": "2026-05-11T10:02:42",
+  "timestamp": "2026-05-11T16:39:35",
   "date": "2026-05-11",
   "scraper": "playwright",
   "bank": "Banque Triodos",
