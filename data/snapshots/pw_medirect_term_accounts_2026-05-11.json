@@ -1,0 +1,99 @@
+{
+  "source": "medirect_term_accounts",
+  "url": "https://www.medirect.be/nl-be/sparen/termijnrekening/",
+  "timestamp": "2026-05-11T10:21:08",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "MeDirect",
+  "link_type": "term_accounts",
+  "raw_text_checksum": "8095799487ed9a8fba51b83b6ebf51de7c9ba4c87ccb4dce0d2cb2d2b9d6178e",
+  "product_type": "unregulated",
+  "num_products": 7,
+  "checksum": "12c300b0d692d28b8ba95883e2e7047021c2c953140bb2fd3034a7d2082fbc77",
+  "products": [
+    {
+      "bank": "MeDirect",
+      "product_name": "Termijnrekening 3 maanden",
+      "base_rate": 0.019,
+      "fidelity_premium": null,
+      "total_rate": 0.0133,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": 100000,
+      "conditions": "Jaarlijkse rentes, opbrengsten op de vervaldag.",
+      "duration": 3
+    },
+    {
+      "bank": "MeDirect",
+      "product_name": "Termijnrekening 6 maanden",
+      "base_rate": 0.019,
+      "fidelity_premium": null,
+      "total_rate": 0.0133,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": 100000,
+      "conditions": "Jaarlijkse rentes, opbrengsten op de vervaldag.",
+      "duration": 6
+    },
+    {
+      "bank": "MeDirect",
+      "product_name": "Termijnrekening 1 jaar",
+      "base_rate": 0.025,
+      "fidelity_premium": null,
+      "total_rate": 0.0175,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": 100000,
+      "conditions": "Jaarlijkse rentes, opbrengsten eenmaal per jaar.",
+      "duration": 1
+    },
+    {
+      "bank": "MeDirect",
+      "product_name": "Termijnrekening 2 jaar",
+      "base_rate": 0.025,
+      "fidelity_premium": null,
+      "total_rate": 0.0175,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": 100000,
+      "conditions": "Jaarlijkse rentes, opbrengsten eenmaal per jaar.",
+      "duration": 2
+    },
+    {
+      "bank": "MeDirect",
+      "product_name": "Termijnrekening 3 jaar",
+      "base_rate": 0.026,
+      "fidelity_premium": null,
+      "total_rate": 0.0182,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": 100000,
+      "conditions": "Jaarlijkse rentes, opbrengsten eenmaal per jaar.",
+      "duration": 3
+    },
+    {
+      "bank": "MeDirect",
+      "product_name": "Termijnrekening 4 jaar",
+      "base_rate": 0.026,
+      "fidelity_premium": null,
+      "total_rate": 0.0182,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": 100000,
+      "conditions": "Jaarlijkse rentes, opbrengsten eenmaal per jaar.",
+      "duration": 4
+    },
+    {
+      "bank": "MeDirect",
+      "product_name": "Termijnrekening 5 jaar",
+      "base_rate": 0.026,
+      "fidelity_premium": null,
+      "total_rate": 0.0182,
+      "account_type": "Termijnrekening",
+      "min_deposit": null,
+      "max_deposit": 100000,
+      "conditions": "Jaarlijkse rentes, opbrengsten eenmaal per jaar.",
+      "duration": 5
+    }
+  ]
+}

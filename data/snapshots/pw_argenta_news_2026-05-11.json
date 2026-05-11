@@ -1,0 +1,56 @@
+{
+  "source": "argenta_news",
+  "url": "https://www.argenta.be/fr/a-propos-d-argenta/presse.html",
+  "timestamp": "2026-05-11T09:52:25",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Argenta",
+  "link_type": "news",
+  "raw_text_checksum": "44355175338a51f72dd17d5ad064a902845bd3be00f955ca4ebca105379352ae",
+  "num_articles": 6,
+  "checksum": "d453dcd9ef3aa8d52f1b9530143754e36fbf47b3ec7d8a32e8127eb371f14825",
+  "articles": [
+    {
+      "title": "Argenta fête ses 70 ans et accélère sa croissance stratégique dans les segments Asset Management et Assurances",
+      "description": "Des revenus en forte croissance et plus diversifiés, des coûts pratiquement stables et une approche orientée client conduisent à des performances solides",
+      "pub_date": "2026-04-01",
+      "link": null,
+      "guid": "89f2f2dfe5f476ac"
+    },
+    {
+      "title": "Argenta rend la rénovation plus abordable grâce à de nouveaux tarifs pour les prêts à la rénovation (écologique)",
+      "description": "Argenta réduit temporairement les taux d’intérêt de ses prêts à la rénovation. À partir du 6 février 2026, les clients bénéficieront de tarifs encore plus avantageux, tant pour les rénovations classiques qu’écologiques.",
+      "pub_date": "2026-02-06",
+      "link": null,
+      "guid": "a984878117f90928"
+    },
+    {
+      "title": "Argenta adapte temporairement les taux des prêts mobilité pour le début de 2026",
+      "description": "Le bancassureur Argenta abaissera temporairement, à partir du 2 janvier 2026, les taux de ses prêts mobilité, à l’occasion de l’événement automobile qui aura lieu dans la capitale.",
+      "pub_date": "2025-12-19",
+      "link": null,
+      "guid": "8d371a53268131dd"
+    },
+    {
+      "title": "Argenta nomme Johan Vankelecom au poste de CFO",
+      "description": "Argenta nomme Johan Vankelecom au poste de Chief Financial Officer (CFO). Avec cette nomination stratégique, Argenta souligne son ambition de poursuivre sa croissance durable et de renforcer sa position.",
+      "pub_date": "2025-11-06",
+      "link": null,
+      "guid": "b5c9e5d1df90ff66"
+    },
+    {
+      "title": "Argenta publie une version actualisée du Green Bond Framework 2025 et de l’European Green Bond Factsheet",
+      "description": "Dans le cadre de ses ambitions climatiques et de son programme de financement vert en pleine expansion, Argenta a publié l’European Green Bond Factsheet ainsi que le Green Bond Framework 2025 actualisé.",
+      "pub_date": "2025-10-17",
+      "link": null,
+      "guid": "ee8ed77b48c73570"
+    },
+    {
+      "title": "La santé financière des ménages belges s'améliore, mais plus de la moitié d'entre eux restent en mauvaise santé financière ou vulnérables",
+      "description": "Le rapport Financial Health 2025 de Deloitte met en lumière l'état de la résilience financière des ménages belges",
+      "pub_date": "2025-09-04",
+      "link": null,
+      "guid": "c85796d1a8627a92"
+    }
+  ]
+}

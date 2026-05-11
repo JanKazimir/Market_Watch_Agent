@@ -1,0 +1,27 @@
+{
+  "source": "banque_triodos_regulated_savings_products_1",
+  "url": "https://www.triodos.be/fr/epargner/compte-epargne-fidelity",
+  "timestamp": "2026-05-11T10:06:51",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Banque Triodos",
+  "link_type": "regulated_savings_products",
+  "raw_text_checksum": "50bd50da337ff1d1a946410fbbf0d56fb214f9bba49a0fa87b198a865cb8b712",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "06068d081042a9db8f1a49b697c848e25da501600eeb9cfe973619d701f8f6dc",
+  "products": [
+    {
+      "bank": "Banque Triodos",
+      "product_name": "Triodos Impact Savings Fidelity",
+      "base_rate": 0.15,
+      "fidelity_premium": 0.95,
+      "total_rate": 1.1,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Aucune condition ne s’applique ni au taux d'intérêt de base, ni à la prime de fidélité.",
+      "duration": null
+    }
+  ]
+}

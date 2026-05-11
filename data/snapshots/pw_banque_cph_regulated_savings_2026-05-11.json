@@ -1,0 +1,63 @@
+{
+  "source": "banque_cph_regulated_savings",
+  "url": "https://www.cph.be/epargner/comptes-depargne-reglementes-commercialises-par-la-banque-cph/",
+  "timestamp": "2026-05-11T10:01:57",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Banque CPH",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "dbfe89ab71be8f8d2e622c1a33b64ba032436838055fcfff00b7772295426c23",
+  "product_type": "regulated",
+  "num_products": 4,
+  "checksum": "fa1042fb81dc261bb23b4a9f37bf99e9258062897f1f187e20cd80f4600c6291",
+  "products": [
+    {
+      "bank": "Banque CPH",
+      "product_name": "Carnet CPH Dépôts Plus",
+      "base_rate": 2.1,
+      "fidelity_premium": 0.5,
+      "total_rate": 2.6,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": 500,
+      "max_deposit": null,
+      "conditions": "Max 500 €/mois; Un seul compte par titulaire unique; Le prélèvement se fait via un ordre permanent au départ d’un compte courant CPH",
+      "duration": null
+    },
+    {
+      "bank": "Banque CPH",
+      "product_name": "Carnet CPH Dépôts Jeunes de 0 à 11 ans inclus",
+      "base_rate": 1.35,
+      "fidelity_premium": 0.5,
+      "total_rate": 1.85,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Réservé aux jeunes de moins de 12 ans",
+      "duration": null
+    },
+    {
+      "bank": "Banque CPH",
+      "product_name": "Carnet CPH Dépôts Jeunes de 12 à 25 ans inclus",
+      "base_rate": 1.1,
+      "fidelity_premium": 0.5,
+      "total_rate": 1.6,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Réservé aux jeunes de 12 à 25 ans inclus",
+      "duration": null
+    },
+    {
+      "bank": "Banque CPH",
+      "product_name": "Carnet CPH Dépôts",
+      "base_rate": 0.3,
+      "fidelity_premium": 0.5,
+      "total_rate": 0.8,
+      "account_type": "Gereglementeerde spaarrekening",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "/",
+      "duration": null
+    }
+  ]
+}

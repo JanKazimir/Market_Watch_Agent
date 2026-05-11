@@ -1,0 +1,13 @@
+{
+  "source": "banque_triodos_regulated_savings_pdf_2",
+  "url": "https://www.triodos.be/fr/epargner/compte-epargne-junior",
+  "timestamp": "2026-05-11T10:09:45",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Banque Triodos",
+  "link_type": "regulated_savings_pdf",
+  "known_pdf_url": "https://www.triodos.be/fr/downloads/informations-cles-pour-lepargnant-triodos-impact-savings-junior?id=42ca350f1905",
+  "num_pdf_links": 0,
+  "checksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "pdf_links": []
+}

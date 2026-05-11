@@ -1,0 +1,87 @@
+{
+  "source": "argenta_term_accounts",
+  "url": "https://www.argenta.be/fr/epargner/depot-a-terme.html#fonctionne",
+  "timestamp": "2026-05-11T09:56:58",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Argenta",
+  "link_type": "term_accounts",
+  "raw_text_checksum": "72c0b7d01df719c1c13a8ea797c7a662e1a18d439a0a80c2bcd05961f2a174f9",
+  "product_type": "unregulated",
+  "num_products": 6,
+  "checksum": "7500185176bc9ce907be48463cd75546329b0415a633e20af8935b35c6af314d",
+  "products": [
+    {
+      "bank": "Argenta",
+      "product_name": "Dépôt à terme d’Argenta Banque d’Épargne",
+      "base_rate": 0.027,
+      "fidelity_premium": null,
+      "total_rate": 0.0189,
+      "account_type": "Termijnrekening",
+      "min_deposit": 250,
+      "max_deposit": null,
+      "conditions": "Taux d'intérêt net tient compte du précompte mobilier de 30 %",
+      "duration": 5
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "Dépôt à terme d’Argenta Banque d’Épargne",
+      "base_rate": 0.026,
+      "fidelity_premium": null,
+      "total_rate": 0.0182,
+      "account_type": "Termijnrekening",
+      "min_deposit": 250,
+      "max_deposit": null,
+      "conditions": "Taux d'intérêt net tient compte du précompte mobilier de 30 %",
+      "duration": 4
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "Dépôt à terme d’Argenta Banque d’Épargne",
+      "base_rate": 0.025,
+      "fidelity_premium": null,
+      "total_rate": 0.0175,
+      "account_type": "Termijnrekening",
+      "min_deposit": 250,
+      "max_deposit": null,
+      "conditions": "Taux d'intérêt net tient compte du précompte mobilier de 30 %",
+      "duration": 3
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "Dépôt à terme d’Argenta Banque d’Épargne",
+      "base_rate": 0.022,
+      "fidelity_premium": null,
+      "total_rate": 0.0154,
+      "account_type": "Termijnrekening",
+      "min_deposit": 250,
+      "max_deposit": null,
+      "conditions": "Taux d'intérêt net tient compte du précompte mobilier de 30 %",
+      "duration": 2
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "Dépôt à terme d’Argenta Banque d’Épargne",
+      "base_rate": 0.02,
+      "fidelity_premium": null,
+      "total_rate": 0.014,
+      "account_type": "Termijnrekening",
+      "min_deposit": 250,
+      "max_deposit": null,
+      "conditions": "Taux d'intérêt net tient compte du précompte mobilier de 30 %",
+      "duration": 1
+    },
+    {
+      "bank": "Argenta",
+      "product_name": "Dépôt à terme d’Argenta Banque d’Épargne",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": 0.017,
+      "account_type": "Termijnrekening",
+      "min_deposit": 250,
+      "max_deposit": null,
+      "conditions": "Taux d'intérêt net tient compte du précompte mobilier de 30 %",
+      "duration": 0.5
+    }
+  ]
+}
