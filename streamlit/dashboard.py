@@ -2,10 +2,12 @@ import json
 import datetime
 from pathlib import Path
 import streamlit as st
+import pandas as pd 
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
 SNAPSHOTS_DIR = Path(__file__).parent.parent / "snapshots"
+EXCEL_PATH = Path("/Users/fefe/Desktop/Market_Watch_Agent/data/list_of_banks_ref_new.xlsx")
 st.set_page_config(page_title="Daily Market Watch", page_icon="📊", layout="wide")
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
@@ -223,4 +225,75 @@ else:
             <div class="news-title"><a href="{link}" target="_blank">{title}</a></div>
             <div class="news-meta">lecho.be — {pub_fmt}</div>
         </div>""", unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html=True)
+
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+# ── Excel Editor ─────────────────────────────────────────────────────────────
+
+st.markdown(
+    '<div class="section-box"><div class="section-title">Bank Reference Excel</div>',
+    unsafe_allow_html=True
+)
+
+if EXCEL_PATH.exists():
+
+    excel_file = pd.ExcelFile(EXCEL_PATH)
+
+    sheet_names = excel_file.sheet_names
+
+    selected_sheet = st.selectbox(
+        "Select sheet",
+        sheet_names
+    )
+
+    df_excel = pd.read_excel(
+        EXCEL_PATH,
+        sheet_name=selected_sheet
+    )
+
+    st.markdown(
+        '<div style="color:#888; margin-bottom:10px;">'
+        'Edit the Excel file directly from the dashboard.'
+        '</div>',
+        unsafe_allow_html=True
+    )
+
+    edited_df = st.data_editor(
+        df_excel,
+        use_container_width=True,
+        num_rows="dynamic"
+    )
+
+    col_save, col_download = st.columns([1, 1])
+
+    with col_save:
+        if st.button("💾 Save Excel"):
+            with pd.ExcelWriter(
+                EXCEL_PATH,
+                engine="openpyxl",
+                mode="a",
+                if_sheet_exists="replace"
+            ) as writer:
+
+                edited_df.to_excel(
+                    writer,
+                    sheet_name=selected_sheet,
+                    index=False
+                )
+            st.success("Excel file updated successfully.")
+
+    with col_download:
+        with open(EXCEL_PATH, "rb") as f:
+            st.download_button(
+                label="⬇️ Download Excel",
+                data=f,
+                file_name="list_of_banks_ref.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
+
+else:
+    st.error(f"Excel file not found: {EXCEL_PATH}")
+
 st.markdown('</div>', unsafe_allow_html=True)
