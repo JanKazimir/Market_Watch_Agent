@@ -1,4 +1,5 @@
 ## Module that downloads PDFs, checksums them, and keeps only new versions
+# Expects an existing {today}_pdf_list.csv file to work from
 
 import csv
 import hashlib
@@ -26,18 +27,15 @@ OUTPUT_DIR = DATA_DIR / "outputs"
 
 
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/pdf,*/*",
+}
+
+
 def checksum(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
-
-def is_pdf_url(url: str) -> bool:
-    """Check if a string looks like a URL pointing to a PDF."""
-    return url.startswith("http") and url.lower().endswith(".pdf")
-
-
-def is_webpage_url(url: str) -> bool:
-    """A URL that is valid but not a PDF."""
-    return url.startswith("http") and not url.lower().endswith(".pdf")
 
 
 def load_links(csv_path: Path) -> list[dict]:
@@ -65,20 +63,14 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
             results.append(entry)
             continue
 
-        # URL but not a PDF (webpage)
-        if is_webpage_url(url):
-            entry["status"] = "webpage"
-            entry["detail"] = "URL points to a webpage, not a PDF"
-            counts["webpage"] += 1
-            results.append(entry)
-            continue
-
-        # It's a PDF URL — try to download
-        filename = url.split("/")[-1]
+        # Try to download — content-type check below decides if it's really a PDF
+        filename = url.split("/")[-1].split("?")[0]
+        if not filename.lower().endswith(".pdf"):
+            filename += ".pdf"
         filepath = latest_dir / filename
 
         try:
-            response = requests.get(url, timeout=30)
+            response = requests.get(url, timeout=30, headers=HEADERS)
             if response.status_code != 200:
                 entry["status"] = "dead_link"
                 entry["detail"] = f"HTTP {response.status_code}"
@@ -89,9 +81,9 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
             # Check content-type as a sanity check
             content_type = response.headers.get("content-type", "")
             if "pdf" not in content_type and "octet-stream" not in content_type:
-                entry["status"] = "dead_link"
-                entry["detail"] = f"Expected PDF but got content-type: {content_type}"
-                counts["dead_link"] += 1
+                entry["status"] = "webpage"
+                entry["detail"] = f"Not a PDF (content-type: {content_type})"
+                counts["webpage"] += 1
                 results.append(entry)
                 continue
 
