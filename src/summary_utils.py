@@ -8,6 +8,12 @@ import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
+import pandas as pd
+
+# Update these paths to be safer
+BASE_DIR = Path(__file__).resolve().parents[1]
+EMAIL_FILE_PATH = BASE_DIR / "data" / "Email" / "team_emails.xlsx"
+JSON_OUTPUT_DIR = BASE_DIR / "data" / "outputs"
 
 def get_latest_classified_file(search_dir: str) -> str:
     """
@@ -16,20 +22,20 @@ def get_latest_classified_file(search_dir: str) -> str:
     # Create pattern to look for all .json files in the directory
     pattern = os.path.join(search_dir, "*.json")
     list_of_files = glob.glob(pattern)
-    
+
     if not list_of_files:
         raise FileNotFoundError(f"No JSON files found in directory: {search_dir}")
-    
+
     # Return the file with the latest creation/modification time
     return max(list_of_files, key=os.path.getmtime)
 
-def save_classification_summary(json_file_path: str, output_folder: str = "daily_summaries") -> str:
+def save_classification_summary(json_file_path: str, output_folder: str = "data/daily_summaries") -> str:
     """
     Accurately extracts links and details from the Market Watch JSON.
     """
     folder = Path(output_folder)
     folder.mkdir(parents=True, exist_ok=True)
-    
+
     try:
         with open(json_file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -42,13 +48,13 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
     for entry in data.values():
         impact = entry.get("classification", {}).get("impact", "low").lower()
         desc = entry.get("classification", {}).get("description", "No description.")
-        
+
         # 1. Detail Logic (Before -> After)
         field = entry.get("field", "")
         before = entry.get("before", "")
         after = entry.get("after", "")
         detail = ""
-        
+
         # Only show transition if it's not a URL field
         if field and before and after and "url" not in field.lower():
             label = field.replace('_', ' ').capitalize()
@@ -57,11 +63,11 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
         # 2. ACCURATE LINK LOGIC
         # Priority: 1. link field, 2. after field (if it's a url), 3. format source as link
         link = entry.get("link")
-        
+
         # Check if the 'after' value is actually a URL (common for product sheet updates)
         if not link and isinstance(after, str) and after.startswith("http"):
             link = after
-            
+
         # Check if the source is a full link
         source_val = entry.get("source", "")
         if not link and isinstance(source_val, str) and source_val.startswith("http"):
@@ -94,7 +100,7 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
     content.extend(medium if medium else [" • No items to monitor today."])
     content.append("\n🟢 LOW IMPACT / GENERAL UPDATES")
     content.extend(low if low else [" • No minor changes today."])
-    
+
     content.extend([
         "",
         f"👉 Full dashboard: https://jankazimir-market-watch-agent-streamlitdashboard-0rpbta.streamlit.app/",
@@ -105,7 +111,7 @@ def save_classification_summary(json_file_path: str, output_folder: str = "daily
     file_path = folder / f"Summary_{date_str}.txt"
     with open(file_path, "w", encoding="utf-8") as f:
         f.write("\n".join(content))
-    
+
     return str(file_path)
 
 
@@ -119,7 +125,7 @@ def send_summary_email(txt_file_path: str, recipients: list[str], sender: str, p
     if not password:
         return "❌ Error: Password is empty."
     """
-    Reads a text file and sends its content. 
+    Reads a text file and sends its content.
     Credentials are passed directly to avoid environment scope issues.
     """
     if not sender or not password:
@@ -130,7 +136,7 @@ def send_summary_email(txt_file_path: str, recipients: list[str], sender: str, p
             body = f.read()
     except Exception as e:
         return f"❌ Error reading TXT file: {e}"
-    
+
     # 1. Get credentials from environment variables
     from dotenv import load_dotenv
     load_dotenv()
@@ -156,7 +162,7 @@ def send_summary_email(txt_file_path: str, recipients: list[str], sender: str, p
     # 3. Setup the email metadata
     date_str = datetime.now().strftime("%Y-%m-%d")
     subject = f"📊 Market Watch Summary — {date_str}"
-    
+
     msg = MIMEMultipart()
     msg['From'] = f"ING Market Watch <{sender}>"
     msg['To'] = ", ".join(recipients)
@@ -171,16 +177,10 @@ def send_summary_email(txt_file_path: str, recipients: list[str], sender: str, p
         return f"✅ Email successfully sent to: {', '.join(recipients)}"
     except Exception as e:
         return f"❌ SMTP Error: {e}"
-    
+
 # summary_utils.py (Add this to your existing file)
 
-import pandas as pd
-from pathlib import Path
 
-# Update these paths to be safer
-BASE_DIR = Path(__file__).resolve().parents[1]
-EMAIL_FILE_PATH = BASE_DIR / "data" / "Email" / "team_emails.xlsx"
-JSON_OUTPUT_DIR = BASE_DIR / "data" / "outputs"
 
 def get_emails_from_excel(file_path: Path) -> list[str]:
     """
@@ -193,20 +193,20 @@ def get_emails_from_excel(file_path: Path) -> list[str]:
 
         # 1. Load the file NORMALLY (Pandas uses the first row as headers by default)
         df = pd.read_excel(file_path)
-        
+
         # 2. Check if the 'Email' column actually exists to avoid crashing
         if 'email' not in df.columns:
             print("⚠️ Error: Could not find a column named 'Email' in the Excel file.")
             return []
-            
+
         # 3. Extract the 'Email' column and clean it up
         emails = df['email'].dropna().astype(str).str.strip().tolist()
-        
+
         # 4. Final safety check (ensure it contains an @ symbol)
         emails = [e for e in emails if "@" in e]
-        
+
         return emails
-        
+
     except Exception as e:
         print(f"⚠️ Error reading file: {e}")
         return []
@@ -219,10 +219,10 @@ def process_and_send_summary() -> str:
     # 1. Load Secrets
     env_path = Path(__file__).resolve().parents[1] / ".env"
     load_dotenv(dotenv_path=env_path)
-    
+
     sender = os.environ.get("EMAIL_SENDER")
     password = os.environ.get("EMAIL_PASSWORD")
-    
+
     if not sender or not password:
         return "❌ Error: Credentials missing in .env."
 
@@ -234,10 +234,10 @@ def process_and_send_summary() -> str:
 
         # 3. Find newest JSON from our internal config
         latest_json = get_latest_classified_file(JSON_OUTPUT_DIR)
-        
+
         # 4. Save TXT and get the path
         txt_path = save_classification_summary(latest_json)
-        
+
         # 5. Send Email
         status = send_summary_email(txt_path, recipients, sender, password)
         return status
