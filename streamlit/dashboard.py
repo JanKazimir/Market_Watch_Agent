@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 from collections import defaultdict
 import csv
+
 # ── Config ────────────────────────────────────────────────────────────────────
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -293,4 +294,166 @@ st.markdown(f"""
 st.markdown('<div class="section-box"><div class="section-title">Changes detected</div>', unsafe_allow_html=True)
 
 if not display_changes:
-    st.markdown('<div style="color:#666">No changes
+    st.markdown('<div style="color:#666">No changes detected.</div>', unsafe_allow_html=True)
+else:
+    for group_name, group_changes in groups.items():
+        st.markdown(f'<div class="group-label">{group_name}</div>', unsafe_allow_html=True)
+
+        for c in group_changes:
+            ct       = c.get("change_type", "")
+            impact   = get_impact(c)
+            bank     = c.get("bank", "")
+            product  = c.get("product_name", "")
+            field    = c.get("field", "")
+            before   = c.get("before")
+            after    = c.get("after")
+            desc     = get_description(c)
+            category = get_category(c)
+
+            if ct == "rate_change":
+                main   = f"{bank} — {product}"
+                detail = f"{field} : <span class='change-before'>{before}%</span> → <span class='change-after'>{after}%</span>"
+            elif ct == "condition_change":
+                main   = f"{bank} — {product}"
+                detail = f"{field} : <span class='change-before'>{before}</span> → <span class='change-after'>{after}</span>"
+            elif ct == "product_added":
+                main   = f"{bank} — {product}"
+                detail = "New product added"
+            elif ct == "product_removed":
+                main   = f"{bank} — {product}"
+                detail = "Product removed"
+            elif ct == "pdf_link_added":
+                main   = f"{bank} — PDF added"
+                url    = after or ""
+                detail = f"<a href='{url}' target='_blank' style='color:#4da6ff;font-size:12px;'>{c.get('link_type', field)} ↗</a>" if url else c.get("link_type", field)
+            elif ct == "pdf_link_removed":
+                main      = f"{bank} — PDF removed"
+                url       = before or ""
+                fallback  = pdf_fallback_url.get(url, "") or pdf_fallback_bank.get(bank, "")
+                link_type = c.get("link_type", field)
+                if fallback:
+                    detail = (
+                        f"<a href='{url}' target='_blank' style='color:#888;font-size:12px;text-decoration:line-through;'>{link_type} ↗</a>"
+                        f" &nbsp;<a href='{fallback}' target='_blank' style='color:#4da6ff;font-size:12px;'>→ page source</a>"
+                    )
+                else:
+                    detail = f"<a href='{url}' target='_blank' style='color:#888;font-size:12px;text-decoration:line-through;'>{link_type} ↗</a>" if url else link_type
+            else:
+                main   = ct
+                detail = ""
+
+            st.markdown(f"""
+            <div class="change-row">
+                <span class="badge badge-{impact}">{impact}</span>
+                <div class="change-body">
+                    <span class="change-main">{main}</span>
+                    <span class="change-category">{category}</span>
+                    <span class="change-detail">{detail}</span>
+                    <span class="change-desc">{desc}</span>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+
+# ── NEWS HEADLINES ────────────────────────────────────────────────────────────
+
+st.markdown('<div class="section-box"><div class="section-title">News headlines</div>', unsafe_allow_html=True)
+
+for c in news_from_diff:
+    title = c.get("title", "")
+    link  = c.get("link", "#")
+    pub   = c.get("pub_date", "")
+    desc  = get_description(c)
+    try:
+        dt = datetime.datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
+        pub_fmt = dt.strftime("%d %b %Y")
+    except:
+        pub_fmt = pub[:16] if pub else ""
+    st.markdown(f"""
+    <div class="news-item">
+        <div class="news-title"><a href="{link}" target="_blank">{title}</a></div>
+        <div class="news-meta">lecho.be — {pub_fmt}</div>
+        <div style="font-size:12px; color:#666; font-style:italic; margin-top:3px;">{desc}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+diff_links = {c.get("link") for c in news_from_diff}
+remaining  = [a for a in articles if a.get("link") not in diff_links]
+
+if not remaining and not news_from_diff:
+    st.markdown('<div style="color:#666">🚫 No news today.</div>', unsafe_allow_html=True)
+else:
+    for article in remaining[:6]:
+        title = article.get("title", "")
+        link  = article.get("link", "#")
+        pub   = article.get("pub_date", "")
+        try:
+            dt = datetime.datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
+            pub_fmt = dt.strftime("%d %b %Y")
+        except:
+            pub_fmt = pub[:16] if pub else ""
+        st.markdown(f"""
+        <div class="news-item">
+            <div class="news-title"><a href="{link}" target="_blank">{title}</a></div>
+            <div class="news-meta">lecho.be — {pub_fmt}</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+# ── DISCREPANCIES ─────────────────────────────────────────────────────────────
+
+st.markdown('<div class="section-box"><div class="section-title">⚡ Discrepancies (Aggregator vs Direct)</div>', unsafe_allow_html=True)
+
+if not discs:
+    st.markdown('<div style="color:#666">No discrepancies detected.</div>', unsafe_allow_html=True)
+else:
+    for d in discs:
+        bank = d.get("bank", "")
+        product = d.get("product_name", "")
+        field = d.get("field", "")
+        diff = d.get("difference", "")
+        sources = d.get("sources", {})
+
+        source_lines = ""
+        for src, val in sources.items():
+            source_lines += f'<span style="color:#888">{src}:</span> <strong>{val}%</strong> &nbsp;'
+
+        st.markdown(f"""
+        <div class="disc-row">
+            <div class="disc-bank">{bank} — {product}</div>
+            <div class="disc-detail">
+                {field} &nbsp;|&nbsp; {source_lines}
+                &nbsp;|&nbsp; <span class="disc-diff">Δ {diff} pp</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+# ── EXCEL (ADMIN ONLY) ────────────────────────────────────────────────────────
+
+if st.session_state.is_admin:
+    st.markdown('<div class="section-box"><div class="section-title">Excel Editor (Admin)</div>', unsafe_allow_html=True)
+
+    if EXCEL_PATH.exists():
+        excel_file = pd.ExcelFile(EXCEL_PATH)
+        sheet = st.selectbox("Sheet", excel_file.sheet_names)
+        df = pd.read_excel(EXCEL_PATH, sheet_name=sheet)
+        edited = st.data_editor(df, use_container_width=True, num_rows="dynamic")
+
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("💾 Save"):
+                with pd.ExcelWriter(EXCEL_PATH, engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
+                    edited.to_excel(writer, sheet_name=sheet, index=False)
+                st.success("Saved")
+        with col2:
+            with open(EXCEL_PATH, "rb") as f:
+                st.download_button("⬇️ Download", f, file_name="banks.xlsx")
+    else:
+        st.error("Excel not found")
+
+    st.markdown('</div>', unsafe_allow_html=True)
