@@ -42,322 +42,51 @@ def classify_impact(change):
         return "HIGH" if diff >= 0.1 else "MED"
     if ct in ("product_added", "product_removed"):
         return "HIGH"
+    if ct == "condition_change":
+        return "MED"
+    if ct in ("pdf_link_added", "pdf_link_removed"):
+        return "LOW"
     return "LOW"
-
-def describe_change(change):
-    return f"{change.get('product_name', '')} - {change.get('change_type', '')}"
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 
 st.markdown("""
 <style>
+    .stApp { background-color: #1a1a1a; color: #e0e0e0; }
+    .block-container { padding-top: 1.5rem; }
 
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-    :root {
-        --bg: #0f1115;
-        --card: #171a21;
-        --border: #262b36;
-
-        --text: #f3f4f6;
-        --muted: #8b93a7;
-
-        --accent: #60a5fa;
-        --title: #ffffff;
-
-        --high: #ef4444;
-        --med: #f59e0b;
-        --low: #3b82f6;
+    .header-box {
+        background: #242424; border-radius: 10px;
+        padding: 16px 24px; margin-bottom: 20px;
+        display: flex; align-items: center; gap: 16px;
     }
-
-    html, body, .stApp {
-        background: var(--bg);
-        color: var(--text);
-        font-family: 'Inter', sans-serif;
+    .header-logo {
+        background: #e05b2b; color: white; font-weight: bold;
+        font-size: 18px; padding: 8px 12px; border-radius: 8px;
     }
-
-    .block-container {
-        max-width: 1100px;
-        padding-top: 2.5rem;
-        padding-bottom: 4rem;
-    }
-
-    /* ── Sidebar ───────────────────── */
-
-    section[data-testid="stSidebar"] {
-        background: var(--card);
-        border-right: 1px solid var(--border);
-    }
-
-    section[data-testid="stSidebar"] * {
-        font-family: 'Inter', sans-serif !important;
-    }
-
-    /* ── Header ───────────────────── */
-
-    .mw-header {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-
-        margin-bottom: 54px;
-    }
-
-    .mw-logo {
-        width: 48px;
-        height: 48px;
-
-        border-radius: 14px;
-
-        background: var(--accent);
-
-        color: white;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-weight: 800;
-        font-size: 16px;
-
-        box-shadow: 0 0 25px rgba(96,165,250,0.15);
-    }
-
-    .mw-title {
-        font-size: 34px;
-        font-weight: 800;
-
-        color: var(--title);
-
-        letter-spacing: -0.04em;
-
-        line-height: 1;
-    }
-
-    .mw-date {
-        font-size: 14px;
-        color: var(--muted);
-
-        margin-top: 7px;
-    }
-
-    /* ── Section Titles ───────────────────── */
-
-    .mw-section-title {
-        font-size: 30px;
-
-        font-weight: 800;
-
-        color: var(--title);
-
-        letter-spacing: -0.04em;
-
-        margin-top: 54px;
-        margin-bottom: 22px;
-
-        line-height: 1;
-
-        position: relative;
-    }
-
-    .mw-section-title::after {
-        content: "";
-
-        display: block;
-
-        width: 42px;
-        height: 3px;
-
-        border-radius: 999px;
-
-        background: var(--accent);
-
-        margin-top: 14px;
-    }
-
-    /* ── Content wrapper ───────────────────── */
-
-    .mw-card {
-        padding: 0;
-    }
-
-    /* ── News ───────────────────── */
-
-    .news-item {
-        padding: 18px 0;
-
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .news-item:last-child {
-        border-bottom: none;
-    }
-
-    .news-link {
-        color: #60a5fa !important;
-
-        text-decoration: none !important;
-
-        font-size: 16px;
-        font-weight: 600;
-
-        line-height: 1.6;
-
-        transition: 0.2s ease;
-    }
-
-    .news-link:hover {
-        color: #93c5fd !important;
-    }
-
-    .news-meta {
-        margin-top: 7px;
-
-        font-size: 12px;
-
-        color: var(--muted);
-    }
-
-    /* ── Changes ───────────────────── */
-
-    .change-row {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-
-        padding: 16px 0;
-
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .change-row:last-child {
-        border-bottom: none;
-    }
-
-    .change-label {
-        font-size: 15px;
-        color: var(--text);
-
-        line-height: 1.5;
-    }
-
-    /* ── Badges ───────────────────── */
-
-    .badge {
-        padding: 5px 11px;
-
-        border-radius: 999px;
-
-        font-size: 11px;
-        font-weight: 700;
-
-        min-width: 58px;
-
-        text-align: center;
-
-        flex-shrink: 0;
-
-        letter-spacing: 0.03em;
-    }
-
-    .badge-HIGH {
-        background: rgba(239, 68, 68, 0.14);
-        color: var(--high);
-    }
-
-    .badge-MED {
-        background: rgba(245, 158, 11, 0.14);
-        color: var(--med);
-    }
-
-    .badge-LOW {
-        background: rgba(59, 130, 246, 0.14);
-        color: var(--low);
-    }
-
-    /* ── Discrepancies ───────────────────── */
-
-    .disc-row {
-        display: flex;
-        align-items: center;
-
-        gap: 12px;
-
-        padding: 16px 0;
-
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .disc-row:last-child {
-        border-bottom: none;
-    }
-
-    .disc-dot {
-        width: 8px;
-        height: 8px;
-
-        border-radius: 999px;
-
-        background: var(--accent);
-
-        flex-shrink: 0;
-    }
-
-    .disc-field {
-        color: var(--muted);
-        font-size: 13px;
-    }
-
-    /* ── Empty state ───────────────────── */
-
-    .empty-state {
-        color: var(--muted);
-
-        font-size: 15px;
-
-        padding: 10px 0;
-    }
-
-    /* ── Inputs ───────────────────── */
-
-    .stSelectbox label,
-    .stTextInput label {
-        color: var(--muted) !important;
-        font-size: 13px !important;
-    }
-
-    div[data-baseweb="select"] > div,
-    .stTextInput input {
-        background: var(--card) !important;
-        color: var(--text) !important;
-
-        border-radius: 12px !important;
-        border: 1px solid var(--border) !important;
-    }
-
-    /* ── Buttons ───────────────────── */
-
-    .stButton > button {
-        border-radius: 12px !important;
-
-        border: 1px solid var(--border) !important;
-
-        background: var(--card) !important;
-
-        color: var(--text) !important;
-
-        font-weight: 600 !important;
-
-        padding: 0.5rem 1rem !important;
-
-        transition: 0.2s ease;
-    }
-
-    .stButton > button:hover {
-        border-color: var(--accent) !important;
-        color: var(--accent) !important;
-    }
-
+    .header-title { font-size: 22px; font-weight: bold; color: #fff; }
+    .header-sub { font-size: 13px; color: #888; }
+
+    .section-box { background: #242424; border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; }
+    .section-title { font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 14px; }
+
+    .news-item { padding: 12px 0; border-bottom: 1px solid #333; }
+    .news-title a { color: #4da6ff; text-decoration: none; font-weight: bold; font-size: 14px; }
+    .news-meta { color: #666; font-size: 12px; margin-top: 3px; }
+
+    .change-row { display:flex; gap:10px; padding:10px 0; border-bottom:1px solid #333; align-items:flex-start; }
+    .change-row:last-child { border-bottom: none; }
+    .badge { padding:2px 8px; border-radius:4px; font-size:11px; flex-shrink:0; margin-top:2px; }
+    .badge-HIGH { background:#c0392b; }
+    .badge-MED  { background:#d4800a; }
+    .badge-LOW  { background:#555; }
+
+    .change-body { display:flex; flex-direction:column; gap:3px; flex:1; }
+    .change-main { font-size:14px; color:#e0e0e0; }
+    .change-detail { font-size:12px; color:#888; }
+    .change-arrow { color:#aaa; }
+    .change-before { color:#c0392b; }
+    .change-after  { color:#27ae60; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -398,30 +127,117 @@ discrepancies = load_closest("discrepancies_", selected_date)
 lecho_ent     = load_closest("lecho_entreprises_banques_", selected_date)
 lecho_top     = load_closest("lecho_top_stories_", selected_date)
 
+# Toutes les changes viennent uniquement de diff_all
 changes  = diff_all.get("changes", [])
 discs    = discrepancies.get("discrepancies", [])
 articles = lecho_ent.get("articles", []) + lecho_top.get("articles", [])
 
+# Sépare les types de changes
+rate_and_condition = [c for c in changes if c.get("change_type") in ("rate_change", "condition_change")]
+pdf_changes        = [c for c in changes if c.get("change_type") in ("pdf_link_added", "pdf_link_removed")]
+product_changes    = [c for c in changes if c.get("change_type") in ("product_added", "product_removed")]
+news_from_diff     = [c for c in changes if c.get("change_type") == "new_article"]
+
 # ── HEADER ────────────────────────────────────────────────────────────────────
 
 st.markdown(f"""
-<div class="mw-header">
-    <div class="mw-logo">MW</div>
+<div class="header-box">
+    <div class="header-logo">MW</div>
     <div>
-        <div class="mw-title">Daily Market Watch</div>
-        <div class="mw-date">{selected_date}</div>
+        <div class="header-title">Daily Market Watch</div>
+        <div class="header-sub">{selected_date}</div>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-# ── NEWS ──────────────────────────────────────────────────────────────────────
+# ── CHANGES ───────────────────────────────────────────────────────────────────
 
-st.markdown('<div class="mw-card"><div class="mw-card-title">News headlines</div>', unsafe_allow_html=True)
+all_display_changes = rate_and_condition + product_changes + pdf_changes
 
-if not articles:
-    st.markdown('<div class="empty-state">— No news for this date.</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-box"><div class="section-title">Changes detected</div>', unsafe_allow_html=True)
+
+if not all_display_changes:
+    st.markdown('<div style="color:#666">No changes detected.</div>', unsafe_allow_html=True)
 else:
-    for article in articles[:6]:
+    for c in all_display_changes:
+        ct     = c.get("change_type", "")
+        impact = classify_impact(c)
+        bank   = c.get("bank", "")
+        product = c.get("product_name", "")
+        field   = c.get("field", "")
+        before  = c.get("before")
+        after   = c.get("after")
+
+        if ct == "rate_change":
+            main   = f"{bank} — {product}"
+            detail = f"{field} : <span class='change-before'>{before}%</span> → <span class='change-after'>{after}%</span>"
+
+        elif ct == "condition_change":
+            main   = f"{bank} — {product}"
+            detail = f"{field} : <span class='change-before'>{before}</span> → <span class='change-after'>{after}</span>"
+
+        elif ct == "product_added":
+            main   = f"{bank} — {product}"
+            detail = "Nouveau produit ajouté"
+
+        elif ct == "product_removed":
+            main   = f"{bank} — {product}"
+            detail = "Produit supprimé"
+
+        elif ct == "pdf_link_added":
+            main   = f"{bank} — PDF ajouté"
+            detail = c.get("link_type", field)
+
+        elif ct == "pdf_link_removed":
+            main   = f"{bank} — PDF supprimé"
+            detail = c.get("link_type", field)
+
+        else:
+            main   = ct
+            detail = ""
+
+        st.markdown(f"""
+        <div class="change-row">
+            <span class="badge badge-{impact}">{impact}</span>
+            <div class="change-body">
+                <span class="change-main">{main}</span>
+                <span class="change-detail">{detail}</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+# ── NEWS HEADLINES ────────────────────────────────────────────────────────────
+
+# Merge : articles des fichiers lecho + new_articles du diff
+st.markdown('<div class="section-box"><div class="section-title">News headlines</div>', unsafe_allow_html=True)
+
+# Affiche d'abord les new_articles du diff
+for c in news_from_diff:
+    title   = c.get("title", "")
+    link    = c.get("link", "#")
+    pub     = c.get("pub_date", "")
+    try:
+        dt = datetime.datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
+        pub_fmt = dt.strftime("%d %b %Y")
+    except:
+        pub_fmt = pub[:16] if pub else ""
+    st.markdown(f"""
+    <div class="news-item">
+        <div class="news-title"><a href="{link}" target="_blank">{title}</a></div>
+        <div class="news-meta">lecho.be — {pub_fmt}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Puis les articles des fichiers lecho (sans doublons)
+diff_links = {c.get("link") for c in news_from_diff}
+remaining  = [a for a in articles if a.get("link") not in diff_links]
+
+if not remaining and not news_from_diff:
+    st.markdown('<div style="color:#666">🚫 No news today.</div>', unsafe_allow_html=True)
+else:
+    for article in remaining[:6]:
         title = article.get("title", "")
         link  = article.get("link", "#")
         pub   = article.get("pub_date", "")
@@ -432,46 +248,8 @@ else:
             pub_fmt = pub[:16] if pub else ""
         st.markdown(f"""
         <div class="news-item">
-            <a class="news-link" href="{link}" target="_blank">{title}</a>
-            <span class="news-meta">lecho.be &nbsp;·&nbsp; {pub_fmt}</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-st.markdown('</div>', unsafe_allow_html=True)
-
-# ── CHANGES ───────────────────────────────────────────────────────────────────
-
-st.markdown('<div class="mw-card"><div class="mw-card-title">Changes detected</div>', unsafe_allow_html=True)
-
-if not changes:
-    st.markdown('<div class="empty-state">— No changes detected.</div>', unsafe_allow_html=True)
-else:
-    for c in changes:
-        impact = classify_impact(c)
-        st.markdown(f"""
-        <div class="change-row">
-            <span class="badge badge-{impact}">{impact}</span>
-            <span class="change-label">{describe_change(c)}</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-st.markdown('</div>', unsafe_allow_html=True)
-
-# ── DISCREPANCIES ─────────────────────────────────────────────────────────────
-
-st.markdown('<div class="mw-card"><div class="mw-card-title">Discrepancies</div>', unsafe_allow_html=True)
-
-if not discs:
-    st.markdown('<div class="empty-state">— No discrepancies detected.</div>', unsafe_allow_html=True)
-else:
-    for d in discs:
-        product = d.get("product_name", "")
-        field   = d.get("field", "")
-        st.markdown(f"""
-        <div class="disc-row">
-            <div class="disc-dot"></div>
-            <span>{product}</span>
-            <span class="disc-field">· {field}</span>
+            <div class="news-title"><a href="{link}" target="_blank">{title}</a></div>
+            <div class="news-meta">lecho.be — {pub_fmt}</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -480,7 +258,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 # ── EXCEL (ADMIN ONLY) ────────────────────────────────────────────────────────
 
 if st.session_state.is_admin:
-    st.markdown('<div class="mw-card"><div class="mw-card-title">Excel Editor (Admin)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-box"><div class="section-title">Excel Editor (Admin)</div>', unsafe_allow_html=True)
 
     if EXCEL_PATH.exists():
         excel_file = pd.ExcelFile(EXCEL_PATH)
