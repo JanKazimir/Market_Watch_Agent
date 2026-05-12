@@ -15,10 +15,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from pdf_diff import diff_pdfs
 from llm.classify_facts import talk_to_llm, dump_and_save_json
+from pdf_status_updater import update_pdf_status
 
 
 
 # Should have a way to update the pdf link by looking at the new url from the url scraping diff.
+
+
 
 #
 ## CONFIG
@@ -47,7 +50,6 @@ REPORT_DIR = DATA_DIR / "pdfs" / "reports"
 PDF_REPORT_PROMPT = """You are part of a Market Watch system monitoring Belgian savings accounts. You will receive a PDF monitoring report containing a download summary and content diffs for changed PDF documents.
 
 Your job: classify and summarise the changes. 
-Start your summary by reproducing the sumamry of changes found at the top of the data sent to you. 
 For changes found, you will receive: context before the change, the change (before and after), and context after the change. 
 Focus your summary on thigns RELEVANT to SAVINGS ACCOUNTS (rate changes, change in conditions, product modifications, fee updates, etc...). 
 Ignore formatting-only changes, page number shifts, or unchanged boilerplate.
@@ -59,7 +61,7 @@ Return valid JSON as a list of objects, each with:
 - "impact": "low", "medium", or "high". The impact of any change that is not related to savings accounts MUST be set to low.
 - "description": what changed, max 25 words. Include old and new values when available.
 
-If there are no meaningful changes, return: {"changes": "No meaningful pdf changes"}
+If there are no meaningful changes, return: {"summary of pdf changes": "No meaningful pdf changes"}
 """
 
 HEADERS = {
@@ -300,13 +302,26 @@ def main():
     report_path.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False))
     print(f"{len(diffs)} PDF diff(s) — report saved to {report_path}")
 
-    # Classify with LLM
-    print("Classifying PDF report with LLM...")
-    classified = talk_to_llm(snapshot, PDF_REPORT_PROMPT)
+    # Classify diffs with LLM
+    print("Classifying PDF diffs with LLM...")
+    classified_diffs = talk_to_llm(diffs, PDF_REPORT_PROMPT) if diffs else {"summary of pdf changes": "No meaningful pdf changes"}
+
+    # Build classified output: report structure but with LLM summary replacing raw diffs
+    classified_output = {
+        "date": report["date"],
+        "summary": report["summary"],
+        "entries": report["entries"],
+        "pdf_diffs": classified_diffs,
+    }
+
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     classified_path = OUTPUT_DIR / f"{today}_pdf_report_classified.json"
-    dump_and_save_json(classified, classified_path)
+    dump_and_save_json(classified_output, classified_path)
     print(f"Classified output saved to {classified_path}")
+
+    # Update Excel url_status column from the report
+    print("Updating Excel status column...")
+    update_pdf_status(report_path, EXCEL_PATH)
 
 
 if __name__ == "__main__":

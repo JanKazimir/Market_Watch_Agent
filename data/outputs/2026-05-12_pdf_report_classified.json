@@ -1,0 +1,35 @@
+{
+  "date": "2026-05-12",
+  "summary": {
+    "unchanged": 15,
+    "updated": 0,
+    "not_a_link": 0,
+    "dead_link": 0,
+    "error": 2
+  },
+  "entries": [
+    {
+      "source_key": "bnp_paribas_fortis_saving",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "regulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=120)"
+    },
+    {
+      "source_key": "bnp_paribas_fortis_terms",
+      "bank": "BNP Paribas Fortis",
+      "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+      "product_type": "unregulated",
+      "language": "",
+      "pdf_source": "",
+      "status": "error",
+      "detail": "HTTPSConnectionPool(host='www.bnpparibasfortis.be', port=443): Read timed out. (read timeout=120)"
+    }
+  ],
+  "pdf_diffs": {
+    "summary of pdf changes": "No meaningful pdf changes"
+  }
+}

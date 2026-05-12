@@ -113,7 +113,7 @@ def extract_pdf_content(pdf_path: str) -> dict:
 # TEXT DIFF
 # ---------------------------------------------------------------------------
 
-def diff_text(old_lines: list[str], new_lines: list[str], context: int = 3) -> list[dict]:
+def diff_text(old_lines: list[str], new_lines: list[str], context: int = 5) -> list[dict]:
     """Produce text diffs with surrounding context lines.
 
     Each diff entry:
@@ -301,7 +301,7 @@ def diff_tables(
 # MAIN FUNCTION
 # ---------------------------------------------------------------------------
 
-def diff_pdfs(old_path: str, new_path: str, context: int = 3) -> dict:
+def diff_pdfs(old_path: str, new_path: str, context: int = 5) -> dict:
     """Compare two PDFs and return a JSON-serialisable diff.
 
     Args:
