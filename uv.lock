@@ -327,8 +327,6 @@ wheels = [
 ]
 
 [[package]]
-<<<<<<< HEAD
-=======
 name = "feedparser"
 version = "6.0.12"
 source = { registry = "https://pypi.org/simple" }
@@ -341,7 +339,6 @@ wheels = [
 ]
 
 [[package]]
->>>>>>> origin/main
 name = "gitdb"
 version = "4.0.12"
 source = { registry = "https://pypi.org/simple" }
@@ -694,10 +691,7 @@ dependencies = [
     { name = "apify-client" },
     { name = "apscheduler" },
     { name = "beautifulsoup4" },
-<<<<<<< HEAD
-=======
     { name = "feedparser" },
->>>>>>> origin/main
     { name = "httpx" },
     { name = "jsondiff" },
     { name = "logging" },
@@ -719,10 +713,7 @@ requires-dist = [
     { name = "apify-client", specifier = ">=2.5.0" },
     { name = "apscheduler", specifier = ">=3.11.2" },
     { name = "beautifulsoup4", specifier = ">=4.14.3" },
-<<<<<<< HEAD
-=======
     { name = "feedparser", specifier = ">=6.0.12" },
->>>>>>> origin/main
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "jsondiff", specifier = ">=2.2.1" },
     { name = "logging", specifier = ">=0.4.9.6" },
@@ -1393,15 +1384,12 @@ wheels = [
 ]
 
 [[package]]
-<<<<<<< HEAD
-=======
 name = "sgmllib3k"
 version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz", hash = "sha256:7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9", size = 5750, upload-time = "2010-08-24T14:33:52.445Z" }
 
 [[package]]
->>>>>>> origin/main
 name = "six"
 version = "1.17.0"
 source = { registry = "https://pypi.org/simple" }
