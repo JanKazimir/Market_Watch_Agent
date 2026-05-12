@@ -1,13 +1,14 @@
 {
   "source": "banque_triodos_tarif_pdf",
   "url": "https://www.triodos.be/fr/epargner/compte-a-terme",
-  "timestamp": "2026-05-11T10:04:22",
+  "timestamp": "2026-05-11T16:39:58",
   "date": "2026-05-11",
   "scraper": "playwright",
   "bank": "Banque Triodos",
   "link_type": "tarif_pdf",
   "known_pdf_url": "https://www.triodos.be/fr/downloads/liste-des-tarifs-pour-les-personnes-privees-valables-a-partir-du-18dec25?id=80b88c049a40",
+  "parent_url": "https://www.triodos.be/fr/epargner/compte-a-terme",
   "num_pdf_links": 0,
-  "checksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "checksum": "",
   "pdf_links": []
 }

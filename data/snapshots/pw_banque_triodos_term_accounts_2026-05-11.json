@@ -1,15 +1,15 @@
 {
   "source": "banque_triodos_term_accounts",
   "url": "https://www.triodos.be/fr/epargner/compte-a-terme",
-  "timestamp": "2026-05-11T10:10:51",
+  "timestamp": "2026-05-11T16:42:42",
   "date": "2026-05-11",
   "scraper": "playwright",
   "bank": "Banque Triodos",
   "link_type": "term_accounts",
-  "raw_text_checksum": "bbfba374c5a1cf04e1cdcdc3299a73da70322bfcef0a9c09d0accc78aa561ec8",
+  "raw_text_checksum": "1cbbd81e251d24863a42d953112c5aa38633517a6539dd4413a4a6394653e63e",
   "product_type": "unregulated",
   "num_products": 9,
-  "checksum": "c2f16f2b62ccb3e8d72736419bc6710cde783de605d32469ca1242e3a5cca2af",
+  "checksum": "0aeefbe8ce3d3542ca91ac99202f32999da507dfad143efc8551984927718c2a",
   "products": [
     {
       "bank": "Banque Triodos",
@@ -17,11 +17,11 @@
       "base_rate": 0.0165,
       "fidelity_premium": null,
       "total_rate": 0.0165,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 3
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "3 mois"
     },
     {
       "bank": "Banque Triodos",
@@ -29,11 +29,11 @@
       "base_rate": 0.0175,
       "fidelity_premium": null,
       "total_rate": 0.0175,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 6
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "6 mois"
     },
     {
       "bank": "Banque Triodos",
@@ -41,11 +41,11 @@
       "base_rate": 0.0185,
       "fidelity_premium": null,
       "total_rate": 0.0185,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 9
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "9 mois"
     },
     {
       "bank": "Banque Triodos",
@@ -53,11 +53,11 @@
       "base_rate": 0.019,
       "fidelity_premium": null,
       "total_rate": 0.019,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 12
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "1 an"
     },
     {
       "bank": "Banque Triodos",
@@ -65,11 +65,11 @@
       "base_rate": 0.019,
       "fidelity_premium": null,
       "total_rate": 0.019,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 24
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "2 ans"
     },
     {
       "bank": "Banque Triodos",
@@ -77,11 +77,11 @@
       "base_rate": 0.019,
       "fidelity_premium": null,
       "total_rate": 0.019,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 36
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "3 ans"
     },
     {
       "bank": "Banque Triodos",
@@ -89,11 +89,11 @@
       "base_rate": 0.02,
       "fidelity_premium": null,
       "total_rate": 0.02,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 48
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "4 ans"
     },
     {
       "bank": "Banque Triodos",
@@ -101,11 +101,11 @@
       "base_rate": 0.022,
       "fidelity_premium": null,
       "total_rate": 0.022,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 60
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "5 ans"
     },
     {
       "bank": "Banque Triodos",
@@ -113,11 +113,11 @@
       "base_rate": 0.0265,
       "fidelity_premium": null,
       "total_rate": 0.0265,
-      "account_type": "Termijnrekening",
-      "min_deposit": 10000,
+      "account_type": "term deposit",
+      "min_deposit": null,
       "max_deposit": null,
-      "conditions": "Vous devez disposer d'un compte d'épargne Triodos Impact Savings pour ouvrir un compte à terme Triodos.",
-      "duration": 120
+      "conditions": "Doit disposer d'un compte d'épargne Triodos Impact Savings.",
+      "duration": "10 ans"
     }
   ]
 }

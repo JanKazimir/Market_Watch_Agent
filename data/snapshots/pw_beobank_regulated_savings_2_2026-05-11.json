@@ -1,0 +1,27 @@
+{
+  "source": "beobank_regulated_savings_2",
+  "url": "https://www.beobank.be/fr/epargner/comptes-epargne/compte-classique.html",
+  "timestamp": "2026-05-11T16:52:12",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Beobank",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "38586a27ddd5c5542364ed77920c07b401b89f9dca25aca131152eaa0a589697",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "60391df14a7d1f48ae9ec72e96db7e89b33ebb180e2324ca3a1433fa35618949",
+  "products": [
+    {
+      "bank": "Beobank",
+      "product_name": "Compte d'épargne Classique",
+      "base_rate": 0.4,
+      "fidelity_premium": 0.1,
+      "total_rate": 0.5,
+      "account_type": "Compte d'épargne réglementé",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "La prime de fidélité est garantie pour les montants restant sur le compte pendant 12 mois sans interruption.",
+      "duration": null
+    }
+  ]
+}

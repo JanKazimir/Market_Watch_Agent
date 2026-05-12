@@ -1,0 +1,27 @@
+{
+  "source": "beobank_regulated_savings",
+  "url": "https://www.beobank.be/fr/epargner/comptes-epargne/compte-save-plus.html",
+  "timestamp": "2026-05-11T16:51:19",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Beobank",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "e79e34858f8bca4ada73f6a10180a235cfe8323f880da8c14c873534530446d1",
+  "product_type": "regulated",
+  "num_products": 1,
+  "checksum": "19f0ea08ed5f8cd20e92cc72556122a5d856cd82dc40adbf1357af080fd5ae6d",
+  "products": [
+    {
+      "bank": "Beobank",
+      "product_name": "Compte d'épargne Save Plus",
+      "base_rate": 0.3,
+      "fidelity_premium": 0.5,
+      "total_rate": 0.8,
+      "account_type": "Compte d'épargne",
+      "min_deposit": null,
+      "max_deposit": 50000,
+      "conditions": "La prime de fidélité passe à 1,30 % si le solde du compte après dépôt est égal ou supérieur à 50.000 euros.",
+      "duration": null
+    }
+  ]
+}

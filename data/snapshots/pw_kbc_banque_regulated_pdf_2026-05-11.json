@@ -1,0 +1,19 @@
+{
+  "source": "kbc_banque_regulated_pdf",
+  "url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html",
+  "timestamp": "2026-05-11T16:46:47",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "KBC Banque",
+  "link_type": "regulated_pdf",
+  "known_pdf_url": "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf",
+  "parent_url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-d-epargne.html",
+  "num_pdf_links": 4,
+  "checksum": "efd6d336ef4e8ffbb89aa0fad849e6a3225a84dfad6d9ec1148e9099327c332c",
+  "pdf_links": [
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3591_F.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/NCI/0012_F.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3591_fr.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf"
+  ]
+}

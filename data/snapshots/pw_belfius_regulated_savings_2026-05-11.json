@@ -1,0 +1,51 @@
+{
+  "source": "belfius_regulated_savings",
+  "url": "https://www.belfius.be/site/retail/fr/produits/epargner/comptes-epargne-reglementes",
+  "timestamp": "2026-05-11T16:43:56",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Belfius",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "468ea9e3954b0b62af0636f314812b6fc55ef353b040d82f02c64c91587dc84c",
+  "product_type": "regulated",
+  "num_products": 3,
+  "checksum": "32d04de984a98026e2996a491d5bb9fbb810f1bfff8cc6110301ff43f038177c",
+  "products": [
+    {
+      "bank": "Belfius",
+      "product_name": "Belfius Flow compte d'épargne",
+      "base_rate": 1.3,
+      "fidelity_premium": 1.5,
+      "total_rate": 2.8,
+      "account_type": "savings account",
+      "min_deposit": 500,
+      "max_deposit": 600,
+      "conditions": "Maximum deposit of 600 euros per month. Cash deposits are not possible. Only for individuals for private purposes and a maximum of one account per client.",
+      "duration": null
+    },
+    {
+      "bank": "Belfius",
+      "product_name": "Belfius Fidelity compte d'épargne",
+      "base_rate": 0.15,
+      "fidelity_premium": 1.25,
+      "total_rate": 1.4,
+      "account_type": "savings account",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "None",
+      "duration": null
+    },
+    {
+      "bank": "Belfius",
+      "product_name": "Compte d'épargne",
+      "base_rate": 0.3,
+      "fidelity_premium": 0.3,
+      "total_rate": 0.6,
+      "account_type": "savings account",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "None",
+      "duration": null
+    }
+  ]
+}

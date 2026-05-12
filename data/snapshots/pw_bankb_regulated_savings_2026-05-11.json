@@ -1,7 +1,7 @@
 {
   "source": "bankb_regulated_savings",
   "url": "https://www.bankb.be/fr-be/epargner/compte-depargne",
-  "timestamp": "2026-05-11T10:01:19",
+  "timestamp": "2026-05-11T16:38:11",
   "date": "2026-05-11",
   "scraper": "playwright",
   "bank": "BankB",
@@ -9,7 +9,7 @@
   "raw_text_checksum": "791ec9c667501b5d2b2fa8c5cb033fdd4b72181cece3196e3f9574a079ff3ba9",
   "product_type": "regulated",
   "num_products": 1,
-  "checksum": "109f20151d16bd01d8b57b9b603c1b1110585c21391e8af2fc688c6748ba7e04",
+  "checksum": "dde1ec7262baa23fb2163f6a632aeadc84fba677ad9354e5e3ef9653181b8aef",
   "products": [
     {
       "bank": "BankB",
@@ -17,7 +17,7 @@
       "base_rate": 0.25,
       "fidelity_premium": 1.25,
       "total_rate": 1.5,
-      "account_type": "Gereglementeerde spaarrekening",
+      "account_type": "savings account",
       "min_deposit": 500,
       "max_deposit": null,
       "conditions": "La prime de fidélité n’est acquise que sur les montants qui sont restés de manière ininterrompue sur le compte d’épargne réglementé pendant 12 mois suivant le versement.",

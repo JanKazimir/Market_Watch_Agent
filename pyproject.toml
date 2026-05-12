@@ -8,10 +8,7 @@ dependencies = [
     "apify-client>=2.5.0",
     "apscheduler>=3.11.2",
     "beautifulsoup4>=4.14.3",
-<<<<<<< HEAD
-=======
     "feedparser>=6.0.12",
->>>>>>> origin/main
     "httpx>=0.28.1",
     "jsondiff>=2.2.1",
     "logging>=0.4.9.6",
@@ -20,6 +17,7 @@ dependencies = [
     "openai>=2.33.0",
     "openpyxl>=3.1.5",
     "pandas>=3.0.2",
+    "pdfplumber>=0.11.9",
     "playwright>=1.59.0",
     "pydantic>=2.13.3",
     "python-dotenv>=1.2.2",

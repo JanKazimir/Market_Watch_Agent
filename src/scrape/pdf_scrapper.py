@@ -3,6 +3,7 @@
 import csv
 import hashlib
 import json
+import sys
 import requests
 import datetime
 import re
@@ -10,9 +11,11 @@ import shutil
 import pandas as pd
 from pathlib import Path
 
+## Importing from sibling modules in src/
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from pdf_diff import diff_pdfs
+from llm.classify_facts import talk_to_llm, dump_and_save_json
 
-
-from pathlib import Path
 
 
 # Should have a way to update the pdf link by looking at the new url from the url scraping diff.
@@ -37,8 +40,33 @@ CSV_PATH = DATA_DIR / "pdf_links_csv" / f"{today}_pdf_list.csv"
 LATEST_DIR = DATA_DIR / "pdfs" / "latest"
 ARCHIVE_DIR = DATA_DIR / "pdfs" / "archive"
 OUTPUT_DIR = DATA_DIR / "outputs"
+SNAPSHOT_DIR = DATA_DIR / "snapshots"
+REPORT_DIR = DATA_DIR / "pdfs" / "reports"
 
-print(BASE_DIR)
+# LLM PROMPT
+PDF_REPORT_PROMPT = """You are part of a Market Watch system monitoring Belgian savings accounts. You will receive a PDF monitoring report containing a download summary and content diffs for changed PDF documents.
+
+Your job: classify and summarise the changes. 
+Start your summary by reproducing the sumamry of changes found at the top of the data sent to you. 
+For changes found, you will receive: context before the change, the change (before and after), and context after the change. 
+Focus your summary on thigns RELEVANT to SAVINGS ACCOUNTS (rate changes, change in conditions, product modifications, fee updates, etc...). 
+Ignore formatting-only changes, page number shifts, or unchanged boilerplate.
+
+Return valid JSON as a list of objects, each with:
+- "bank": bank name
+- "source_key": from the input
+- "category": one of "Rate change", "T&C modification", "Fee/tariff change", "New product", "Product removed", "Other"
+- "impact": "low", "medium", or "high". The impact of any change that is not related to savings accounts MUST be set to low.
+- "description": what changed, max 25 words. Include old and new values when available.
+
+If there are no meaningful changes, return: {"changes": "No meaningful pdf changes"}
+"""
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/pdf,*/*",
+}
+
 
 
 #
@@ -121,13 +149,9 @@ def build_pdf_list(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-
-
-
 #
 ## PDF SCRAPPER
 #
-
 
 def checksum(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -137,10 +161,6 @@ def is_pdf_url(url: str) -> bool:
     """Check if a string looks like a URL pointing to a PDF."""
     return url.startswith("http") and url.lower().endswith(".pdf")
 
-
-def is_webpage_url(url: str) -> bool:
-    """A URL that is valid but not a PDF."""
-    return url.startswith("http") and not url.lower().endswith(".pdf")
 
 
 def load_links(csv_path: Path) -> list[dict]:
@@ -154,7 +174,7 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
     archive_dir.mkdir(parents=True, exist_ok=True)
 
     results = []
-    counts = {"unchanged": 0, "updated": 0, "not_a_link": 0, "webpage": 0, "dead_link": 0, "error": 0}
+    counts = {"unchanged": 0, "updated": 0, "not_a_link": 0, "dead_link": 0, "error": 0}
 
     for row in rows:
         url = row.get("url", "").strip()
@@ -168,20 +188,14 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
             results.append(entry)
             continue
 
-        # URL but not a PDF (webpage)
-        if is_webpage_url(url):
-            entry["status"] = "webpage"
-            entry["detail"] = "URL points to a webpage, not a PDF"
-            counts["webpage"] += 1
-            results.append(entry)
-            continue
-
-        # It's a PDF URL — try to download
-        filename = url.split("/")[-1]
+        # Build a filename from the URL; add .pdf if the URL doesn't end with it
+        filename = url.split("/")[-1].split("?")[0]
+        if not filename.lower().endswith(".pdf"):
+            filename = filename + ".pdf"
         filepath = latest_dir / filename
 
         try:
-            response = requests.get(url, timeout=30)
+            response = requests.get(url, timeout=(10, 120), headers=HEADERS)
             if response.status_code != 200:
                 entry["status"] = "dead_link"
                 entry["detail"] = f"HTTP {response.status_code}"
@@ -229,6 +243,30 @@ def download_and_check(rows: list[dict], latest_dir: Path = LATEST_DIR, archive_
     }
 
 
+def run_pdf_diffs(report: dict, latest_dir: Path = LATEST_DIR, archive_dir: Path = ARCHIVE_DIR) -> list[dict]:
+    """For every PDF that changed, diff the archived (old) vs latest (new) version."""
+    diffs = []
+    for entry in report["entries"]:
+        if entry.get("detail") != "Content changed":
+            continue
+
+        filename = entry["url"].strip().split("/")[-1]
+        old_path = archive_dir / f"{today}_{filename}"
+        new_path = latest_dir / filename
+
+        if not old_path.exists() or not new_path.exists():
+            print(f"  Skipping diff for {filename}: file(s) missing")
+            continue
+
+        print(f"  Diffing {filename} ...")
+        diff_result = diff_pdfs(str(old_path), str(new_path))
+        diff_result["source_key"] = entry.get("source_key", "")
+        diff_result["bank"] = entry.get("bank", "")
+        diffs.append(diff_result)
+
+    return diffs
+
+
 def main():
     ## Read Excel, back it up, 
     backup_excel()
@@ -239,21 +277,36 @@ def main():
     print(pdf_df.to_string())
     print(f"\nWrote {len(pdf_df)} rows to {OUTPUT_PATH}")
     
-    
-    print("Starting pdf...")
+    ## Pdf download
+    print("Starting pdf download...")
     rows = load_links(CSV_PATH)
     print("Downloading and checking pdf files...")
     report = download_and_check(rows)
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = OUTPUT_DIR / f"{today}_pdf_diff.json"
-    output_path.write_text(json.dumps(report, indent=2, ensure_ascii=False))
-
     s = report["summary"]
     print(f"Updated: {s['updated']}  Unchanged: {s['unchanged']}  "
-          f"Dead links: {s['dead_link']}  Webpages: {s['webpage']}  "
+          f"Dead links: {s['dead_link']}  "
           f"Not a link: {s['not_a_link']}  Errors: {s['error']}")
-    print(f"Report saved to {output_path}")
+
+    # Diff changed PDFs
+    print("Running PDF content diffs...")
+    diffs = run_pdf_diffs(report)
+
+    # Combine report + diffs into a single snapshot
+    snapshot = {**report, "pdf_diffs": diffs}
+
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    report_path = REPORT_DIR / f"{today}_pdf_diff_report.json"
+    report_path.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False))
+    print(f"{len(diffs)} PDF diff(s) — report saved to {report_path}")
+
+    # Classify with LLM
+    print("Classifying PDF report with LLM...")
+    classified = talk_to_llm(snapshot, PDF_REPORT_PROMPT)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    classified_path = OUTPUT_DIR / f"{today}_pdf_report_classified.json"
+    dump_and_save_json(classified, classified_path)
+    print(f"Classified output saved to {classified_path}")
 
 
 if __name__ == "__main__":

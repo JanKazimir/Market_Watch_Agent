@@ -12,7 +12,7 @@
       "taxonomy_category": "Rate change",
       "taxonomy_group": "Product & Structure",
       "impact": "Medium",
-      "description": "Beobank decreased base rate from 0.5% to 0.45% for Klassieke Spaarrekening."
+      "description": "Beobank decreased base rate from 0.5 to 0.45 on Klassieke Spaarrekening."
     }
   },
   "1": {
@@ -28,7 +28,7 @@
       "taxonomy_category": "Rate change",
       "taxonomy_group": "Product & Structure",
       "impact": "Medium",
-      "description": "Argenta reduced fidelity premium from 0.35% to 0.3% for e-spaar."
+      "description": "Argenta reduced fidelity premium from 0.35 to 0.3 on e-spaar."
     }
   },
   "2": {
@@ -44,7 +44,7 @@
       "taxonomy_category": "Eligibility / conditions",
       "taxonomy_group": "Product & Structure",
       "impact": "Medium",
-      "description": "Crelan lowered max deposit from €350 to €250 for Horizon Plus boekje."
+      "description": "Crelan lowered max deposit from €350 to €250 on Horizon Plus boekje."
     }
   },
   "3": {
@@ -57,10 +57,10 @@
     "source": "lecho.be",
     "data_type": "news",
     "classification": {
-      "taxonomy_category": "News articles or press release on rate changes",
+      "taxonomy_category": "News article",
       "taxonomy_group": "News & External Signals",
       "impact": "HIGH",
-      "description": "Commerzbank to cut 3,000 jobs, aiming to double profits by 2030."
+      "description": "Commerzbank to cut 3,000 jobs, impacting market dynamics."
     }
   },
   "4": {
@@ -73,10 +73,10 @@
     "before": null,
     "after": "https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-epargne.pdf",
     "classification": {
-      "taxonomy_category": "New marketing message",
-      "taxonomy_group": "Communication & Positioning",
+      "taxonomy_category": "New document added",
+      "taxonomy_group": "Other",
       "impact": "low",
-      "description": "Argenta added new PDF link for e-spaar service mobility."
+      "description": "Argenta added new PDF link for e-spaar service details."
     }
   },
   "5": {
@@ -89,10 +89,10 @@
     "before": "https://www.argenta.be/content/dam/argenta/documents/general/service-de-mobilite-interbancaire/service-mobilite-interbancaire-compte-tarif.pdf",
     "after": null,
     "classification": {
-      "taxonomy_category": "New marketing message",
-      "taxonomy_group": "Communication & Positioning",
+      "taxonomy_category": "Document removed",
+      "taxonomy_group": "Other",
       "impact": "low",
-      "description": "Argenta removed old PDF link for e-spaar service mobility."
+      "description": "Argenta removed old PDF link for e-spaar service details."
     }
   }
 }

@@ -51,6 +51,8 @@ client = OpenAI(api_key=api_key)
 testing_input_path = BASE_DIR / "data" / "snapshots" / "diff_test.json"
 =======
 api_key = os.environ.get("API_KEY")
+test_string = os.environ.get("TEST_STRING")
+
 llm_small_model = "gpt-4o-mini"
 today = datetime.date.today().isoformat()
 ## Open ai client:

@@ -1,0 +1,19 @@
+{
+  "source": "kbc_banque_regulated_pdf_2",
+  "url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav",
+  "timestamp": "2026-05-11T16:47:31",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "KBC Banque",
+  "link_type": "regulated_pdf",
+  "known_pdf_url": "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf",
+  "parent_url": "https://www.kbc.be/particuliers/fr/epargner/comptes-epargne/compte-depargne-de-croissance.html?zone=topnav",
+  "num_pdf_links": 4,
+  "checksum": "47d7caf40f654942b82ea2b30ff74276f3274faf6cd8e2ec5662736dd12ffa55",
+  "pdf_links": [
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/info_spr_3770_F.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/NCI/0012_F.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/KBC_-_productfiche_3770_fr.pdf",
+    "https://multimediafiles.kbcgroup.eu/ng/published/KBC/PDF/SPABEL/VARIA/protection-des-depots-fiche-d-information.pdf"
+  ]
+}

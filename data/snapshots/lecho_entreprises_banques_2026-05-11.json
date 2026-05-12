@@ -2,10 +2,10 @@
   "source": "lecho.be",
   "feed": "entreprises_banques",
   "url": "https://www.lecho.be/rss/entreprises_banques.xml",
-  "timestamp": "2026-05-11T09:51:35.299291",
+  "timestamp": "2026-05-11T16:31:56.946279",
   "date": "2026-05-11",
-  "num_articles": 8,
-  "checksum": "cddf1cf8aea2c976714200bfd7c9dff63dec8b8bf846f7886e0f7acc350ed759",
+  "num_articles": 7,
+  "checksum": "69c9c22574b46fb0e09f477c1ce1827c18b75f455b9110abb9c9626edb6aa0cf",
   "articles": [
     {
       "guid": "https://www.lecho.be/r/t/1/id/10659714",
@@ -61,14 +61,6 @@
       "description": "30/04 Les géants américains se hissent en tête du classement mondial des apps d'investissement du consultant Sia, tandis que les plateformes belges, pourtant qualitatives, sont pénalisées par leurs tarifs p...",
       "link": "https://www.lecho.be/r/t/1/id/10658209",
       "pub_date": "Thu, 30 Apr 2026 03:00:00 GMT",
-      "category": "Entreprises"
-    },
-    {
-      "guid": "https://www.lecho.be/r/t/1/id/10655230",
-      "title": "JPMorgan revoit à la hausse ses ambitions sur le marché belge du private banking",
-      "description": "29/04 Traditionnellement axée sur les \"très grandes fortunes\", par nature discrètes et peu nombreuses,  JPMorgan est longtemps restée un acteur peu en vue du private banking européen. Mais la grande banque ...",
-      "link": "https://www.lecho.be/r/t/1/id/10655230",
-      "pub_date": "Wed, 29 Apr 2026 15:01:25 GMT",
       "category": "Entreprises"
     }
   ]

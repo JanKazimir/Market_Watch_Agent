@@ -1,12 +1,13 @@
 {
   "source": "argenta_tarif_pdf",
   "url": "https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre",
-  "timestamp": "2026-05-11T09:53:01",
+  "timestamp": "2026-05-11T16:32:51",
   "date": "2026-05-11",
   "scraper": "playwright",
   "bank": "Argenta",
   "link_type": "tarif_pdf",
   "known_pdf_url": "https://www.argenta.be/content/dam/argenta/documents/general/tarifs/Liste%20des%20tarifs.pdf",
+  "parent_url": "https://www.argenta.be/fr/epargner/compte-d-epargne.html#offre",
   "num_pdf_links": 8,
   "checksum": "30ee1ca8a812e0cab7932e78094a828797a1e4f4b38d5f367edcd7d8050f7e8e",
   "pdf_links": [
