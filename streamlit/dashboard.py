@@ -255,22 +255,6 @@ else:
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ── DISCREPANCIES ─────────────────────────────────────────────────────────────
-
-st.markdown('<div class="section-box"><div class="section-title">Discrepancies</div>', unsafe_allow_html=True)
-
-if not discs:
-    st.markdown('<div style="color:#666">No discrepancies detected.</div>', unsafe_allow_html=True)
-else:
-    for d in discs:
-        st.markdown(f"""
-        <div style="padding:8px 0;border-bottom:1px solid #333">
-            {d.get('product_name','')} — {d.get('field','')}
-        </div>
-        """, unsafe_allow_html=True)
-
-st.markdown('</div>', unsafe_allow_html=True)
-
 # ── EXCEL (ADMIN ONLY) ────────────────────────────────────────────────────────
 
 if st.session_state.is_admin:
