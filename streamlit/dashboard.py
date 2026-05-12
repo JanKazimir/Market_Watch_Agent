@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent
 SNAPSHOTS_DIR = BASE_DIR.parent / "data" / "outputs"
 SNAPSHOTS_OLD = BASE_DIR.parent / "data" / "snapshots"  
 
-EXCEL_PATH = Path("../data/list_of_banks_ref_new.xlsx")
+EXCEL_PATH = BASE_DIR / "data" / "list_of_banks_ref_new.xlsx"
 
 st.set_page_config(page_title="Daily Market Watch", page_icon="📊", layout="wide")
 
