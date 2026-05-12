@@ -1,0 +1,63 @@
+{
+  "source": "crelan_regulated_savings",
+  "url": "https://www.crelan.be/fr/particuliers/epargner-et-investir/epargner/produit/le-compte-depargne",
+  "timestamp": "2026-05-11T16:45:07",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Crelan",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "1f53187506fdebb43a8c255e640043f07beadda12e1c4dfd07f8868eb3daa128",
+  "product_type": "regulated",
+  "num_products": 4,
+  "checksum": "be6954aa58db444b7efdba22942233699507c03d35cdc195c920006f6da6ac11",
+  "products": [
+    {
+      "bank": "Crelan",
+      "product_name": "Crelan GoSave",
+      "base_rate": 0.5,
+      "fidelity_premium": 1.5,
+      "total_rate": 2.0,
+      "account_type": "Compte d'épargne réglementé",
+      "min_deposit": null,
+      "max_deposit": 500000,
+      "conditions": "Épargne mensuelle limitée à 500 euros",
+      "duration": null
+    },
+    {
+      "bank": "Crelan",
+      "product_name": "Livret Crelan Horizon Plus",
+      "base_rate": 0.1,
+      "fidelity_premium": 1.2,
+      "total_rate": 1.3,
+      "account_type": "Compte d'épargne réglementé",
+      "min_deposit": null,
+      "max_deposit": 500000,
+      "conditions": null,
+      "duration": null
+    },
+    {
+      "bank": "Crelan",
+      "product_name": "Livret Crelan",
+      "base_rate": 0.2,
+      "fidelity_premium": 0.35,
+      "total_rate": 0.55,
+      "account_type": "Compte d'épargne réglementé",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    },
+    {
+      "bank": "Crelan",
+      "product_name": "Livret Crelan Direct",
+      "base_rate": 0.2,
+      "fidelity_premium": 0.35,
+      "total_rate": 0.55,
+      "account_type": "Compte d'épargne réglementé",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": null,
+      "duration": null
+    }
+  ]
+}

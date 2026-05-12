@@ -1,14 +1,39 @@
 {
   "source": "kbc_banque_term_accounts",
   "url": "https://www.kbc.be/particuliers/fr/epargner/compte-a-terme.html",
-  "timestamp": "2026-05-11T10:19:14",
+  "timestamp": "2026-05-11T16:47:59",
   "date": "2026-05-11",
   "scraper": "playwright",
   "bank": "KBC Banque",
   "link_type": "term_accounts",
   "raw_text_checksum": "5bcf5fc5d487f0683ee4ee6618c69b99cdb6f6ebb2a760588862d21bf65602fa",
   "product_type": "unregulated",
-  "num_products": 0,
-  "checksum": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "products": []
+  "num_products": 2,
+  "checksum": "9c6a4d8b88403a0122d6733784094e8e4605fa60912e22a64e9c08b2279fa006",
+  "products": [
+    {
+      "bank": "KBC Bank",
+      "product_name": "Compte à terme KBC en euros",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "term deposit",
+      "min_deposit": 500,
+      "max_deposit": null,
+      "conditions": "Les taux évoluent constamment. Le taux est garanti au moment de la souscription pour toute la durée.",
+      "duration": "de 1 à 5 ans"
+    },
+    {
+      "bank": "KBC Bank",
+      "product_name": "Compte à terme KBC en devises",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "term deposit",
+      "min_deposit": 500,
+      "max_deposit": null,
+      "conditions": "Les taux évoluent constamment. Le taux est garanti au moment de la souscription pour toute la durée.",
+      "duration": "de 1 à 3 ans"
+    }
+  ]
 }

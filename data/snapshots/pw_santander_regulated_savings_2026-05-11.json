@@ -1,0 +1,63 @@
+{
+  "source": "santander_regulated_savings",
+  "url": "https://www.santanderconsumerbank.be/fr/comptes-depargne-reglementes",
+  "timestamp": "2026-05-11T16:55:11",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Santander",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "2bde48fa01c0ae7b18b0370bff5474dfcd148b7d0123eb92f62cafd3b0568a46",
+  "product_type": "regulated",
+  "num_products": 4,
+  "checksum": "9f96860047571265f5bd8bb20c45335b981f3178c9cf5b33b3930d10a9466bd3",
+  "products": [
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Vision Max",
+      "base_rate": 0.7,
+      "fidelity_premium": 1.3,
+      "total_rate": 2.0,
+      "account_type": "savings account",
+      "min_deposit": 125000,
+      "max_deposit": 300000,
+      "conditions": null,
+      "duration": null
+    },
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Vision Plus",
+      "base_rate": 0.6,
+      "fidelity_premium": 1.05,
+      "total_rate": 1.65,
+      "account_type": "savings account",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Aucun plafond",
+      "duration": null
+    },
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Vision",
+      "base_rate": 0.95,
+      "fidelity_premium": 0.35,
+      "total_rate": 1.3,
+      "account_type": "savings account",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Aucun plafond",
+      "duration": null
+    },
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Vision Max",
+      "base_rate": 0.05,
+      "fidelity_premium": 1.3,
+      "total_rate": 1.35,
+      "account_type": "savings account",
+      "min_deposit": null,
+      "max_deposit": 124999.99,
+      "conditions": "jusqu'à 124.999,99 euros. A partir de 300.000,01 euros.",
+      "duration": null
+    }
+  ]
+}

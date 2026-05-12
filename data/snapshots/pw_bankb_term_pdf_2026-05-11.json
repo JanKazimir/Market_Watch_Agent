@@ -1,0 +1,16 @@
+{
+  "source": "bankb_term_pdf",
+  "url": "https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf",
+  "timestamp": "2026-05-11T16:38:45",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "BankB",
+  "link_type": "term_pdf",
+  "known_pdf_url": "https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf",
+  "parent_url": null,
+  "num_pdf_links": 1,
+  "checksum": "d48d1d8476f35452ee5cf998b91283d9d1901fd03e366c07cf83c85478761420",
+  "pdf_links": [
+    "https://www.bankb.be/sites/default/files/documents/2025-04/Fiche%20d%27information%20compte%20a%20terme.pdf"
+  ]
+}
