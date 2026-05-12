@@ -1,0 +1,16 @@
+{
+  "source": "bnp_paribas_fortis_regulated_pdf",
+  "url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+  "timestamp": "2026-05-11T16:37:27",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "BNP Paribas Fortis",
+  "link_type": "regulated_pdf",
+  "known_pdf_url": "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf",
+  "parent_url": null,
+  "num_pdf_links": 1,
+  "checksum": "a5a73793b7a4b9bedbc1f1beb34473f3dc9b3bdf2e2aed377cf18b315db570d3",
+  "pdf_links": [
+    "https://www.bnpparibasfortis.be/rsc/contrib/document/1-Website/5-Docserver/BNP/F01028E.pdf"
+  ]
+}

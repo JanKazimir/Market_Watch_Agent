@@ -1,0 +1,75 @@
+{
+  "source": "bankb_term_accounts",
+  "url": "https://www.bankb.be/fr-be/epargner/compte-terme",
+  "timestamp": "2026-05-11T16:38:45",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "BankB",
+  "link_type": "term_accounts",
+  "raw_text_checksum": "7748571b1d41cb81806aebb3da84e48d7ac655e3e2c2150645b0a171b87660dd",
+  "product_type": "unregulated",
+  "num_products": 5,
+  "checksum": "43916be61ed877d0a04461c329dabdb6e17ef0cd6a6a426d16aea1c29acb166c",
+  "products": [
+    {
+      "bank": "BankB",
+      "product_name": "Compte à terme BankB",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "term deposit",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "Pas de frais d’entrée ni de gestion.",
+      "duration": "1 à 10 ans"
+    },
+    {
+      "bank": "BankB",
+      "product_name": "Compte Target BankB",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "savings account",
+      "min_deposit": 100,
+      "max_deposit": null,
+      "conditions": "Versement des intérêts à l’échéance avec capitalisation des intérêts.",
+      "duration": "2, 3, 4, 5, 7, 8 ou 10 ans"
+    },
+    {
+      "bank": "BankB",
+      "product_name": "Compte Relax BankB",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "savings account",
+      "min_deposit": 100,
+      "max_deposit": null,
+      "conditions": "Versement d’intérêts annuel.",
+      "duration": "1, 2, 3, 4, 5, 7, 8 ou 10 ans"
+    },
+    {
+      "bank": "BankB",
+      "product_name": "Compte Tempo BankB",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "savings account",
+      "min_deposit": 100,
+      "max_deposit": null,
+      "conditions": "Versement d’intérêts semestriel.",
+      "duration": "1, 2, 3, 5, 7, 8 ou 10 ans"
+    },
+    {
+      "bank": "BankB",
+      "product_name": "Compte Confort BankB",
+      "base_rate": null,
+      "fidelity_premium": null,
+      "total_rate": null,
+      "account_type": "savings account",
+      "min_deposit": 25000,
+      "max_deposit": null,
+      "conditions": "Versement d’intérêts mensuel.",
+      "duration": "1, 2, 3, 5, 7, 8 ou 10 ans"
+    }
+  ]
+}

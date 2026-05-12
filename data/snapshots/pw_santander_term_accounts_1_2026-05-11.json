@@ -1,0 +1,27 @@
+{
+  "source": "santander_term_accounts_1",
+  "url": "https://www.santanderconsumerbank.be/fr/epargner/comptes-terme/vision-green",
+  "timestamp": "2026-05-11T16:55:51",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Santander",
+  "link_type": "term_accounts",
+  "raw_text_checksum": "18194e290f86c512efe3ffd10e3685d8c9e3d6c21ac958a34288dacacbd6a028",
+  "product_type": "unregulated",
+  "num_products": 1,
+  "checksum": "d5e382bb7387ddec1bf406289bea29bbfe42f1c139b95960144267b639134c51",
+  "products": [
+    {
+      "bank": "Santander Consumer Bank",
+      "product_name": "Compte à terme Vision Green",
+      "base_rate": 0.01733,
+      "fidelity_premium": null,
+      "total_rate": 0.01213,
+      "account_type": "term deposit",
+      "min_deposit": 1000,
+      "max_deposit": 200000,
+      "conditions": "You must already have a savings account with Santander to open this term deposit.",
+      "duration": 9
+    }
+  ]
+}

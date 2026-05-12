@@ -1,0 +1,39 @@
+{
+  "source": "keytrade_regulated_savings",
+  "url": "https://www.keytradebank.be/en/banking/savings",
+  "timestamp": "2026-05-11T16:53:06",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "Keytrade",
+  "link_type": "regulated_savings",
+  "raw_text_checksum": "556deda259c5eb79642792e1816c81f04532804bf7a6535b5fe73e6283c0a22e",
+  "product_type": "regulated",
+  "num_products": 2,
+  "checksum": "899bbd15a7ad91039cd7e954f579eb45928b16461fa99ae6fe29937a46b7b12a",
+  "products": [
+    {
+      "bank": "Keytrade Bank",
+      "product_name": "High Fidelity savings account",
+      "base_rate": 0.4,
+      "fidelity_premium": 1.5,
+      "total_rate": 1.9,
+      "account_type": "savings account",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "None",
+      "duration": null
+    },
+    {
+      "bank": "Keytrade Bank",
+      "product_name": "Azur savings account",
+      "base_rate": 0.8,
+      "fidelity_premium": 0.4,
+      "total_rate": 1.2,
+      "account_type": "savings account",
+      "min_deposit": null,
+      "max_deposit": null,
+      "conditions": "None",
+      "duration": null
+    }
+  ]
+}

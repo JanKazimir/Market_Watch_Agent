@@ -88,13 +88,19 @@ Pour en savoir plus, consultez la fiche d'information sur le système de garanti
 Fiscalité
 Un précompte mobilier de 30% est soustrait aux intérêts créditeurs bruts pour les personnes physiques résidentes belges. Il est retenu à la source automatiquement par votre banque.
 Frais
-En cas de retrait anticipé, vous devez rompre le contrat et vous payerez des frais de dossier et une indemnité de remploi.
-Frais de dossier : 1% (minimum 25 EUR – maximum 250 EUR)
-Indemnité de rupture : calculée en fonction du montant de l'investissement, de la durée restante et du taux d’intérêt de référence au moment de la rupture.
 
-Le remboursement anticipé d'un contrat sans indemnité de rupture (mais avec frais de dossier) est possible dans le cadre d'un premier ou unique projet immobilier. La Banque peut demander aux clients de documenter leur demande.
+Pendant les 14 premiers jours suivant l’ouverture de votre compte à terme, vous pouvez vous rétracter du contrat sans frais.
 
-Plus d'infos dans la Liste des tarifs pour personnes privées disponible ci-dessous.
+En cas de retrait anticipé après ce délai, vous devez rompre le contrat et des frais seront appliqués :
+
+Frais de dossier : 1 % (minimum 25 EUR – maximum 250 EUR)
+Indemnité de rupture : calculée en fonction du montant investi, de la durée restante et du taux d’intérêt de référence au moment de la rupture.
+
+ 
+
+Plus d’infos dans la Liste des tarifs pour personnes privées disponible ci-dessous.
+
+Le remboursement anticipé sans indemnité de rupture (mais avec frais de dossier) est possible dans le cadre d’un premier ou unique projet immobilier. La Banque peut demander des justificatifs.
 
 Quels risques?
 Risque de faillite 
@@ -126,8 +132,6 @@ www.ombudsfin.be
 
 Utilisez le formulaire pour déposer une plainte et vous assurer qu'elle soit traitée dans les meilleurs délais.
 
-Consultez ce document avant d'ouvrir votre compte:
-Liste des tarifs pour personnes privées
 Ouvrir un compte à terme Triodos
 
 Important : pour ouvrir un compte à terme Triodos, vous devez d'abord disposer d'un compte d'épargne Triodos (gratuit).
@@ -177,7 +181,7 @@ Sont concernés tous les processus allant des tests sur les animaux et des méth
 
 En savoir plus sur nos principes d'affaires (PDF)
 En savoir plus sur nos exigences minimales et critères d'exclusion (PDF)
-Documents
+Documents importants
 Formulaire d'information sur le système de garantie des dépôts
 ≈ 1 MB
 Charte Vie privée

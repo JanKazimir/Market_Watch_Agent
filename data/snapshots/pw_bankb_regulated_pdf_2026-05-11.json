@@ -1,0 +1,16 @@
+{
+  "source": "bankb_regulated_pdf",
+  "url": "https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf",
+  "timestamp": "2026-05-11T16:38:11",
+  "date": "2026-05-11",
+  "scraper": "playwright",
+  "bank": "BankB",
+  "link_type": "regulated_pdf",
+  "known_pdf_url": "https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf",
+  "parent_url": null,
+  "num_pdf_links": 1,
+  "checksum": "84401251bd1047dc9503ca76df08010f208b99b7bbc1bbdc77b29af3eb2c5390",
+  "pdf_links": [
+    "https://www.bankb.be/sites/default/files/documents/2025-03/Informations%20_cles_pour_l%27epargnant.pdf"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "date": "2026-05-11",
-  "generated_at": "2026-05-11T10:22:33",
-  "num_sources": 24,
+  "generated_at": "2026-05-11T16:56:11",
+  "num_sources": 41,
   "sources": [
     "bankshopper.be",
     "bankshopper.be",
@@ -9,6 +9,7 @@
     "argenta_term_accounts",
     "bankb_regulated_savings",
     "bankb_saving_accounts",
+    "bankb_term_accounts",
     "banque_cph_regulated_savings",
     "banque_triodos_regulated_savings",
     "banque_triodos_regulated_savings_products_1",
@@ -17,23 +18,73 @@
     "banque_triodos_saving_accounts",
     "banque_triodos_term_accounts_1",
     "banque_triodos_term_accounts",
+    "belfius_regulated_savings",
     "belfius_saving_accounts",
+    "beobank_regulated_savings_1",
+    "beobank_regulated_savings",
+    "beobank_regulated_savings_2",
     "beobank_term_accounts",
+    "crelan_regulated_savings",
     "crelan_saving_accounts",
+    "crelan_term_accounts",
+    "kbc_banque_regulated_savings_1",
+    "kbc_banque_regulated_savings",
+    "kbc_banque_regulated_savings_2",
     "kbc_banque_regulated_savings_products_1",
     "kbc_banque_regulated_savings_products",
     "kbc_banque_regulated_savings_products_2",
     "kbc_banque_term_accounts",
+    "keytrade_regulated_savings",
+    "keytrade_term_accounts",
+    "medirect_regulated_savings",
     "medirect_saving_accounts",
     "medirect_term_accounts",
-    "revolut_bank_uab___belgian_branch_saving_accounts"
+    "revolut_bank_uab___belgian_branch_saving_accounts",
+    "revolut_bank_uab___belgian_branch_term_accounts",
+    "santander_regulated_savings",
+    "santander_term_accounts_1",
+    "santander_term_accounts"
   ],
-  "products_matched_across_sources": 6,
-  "pairs_skipped_same_provider": 12,
-  "total_discrepancies": 7,
-  "rate_discrepancies": 7,
+  "products_matched_across_sources": 11,
+  "pairs_skipped_same_provider": 30,
+  "total_discrepancies": 16,
+  "rate_discrepancies": 16,
   "condition_discrepancies": 0,
   "discrepancies": [
+    {
+      "type": "rate_discrepancy",
+      "bank": "Beobank",
+      "product_name": "Beobank Save Plus Spaarrekening",
+      "field": "fidelity_premium",
+      "sources": {
+        "bankshopper.be": 1.7,
+        "beobank_regulated_savings": 0.5
+      },
+      "difference": 1.2,
+      "product_name_per_source": {
+        "bankshopper.be": "Beobank Save Plus Spaarrekening",
+        "beobank_regulated_savings": "Compte d'épargne Save Plus"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:beobank"
+    },
+    {
+      "type": "rate_discrepancy",
+      "bank": "Keytrade Bank",
+      "product_name": "Keytrade Bank High Fidelity",
+      "field": "total_rate",
+      "sources": {
+        "bankshopper.be": 2.55,
+        "keytrade_regulated_savings": 1.9
+      },
+      "difference": 0.65,
+      "product_name_per_source": {
+        "bankshopper.be": "Keytrade Bank High Fidelity",
+        "keytrade_regulated_savings": "High Fidelity savings account"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:keytrade"
+    },
     {
       "type": "rate_discrepancy",
       "bank": "Triodos Bank",
@@ -67,6 +118,23 @@
       },
       "provider_a": "aggregator:bankshopper",
       "provider_b": "direct:banque_triodos"
+    },
+    {
+      "type": "rate_discrepancy",
+      "bank": "Keytrade Bank",
+      "product_name": "Keytrade Bank High Fidelity",
+      "field": "base_rate",
+      "sources": {
+        "bankshopper.be": 0.9,
+        "keytrade_regulated_savings": 0.4
+      },
+      "difference": 0.5,
+      "product_name_per_source": {
+        "bankshopper.be": "Keytrade Bank High Fidelity",
+        "keytrade_regulated_savings": "High Fidelity savings account"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:keytrade"
     },
     {
       "type": "rate_discrepancy",
@@ -104,6 +172,57 @@
     },
     {
       "type": "rate_discrepancy",
+      "bank": "Keytrade Bank",
+      "product_name": "Keytrade Bank AZUR Spaarrekening",
+      "field": "total_rate",
+      "sources": {
+        "bankshopper.be": 1.5,
+        "keytrade_regulated_savings": 1.2
+      },
+      "difference": 0.3,
+      "product_name_per_source": {
+        "bankshopper.be": "Keytrade Bank AZUR Spaarrekening",
+        "keytrade_regulated_savings": "Azur savings account"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:keytrade"
+    },
+    {
+      "type": "rate_discrepancy",
+      "bank": "Beobank",
+      "product_name": "Beobank Save Plus Spaarrekening",
+      "field": "total_rate",
+      "sources": {
+        "bankshopper.be": 1.1,
+        "beobank_regulated_savings": 0.8
+      },
+      "difference": 0.3,
+      "product_name_per_source": {
+        "bankshopper.be": "Beobank Save Plus Spaarrekening",
+        "beobank_regulated_savings": "Compte d'épargne Save Plus"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:beobank"
+    },
+    {
+      "type": "rate_discrepancy",
+      "bank": "Keytrade Bank",
+      "product_name": "Keytrade Bank AZUR Spaarrekening",
+      "field": "base_rate",
+      "sources": {
+        "bankshopper.be": 1.0,
+        "keytrade_regulated_savings": 0.8
+      },
+      "difference": 0.2,
+      "product_name_per_source": {
+        "bankshopper.be": "Keytrade Bank AZUR Spaarrekening",
+        "keytrade_regulated_savings": "Azur savings account"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:keytrade"
+    },
+    {
+      "type": "rate_discrepancy",
       "bank": "Triodos Bank",
       "product_name": "Triodos Impact Savings",
       "field": "base_rate",
@@ -135,6 +254,57 @@
       },
       "provider_a": "aggregator:bankshopper",
       "provider_b": "direct:banque_triodos"
+    },
+    {
+      "type": "rate_discrepancy",
+      "bank": "Keytrade Bank",
+      "product_name": "Keytrade Bank High Fidelity",
+      "field": "fidelity_premium",
+      "sources": {
+        "bankshopper.be": 1.65,
+        "keytrade_regulated_savings": 1.5
+      },
+      "difference": 0.15,
+      "product_name_per_source": {
+        "bankshopper.be": "Keytrade Bank High Fidelity",
+        "keytrade_regulated_savings": "High Fidelity savings account"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:keytrade"
+    },
+    {
+      "type": "rate_discrepancy",
+      "bank": "Keytrade Bank",
+      "product_name": "Keytrade Bank AZUR Spaarrekening",
+      "field": "fidelity_premium",
+      "sources": {
+        "bankshopper.be": 0.5,
+        "keytrade_regulated_savings": 0.4
+      },
+      "difference": 0.1,
+      "product_name_per_source": {
+        "bankshopper.be": "Keytrade Bank AZUR Spaarrekening",
+        "keytrade_regulated_savings": "Azur savings account"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:keytrade"
+    },
+    {
+      "type": "rate_discrepancy",
+      "bank": "Beobank",
+      "product_name": "Beobank Save Plus Spaarrekening",
+      "field": "base_rate",
+      "sources": {
+        "bankshopper.be": 0.4,
+        "beobank_regulated_savings": 0.3
+      },
+      "difference": 0.1,
+      "product_name_per_source": {
+        "bankshopper.be": "Beobank Save Plus Spaarrekening",
+        "beobank_regulated_savings": "Compte d'épargne Save Plus"
+      },
+      "provider_a": "aggregator:bankshopper",
+      "provider_b": "direct:beobank"
     },
     {
       "type": "rate_discrepancy",
